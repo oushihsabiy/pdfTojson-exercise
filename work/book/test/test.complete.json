@@ -1,0 +1,12 @@
+[
+  {
+    "index": "test",
+    "source": "user_test",
+    "source_idx": "2.1.4",
+    "题目类型": "定理",
+    "预估难度": "中等",
+    "problem": "Theorem 2.1.4: Let Q \\subseteq \\mathbb{R}^n be an open convex set, and let f:Q\\to\\mathbb{R} be twice continuously differentiable. Then f belongs to the class \\mathcal{F}^2(Q) (i.e., f is convex on Q) if and only if for every x \\in Q one has \\nabla^2 f(x) \\succeq 0.",
+    "proof": "",
+    "direct_answer": ""
+  }
+]

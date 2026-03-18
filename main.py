@@ -56,16 +56,16 @@ def run_cmd(cmd: list[str]) -> None:
 
 
 def ensure_scripts_exist(script_dir: Path, mode: str) -> tuple[Path, Path, Path, Path, Path]:
-    if mode not in {"book", "paper"}:
+    if mode not in {"book", "exercise", "paper"}:
         raise SystemExit(
-            f"Unsupported mode: {mode!r} (expected 'book' or 'paper')")
+            f"Unsupported mode: {mode!r} (expected 'book', 'exercise', or 'paper')")
 
     src_dir_rawjson = script_dir / "src" / mode / "rawjson"
     pdf_to_md = src_dir_rawjson / "pdfTomd.py"
     md_to_tex = src_dir_rawjson / "mdTotex.py"
     tex_to_json = src_dir_rawjson / "texTojson.py"
 
-    src_dir_stdjson = script_dir / "src" / mode / "stdjson"
+    src_dir_stdjson = script_dir / "src" / "stdjson"
     raw_to_complete = src_dir_stdjson / "raw_to_complete.py"
     complete_to_lean = src_dir_stdjson / "complete_to_lean.py"
 
@@ -210,7 +210,7 @@ def run_stage_atomic(
     cmd: list[str],
     out_path: Path,
     validate_out: Validator,
-) -> None:
+) -> bool:
     tmp = _tmp_path(out_path)
     if CLEAN_STALE_TMPS and tmp.exists():
         try:
@@ -224,12 +224,30 @@ def run_stage_atomic(
     cmd2 = list(cmd)
     cmd2[3] = str(tmp)
 
-    run_cmd(cmd2)
+    try:
+        run_cmd(cmd2)
+    except SystemExit as e:
+        print(
+            f"[warn] stage command failed: {' '.join(cmd2)}; reason={e}", file=sys.stderr)
+        try:
+            if tmp.exists():
+                tmp.unlink()
+        except Exception:
+            pass
+        return False
 
     if not validate_out(tmp):
-        raise SystemExit(f"Stage produced incomplete output: {tmp}")
+        print(
+            f"[warn] Stage produced incomplete output: {tmp}", file=sys.stderr)
+        try:
+            if tmp.exists():
+                tmp.unlink()
+        except Exception:
+            pass
+        return False
 
     tmp.replace(out_path)
+    return True
 
 
 def process_one(
@@ -270,11 +288,15 @@ def process_one(
             cmd1 += ["--workers", str(int(OCR_WORKERS))]
 
         if ATOMIC_OUTPUTS:
-            run_stage_atomic(
+            ok = run_stage_atomic(
                 cmd=cmd1,
                 out_path=md_path,
                 validate_out=lambda p: md_complete(p, pdf_path),
             )
+            if not ok:
+                print(
+                    f"[warn] PDF->MD stage failed for {pdf_path}; skipping remaining stages", file=sys.stderr)
+                return json_path
         else:
             run_cmd(cmd1)
             if not md_complete(md_path, pdf_path):
@@ -288,11 +310,15 @@ def process_one(
             cmd2 += ["--workers", str(int(THINK_WORKERS))]
 
         if ATOMIC_OUTPUTS:
-            run_stage_atomic(
+            ok = run_stage_atomic(
                 cmd=cmd2,
                 out_path=tex_path,
                 validate_out=tex_complete,
             )
+            if not ok:
+                print(
+                    f"[warn] MD->TEX stage failed for {pdf_path}; skipping remaining stages", file=sys.stderr)
+                return json_path
         else:
             run_cmd(cmd2)
             if not tex_complete(tex_path):
@@ -305,11 +331,15 @@ def process_one(
     cmd3 = [sys.executable, str(tex_to_json), str(tex_path), str(json_path)]
 
     if ATOMIC_OUTPUTS:
-        run_stage_atomic(
+        ok = run_stage_atomic(
             cmd=cmd3,
             out_path=json_path,
             validate_out=json_complete,
         )
+        if not ok:
+            print(
+                f"[warn] TEX->JSON stage failed for {pdf_path}; skipping remaining stages", file=sys.stderr)
+            return json_path
     else:
         run_cmd(cmd3)
         if not json_complete(json_path):
@@ -350,8 +380,12 @@ def process_json(
         cmd1 = [sys.executable, str(raw_to_complete), str(
             json_path), str(complete_json)]
         if ATOMIC_OUTPUTS:
-            run_stage_atomic(cmd=cmd1, out_path=complete_json,
-                             validate_out=json_complete)
+            ok = run_stage_atomic(cmd=cmd1, out_path=complete_json,
+                                  validate_out=json_complete)
+            if not ok:
+                print(
+                    f"[warn] RAW->COMPLETE stage failed for {json_path}; skipping COMPLETE->LEAN", file=sys.stderr)
+                return lean_json
         else:
             run_cmd(cmd1)
             if not json_complete(complete_json):
@@ -366,8 +400,12 @@ def process_json(
     cmd2 = [sys.executable, str(complete_to_lean), str(
         complete_json), str(lean_json)]
     if ATOMIC_OUTPUTS:
-        run_stage_atomic(cmd=cmd2, out_path=lean_json,
-                         validate_out=json_complete)
+        ok = run_stage_atomic(cmd=cmd2, out_path=lean_json,
+                              validate_out=json_complete)
+        if not ok:
+            print(
+                f"[warn] COMPLETE->LEAN stage failed for {complete_json}; skipping", file=sys.stderr)
+            return lean_json
     else:
         run_cmd(cmd2)
         if not json_complete(lean_json):
