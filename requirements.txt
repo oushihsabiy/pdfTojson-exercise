@@ -1,0 +1,6 @@
+openai
+tenacity
+tqdm
+Pillow
+pdf2image
+PyMuPDF

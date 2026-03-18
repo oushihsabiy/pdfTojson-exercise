@@ -57,15 +57,20 @@ def run_cmd(cmd: list[str]) -> None:
 
 def ensure_scripts_exist(script_dir: Path, mode: str) -> tuple[Path, Path, Path]:
     if mode not in {"book", "paper"}:
-        raise SystemExit(f"Unsupported mode: {mode!r} (expected 'book' or 'paper')")
+        raise SystemExit(
+            f"Unsupported mode: {mode!r} (expected 'book' or 'paper')")
 
-    src_dir = script_dir / "src" / mode
-    pdf_to_md = src_dir / "pdfTomd.py"
-    md_to_tex = src_dir / "mdTotex.py"
-    tex_to_json = src_dir / "texTojson.py"
+    src_dir_rawjson = script_dir / "src" / mode / "rawjson"
+    pdf_to_md = src_dir_rawjson / "pdfTomd.py"
+    md_to_tex = src_dir_rawjson / "mdTotex.py"
+    tex_to_json = src_dir_rawjson / "texTojson.py"
+
+    src_dir_stdjson = script_dir / "src" / mode / "stdjson"
+
     missing = [p for p in [pdf_to_md, md_to_tex, tex_to_json] if not p.exists()]
     if missing:
-        raise SystemExit("Missing scripts:\n" + "\n".join(str(p) for p in missing))
+        raise SystemExit("Missing scripts:\n" + "\n".join(str(p)
+                         for p in missing))
     return pdf_to_md, md_to_tex, tex_to_json
 
 
@@ -211,7 +216,8 @@ def run_stage_atomic(
             pass
 
     if len(cmd) < 4:
-        raise RuntimeError("cmd too short (expected: python script IN OUT [flags...])")
+        raise RuntimeError(
+            "cmd too short (expected: python script IN OUT [flags...])")
     cmd2 = list(cmd)
     cmd2[3] = str(tmp)
 
@@ -311,7 +317,8 @@ def process_one(
 
 def parse_args() -> argparse.Namespace:
     settings = load_settings()
-    ap = argparse.ArgumentParser(description="Run the OCR -> Markdown -> TeX -> JSON pipeline.")
+    ap = argparse.ArgumentParser(
+        description="Run the OCR -> Markdown -> TeX -> JSON pipeline.")
     ap.add_argument(
         "--mode",
         choices=["book", "paper"],
@@ -327,8 +334,10 @@ def main() -> None:
     global OCR_WORKERS, THINK_WORKERS, STRICT_RESUME, ATOMIC_OUTPUTS, CLEAN_STALE_TMPS
 
     settings = load_settings()
-    INPUT_PDF_DIR = PROJECT_ROOT / str(get_setting(settings, "INPUT_PDF_DIR", "input_pdfs"))
-    OUTPUT_JSON_DIR = PROJECT_ROOT / str(get_setting(settings, "OUTPUT_JSON_DIR", "output_json"))
+    INPUT_PDF_DIR = PROJECT_ROOT / \
+        str(get_setting(settings, "INPUT_PDF_DIR", "input_pdfs"))
+    OUTPUT_JSON_DIR = PROJECT_ROOT / \
+        str(get_setting(settings, "OUTPUT_JSON_DIR", "output_json"))
     WORK_DIR = PROJECT_ROOT / str(get_setting(settings, "WORK_DIR", "work"))
     PIPELINE_MODE = str(get_setting(settings, "PIPELINE_MODE", "book"))
     OCR_MAX_TOKENS = get_setting(settings, "OCR_MAX_TOKENS", None)
@@ -347,7 +356,8 @@ def main() -> None:
     OUTPUT_JSON_DIR.mkdir(parents=True, exist_ok=True)
     WORK_DIR.mkdir(parents=True, exist_ok=True)
 
-    pdf_to_md, md_to_tex, tex_to_json = ensure_scripts_exist(PROJECT_ROOT, mode)
+    pdf_to_md, md_to_tex, tex_to_json = ensure_scripts_exist(
+        PROJECT_ROOT, mode)
     mode_input_dir = INPUT_PDF_DIR / mode
     mode_input_dir.mkdir(parents=True, exist_ok=True)
 
@@ -399,7 +409,8 @@ def main() -> None:
     print(f"Mode: {mode}")
     print(f"Found {len(pdfs)} PDF(s) to process in {mode_input_dir}")
     for pdf in pdfs:
-        print(f"\n=== Processing: {pdf.relative_to(INPUT_PDF_DIR).as_posix()} ===")
+        print(
+            f"\n=== Processing: {pdf.relative_to(INPUT_PDF_DIR).as_posix()} ===")
         out_json = process_one(
             pdf,
             pdf_to_md,
