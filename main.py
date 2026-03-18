@@ -55,7 +55,7 @@ def run_cmd(cmd: list[str]) -> None:
         raise SystemExit(proc.returncode)
 
 
-def ensure_scripts_exist(script_dir: Path, mode: str) -> tuple[Path, Path, Path]:
+def ensure_scripts_exist(script_dir: Path, mode: str) -> tuple[Path, Path, Path, Path, Path]:
     if mode not in {"book", "paper"}:
         raise SystemExit(
             f"Unsupported mode: {mode!r} (expected 'book' or 'paper')")
@@ -66,12 +66,15 @@ def ensure_scripts_exist(script_dir: Path, mode: str) -> tuple[Path, Path, Path]
     tex_to_json = src_dir_rawjson / "texTojson.py"
 
     src_dir_stdjson = script_dir / "src" / mode / "stdjson"
+    raw_to_complete = src_dir_stdjson / "raw_to_complete.py"
+    complete_to_lean = src_dir_stdjson / "complete_to_lean.py"
 
-    missing = [p for p in [pdf_to_md, md_to_tex, tex_to_json] if not p.exists()]
+    missing = [p for p in [pdf_to_md, md_to_tex, tex_to_json,
+                           raw_to_complete, complete_to_lean] if not p.exists()]
     if missing:
         raise SystemExit("Missing scripts:\n" + "\n".join(str(p)
                          for p in missing))
-    return pdf_to_md, md_to_tex, tex_to_json
+    return pdf_to_md, md_to_tex, tex_to_json, raw_to_complete, complete_to_lean
 
 
 def _tmp_path(final_path: Path) -> Path:
@@ -315,6 +318,64 @@ def process_one(
     return json_path
 
 
+def process_json(
+    json_path: Path,
+    raw_to_complete: Path,
+    complete_to_lean: Path,
+    *,
+    mode: str,
+    input_json_dir: Path,
+    output_json_dir: Path,
+    work_dir: Path,
+) -> Path:
+    """Run stdjson stages: raw_to_complete -> complete_to_lean.
+
+    Uses atomic stage runner when configured. Returns final lean JSON path.
+    """
+    rel = json_path.relative_to(input_json_dir)
+    rel_no_suffix = rel.with_suffix("")
+
+    job_dir = work_dir / rel_no_suffix
+    job_dir.mkdir(parents=True, exist_ok=True)
+
+    stem = json_path.stem
+    complete_json = job_dir / f"{stem}.complete.json"
+    lean_json = (output_json_dir / rel).with_suffix(".lean.json")
+    lean_json.parent.mkdir(parents=True, exist_ok=True)
+
+    # Stage 1: raw -> complete
+    if json_complete(complete_json) and not OVERWRITE_JSON:
+        print(f"[skip] RAW->COMPLETE (complete): {complete_json}")
+    else:
+        cmd1 = [sys.executable, str(raw_to_complete), str(
+            json_path), str(complete_json)]
+        if ATOMIC_OUTPUTS:
+            run_stage_atomic(cmd=cmd1, out_path=complete_json,
+                             validate_out=json_complete)
+        else:
+            run_cmd(cmd1)
+            if not json_complete(complete_json):
+                raise SystemExit(
+                    f"RAW->COMPLETE output incomplete: {complete_json}")
+
+    # Stage 2: complete -> lean
+    if json_complete(lean_json) and not OVERWRITE_JSON:
+        print(f"[skip] COMPLETE->LEAN (complete): {lean_json}")
+        return lean_json
+
+    cmd2 = [sys.executable, str(complete_to_lean), str(
+        complete_json), str(lean_json)]
+    if ATOMIC_OUTPUTS:
+        run_stage_atomic(cmd=cmd2, out_path=lean_json,
+                         validate_out=json_complete)
+    else:
+        run_cmd(cmd2)
+        if not json_complete(lean_json):
+            raise SystemExit(f"COMPLETE->LEAN output incomplete: {lean_json}")
+
+    return lean_json
+
+
 def parse_args() -> argparse.Namespace:
     settings = load_settings()
     ap = argparse.ArgumentParser(
@@ -356,7 +417,7 @@ def main() -> None:
     OUTPUT_JSON_DIR.mkdir(parents=True, exist_ok=True)
     WORK_DIR.mkdir(parents=True, exist_ok=True)
 
-    pdf_to_md, md_to_tex, tex_to_json = ensure_scripts_exist(
+    pdf_to_md, md_to_tex, tex_to_json, raw_to_complete, complete_to_lean = ensure_scripts_exist(
         PROJECT_ROOT, mode)
     mode_input_dir = INPUT_PDF_DIR / mode
     mode_input_dir.mkdir(parents=True, exist_ok=True)
@@ -399,13 +460,15 @@ def main() -> None:
         rel = p.relative_to(INPUT_PDF_DIR)
         return (OUTPUT_JSON_DIR / rel).with_suffix(".json")
 
+    '''
     if not OVERWRITE_JSON:
         pdfs = [p for p in pdfs if not json_complete(_json_out_path(p))]
 
+    
     if not pdfs:
         print(f"No PDFs to process for mode={mode!r} in: {mode_input_dir}")
         return
-
+    '''
     print(f"Mode: {mode}")
     print(f"Found {len(pdfs)} PDF(s) to process in {mode_input_dir}")
     for pdf in pdfs:
@@ -422,6 +485,21 @@ def main() -> None:
             work_dir=WORK_DIR,
         )
         print(f"[ok] JSON -> {out_json}")
+
+        # Run stdjson processing (raw_to_complete, complete_to_lean)
+        try:
+            lean = process_json(
+                out_json,
+                raw_to_complete,
+                complete_to_lean,
+                mode=mode,
+                input_json_dir=OUTPUT_JSON_DIR,
+                output_json_dir=OUTPUT_JSON_DIR,
+                work_dir=WORK_DIR,
+            )
+            print(f"[ok] STDJSON -> {lean}")
+        except Exception as e:
+            print(f"[warn] stdjson processing failed for {out_json}: {e}")
 
     print("\nALL DONE")
 
