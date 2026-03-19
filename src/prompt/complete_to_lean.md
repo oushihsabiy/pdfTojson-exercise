@@ -61,6 +61,10 @@ Formatting rules for the rewritten "problem":
 10. LaTeX line-display rule:
 The rewritten "problem" must be formatted so that, when rendered in LaTeX, each labeled unit occupies its own line.
 Each "Definition:", "Hypothesis:", and "Goal:" must appear on a separate displayed line.Do not place two labeled units on the same rendered line.Use LaTeX formatting that guarantees line breaks in the rendered output, not just plain text newlines.
+11. Escape backslashes properly for JSON strings. For example, write `\\in`, `\\mathbf{R}`, `\\le`, `\\nabla` inside JSON output.
+12. Any sentence that explains the meaning of notation, symbols, relations, or shorthand such as "where ... means ...", "... denotes ...", "... stands for ...", or
+"we define ... by ..." must be rewritten as a separate "Definition:" line,
+not as a "Hypothesis:" line.
 
 Example style:
 Original:
