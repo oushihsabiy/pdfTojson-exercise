@@ -1,0 +1,866 @@
+[
+  {
+    "index": 1,
+    "source_idx": "Exercise 1.1",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "其他"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 1.1\nLet $k\\in\\mathbf{N}$, let $\\alpha,\\beta\\in\\mathbf{R}$ with $\\alpha\\leq\\beta$, and for each coefficient vector $a=(a_1,\\dots,a_k)\\in\\mathbf{R}^k$ define the polynomial\n\n\\[\np(t)=a_1+a_2 t+\\cdots+a_k t^{k-1}, \\qquad t\\in\\mathbf{R}.\n\\]\n\nIs the set\n\n\\[\n\\{a\\in\\mathbf{R}^k\\mid p(0)=1,\\ |p(t)|\\leq 1\\text{ for all } t\\in[\\alpha,\\beta]\\}\n\\]\n\nconvex?",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 2,
+    "source_idx": "Exercise 1.2",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 1.2\n\\emph{Set distributive characterization of convexity} [Rockafellar]. Let $C \\subseteq \\mathbf{R}^n$. Show that $C$ is convex if and only if\n$$(\\alpha + \\beta)C = \\alpha C + \\beta C$$\nfor all nonnegative scalars $\\alpha, \\beta$, where\n$$\\alpha C = \\{\\alpha x \\mid x \\in C\\}, \\qquad \\alpha C + \\beta C = \\{u+v \\mid u \\in \\alpha C,\\ v \\in \\beta C\\}.$$",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 3,
+    "source_idx": "Exercise 1.3",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 1.3\n\\emph{Composition of linear-fractional functions.} Let $A \\in \\mathbf{R}^{m\\times n}$, $b \\in \\mathbf{R}^m$, $c \\in \\mathbf{R}^n$, $d \\in \\mathbf{R}$, and let $E \\in \\mathbf{R}^{p\\times m}$, $f \\in \\mathbf{R}^p$, $g \\in \\mathbf{R}^m$, $h \\in \\mathbf{R}$. Suppose $\\phi : \\mathbf{R}^n \\to \\mathbf{R}^m$ and $\\psi : \\mathbf{R}^m \\to \\mathbf{R}^p$ are the linear-fractional functions\n\n\\[\n\\phi(x) = \\frac{Ax + b}{c^T x + d}, \\qquad\n\\psi(y) = \\frac{Ey + f}{g^T y + h},\n\\]\n\nwith domains\n\\[\n\\mathbf{dom}\\,\\phi = \\{x \\in \\mathbf{R}^n \\mid c^T x + d > 0\\}, \\qquad\n\\mathbf{dom}\\,\\psi = \\{y \\in \\mathbf{R}^m \\mid g^T y + h > 0\\}.\n\\]\nWe associate with $\\phi$ and $\\psi$ the matrices\n\n\\[\n\\begin{bmatrix}\nA & b \\\\\nc^T & d\n\\end{bmatrix},\n\\qquad\n\\begin{bmatrix}\nE & f \\\\\ng^T & h\n\\end{bmatrix},\n\\]\n\nrespectively.\n\nNow consider the composition $\\Gamma = \\psi \\circ \\phi$, i.e., $\\Gamma(x) = \\psi(\\phi(x))$, with domain\n\n\\[\n\\mathbf{dom}\\,\\Gamma = \\{x \\in \\mathbf{dom}\\,\\phi \\mid \\phi(x) \\in \\mathbf{dom}\\,\\psi\\}.\n\\]\n\nShow that $\\Gamma$ is linear-fractional, and that the matrix associated with it is the product\n\n\\[\n\\begin{bmatrix}\nE & f \\\\\ng^T & h\n\\end{bmatrix}\n\\begin{bmatrix}\nA & b \\\\\nc^T & d\n\\end{bmatrix}.\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 4,
+    "source_idx": "Exercise 1.4",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "求值题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 1.4\nDual of exponential cone. Consider the exponential cone $K_{\\exp} \\subseteq \\mathbf{R}^3$ defined by\n\n\\[\nK_{\\exp} = \\{(x,y,z) \\in \\mathbf{R}^3 \\mid y > 0,\\ ye^{x/y} \\leq z\\}.\n\\]\n\nFind its dual cone\n\\[\nK_{\\exp}^* = \\{u \\in \\mathbf{R}^3 \\mid u^T v \\geq 0\\ \\text{for all } v \\in K_{\\exp}\\}.\n\\]\n\nWe are not worried here about the fine details of what happens on the boundaries of these cones, so you really needn't worry about it. But we make some comments here for those who do care about such things.\n\nThe cone $K_{\\exp}$ as defined above is not closed. To obtain its closure, we need to add the points\n\n\\[\n\\{(x,y,z) \\mid x \\leq 0,\\ y = 0,\\ z \\geq 0\\}.\n\\]\n\n(This makes no difference, since the dual of a cone is equal to the dual of its closure.)",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 5,
+    "source_idx": "Exercise 1.5-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 1.5\nDual of intersection of cones. Let $C$ and $D$ be closed convex cones in $\\mathbf{R}^n$. For a cone $K \\subseteq \\mathbf{R}^n$, its dual cone is defined by\n\\[\nK^* = \\{y \\in \\mathbf{R}^n \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}.\n\\]\nIn this problem we will show that\n\n\\[\n(C \\cap D)^* = C^* + D^*.\n\\]\n\nHere, $+$ denotes set addition: $C^* + D^*$ is the set $\\{u + v \\mid u \\in C^*,\\ v \\in D^*\\}$. In other words, the dual of the intersection of two closed convex cones is the sum of the dual cones.\n\n(a) Show that $C \\cap D$ and $C^* + D^*$ are convex cones. (In fact, $C \\cap D$ and $C^* + D^*$ are closed, but we won't ask you to show this.)",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 6,
+    "source_idx": "Exercise 1.5-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 1.5\nDual of intersection of cones. Let $C$ and $D$ be closed convex cones in $\\mathbf{R}^n$, and let the dual cone of a cone $K \\subseteq \\mathbf{R}^n$ be defined by\n\\[\nK^* = \\{y \\in \\mathbf{R}^n \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}.\n\\]\nIn this problem we will show that\n\n\\[\n(C \\cap D)^* = C^* + D^*.\n\\]\n\nHere, $+$ denotes set addition: $C^* + D^*$ is the set $\\{u + v \\mid u \\in C^*,\\ v \\in D^*\\}$. In other words, the dual of the intersection of two closed convex cones is the sum of the dual cones.\n\n(b) Show that $(C \\cap D)^* \\supseteq C^* + D^*$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 7,
+    "source_idx": "Exercise 1.5-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 1.5\nDual of intersection of cones. Let $C$ and $D$ be closed convex cones in $\\mathbf{R}^n$, and for a cone $K \\subseteq \\mathbf{R}^n$ define its dual cone by\n\\[\nK^* = \\{y \\in \\mathbf{R}^n \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}.\n\\]\nIn this problem we will show that\n\n\\[\n(C \\cap D)^* = C^* + D^*.\n\\]\n\nHere, $+$ denotes set addition: $C^* + D^*$ is the set $\\{u + v \\mid u \\in C^*,\\ v \\in D^*\\}$. In other words, the dual of the intersection of two closed convex cones is the sum of the dual cones.\n\n(c) Now show that $(C \\cap D)^* \\subseteq C^* + D^*$. You can do this by first showing\n\n\\[\n(C \\cap D)^* \\subseteq C^* + D^* \\Longleftrightarrow C \\cap D \\supseteq (C^* + D^*)^* .\n\\]\n\nYou can use the following result:\n\n\\[\n\\text{If } K \\subseteq \\mathbf{R}^n \\text{ is a closed convex cone, then } K^{**} = K.\n\\]\n\nNext, show that $C \\cap D \\supseteq (C^* + D^*)^*$ and conclude that $(C \\cap D)^* = C^* + D^*$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 8,
+    "source_idx": "Exercise 1.5-(d)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 1.5\nDual of intersection of cones. Let $C$ and $D$ be closed convex cones in $\\mathbf{R}^n$. In this problem we will show that\n\n\\[\n(C \\cap D)^* = C^* + D^*.\n\\]\n\nHere, $+$ denotes set addition: $C^* + D^*$ is the set $\\{u + v \\mid u \\in C^*,\\ v \\in D^*\\}$. In other words, the dual of the intersection of two closed convex cones is the sum of the dual cones.\n\n(d) Let $A \\in \\mathbf{R}^{m \\times n}$, and define the polyhedral cone\n\n\\[\nV = \\{x \\in \\mathbf{R}^n \\mid Ax \\succeq 0\\},\n\\]\n\nwhere $Ax \\succeq 0$ means that each component of $Ax$ is nonnegative. Show that the dual cone of $V$ can be expressed as\n\n\\[\nV^* = \\{A^T v \\mid v \\succeq 0\\},\n\\]\n\nwhere $v \\in \\mathbf{R}^m$ and $v \\succeq 0$ means that each component of $v$ is nonnegative.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 9,
+    "source_idx": "Exercise 1.6-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 1.6\nPolar of a set. Let $C \\subseteq \\mathbf{R}^n$ be any set. Its polar is defined by\n\n\\[\nC^\\circ = \\{y \\in \\mathbf{R}^n \\mid y^T x \\leq 1 \\text{ for all } x \\in C\\}.\n\\]\n\n(a) Show that $C^\\circ$ is convex, even if $C$ itself is not convex.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 10,
+    "source_idx": "Exercise 1.6-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "求值题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 1.6\nPolar of a set. The polar of a set $C \\subseteq \\mathbf{R}^n$ is defined as\n\n\\[\nC^\\circ = \\{y \\in \\mathbf{R}^n \\mid y^T x \\leq 1 \\text{ for all } x \\in C\\}.\n\\]\n\n(b) Suppose $C \\subseteq \\mathbf{R}^n$ is a cone, i.e., $\\theta x \\in C$ for all $x \\in C$ and all $\\theta \\ge 0$. What is the polar of $C$?",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 11,
+    "source_idx": "Exercise 1.6-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "求值题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 1.6\nPolar of a set. The polar of $C \\subseteq \\mathbf{R}^n$ is defined as the set\n\n\\[\nC^\\circ = \\{y \\in \\mathbf{R}^n \\mid y^T x \\leq 1 \\text{ for all } x \\in C\\}.\n\\]\n\n(c) Let $\\|\\cdot\\|$ be a norm on $\\mathbf{R}^n$, and let its unit ball be\n\\[\nB = \\{x \\in \\mathbf{R}^n \\mid \\|x\\| \\leq 1\\}.\n\\]\nWhat is the polar set $B^\\circ$ of this unit ball?",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 12,
+    "source_idx": "Exercise 1.6-(d)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "求值题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 1.6\nPolar of a set. For a set $C \\subseteq \\mathbf{R}^n$, its polar is defined by\n\n\\[\nC^\\circ = \\{y \\in \\mathbf{R}^n \\mid y^T x \\leq 1 \\text{ for all } x \\in C\\}.\n\\]\n\n(d) Let $\\mathbf{1} \\in \\mathbf{R}^n$ denote the all-ones vector, and consider the set\n\\[\nC = \\{x \\in \\mathbf{R}^n \\mid \\mathbf{1}^T x = 1,\\, x \\succeq 0\\}.\n\\]\nWhat is the polar set $C^\\circ$?",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 13,
+    "source_idx": "Exercise 1.6-(e)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 1.6\nPolar of a set. Let $C \\subseteq \\mathbf{R}^n$ be a set. Its polar is defined by\n\n\\[\nC^\\circ = \\{y \\in \\mathbf{R}^n \\mid y^T x \\leq 1 \\text{ for all } x \\in C\\}.\n\\]\n\n(e) Show that if $C$ is closed and convex and satisfies $0 \\in C$, then\n\\[\n(C^\\circ)^\\circ = C.\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 14,
+    "source_idx": "Exercise 1.7-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "其他"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 1.7\nDual cones in $\\mathbf{R}^2$. For each cone $K \\subseteq \\mathbf{R}^2$, describe its dual cone\n\\[\nK^* = \\{y \\in \\mathbf{R}^2 \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}.\n\\]\n\n(a) $K = \\{0\\}$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 15,
+    "source_idx": "Exercise 1.7-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "其他"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 1.7\nDual cones in $\\mathbf{R}^2$. For a cone $K \\subseteq \\mathbf{R}^2$, its dual cone is defined by\n$$K^* = \\{y \\in \\mathbf{R}^2 \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}.$$ Describe the dual cone for the following cone:\n\n(b) $K = \\mathbf{R}^2$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 16,
+    "source_idx": "Exercise 1.7-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "其他"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 1.7\nDual cones in $\\mathbf{R}^2$. For the cone $K \\subseteq \\mathbf{R}^2$, describe its dual cone\n\\[\nK^* = \\{y \\in \\mathbf{R}^2 \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}.\n\\]\n\n(c) $K = \\{(x_1, x_2) \\in \\mathbf{R}^2 \\mid |x_1| \\leq x_2\\}$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 17,
+    "source_idx": "Exercise 1.7-(d)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "其他"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 1.7\nDual cones in $\\mathbf{R}^2$. For the cone $K \\subseteq \\mathbf{R}^2$, describe its dual cone\n$$\nK^* = \\{y \\in \\mathbf{R}^2 \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}.\n$$\n\n(d) $K = \\{(x_1, x_2) \\in \\mathbf{R}^2 \\mid x_1 + x_2 = 0\\}$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 18,
+    "source_idx": "Exercise 2.1",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "求值题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.1\nMaximum of a convex function over a polyhedron. Let $v_1,\\ldots,v_k\\in\\mathbb{R}^n$, let\n\\[\nP=\\operatorname{conv}\\{v_1,\\ldots,v_k\\}\\subseteq \\mathbb{R}^n,\n\\]\nand let $f:\\mathbb{R}^n\\to\\mathbb{R}$ be a convex function. Show that the maximum of $f$ over the polyhedron $P$ is achieved at one of its vertices, \\emph{i.e.},\n\n\\[\n\\sup_{x\\in P} f(x)=\\max_{i=1,\\ldots,k} f(v_i).\n\\]\n\n(A stronger statement is: the maximum of a convex function over a closed bounded convex set is achieved at an extreme point, \\emph{i.e.}, a point in the set that is not a convex combination of any other points in the set.) \\emph{Hint.} Assume the statement is false, and use Jensen's inequality.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 19,
+    "source_idx": "Exercise 2.2",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.2\n\\emph{A general vector composition rule.} Let $h:\\mathbf{R}^k\\to\\mathbf{R}$ be a convex function with $\\operatorname{dom} h=\\mathbf{R}^k$, and let $g_i:\\mathbf{R}^n\\to\\mathbf{R}$, $i=1,\\dots,k$. Define $f:\\mathbf{R}^n\\to\\mathbf{R}$ by\n\n\\[\nf(x)=h(g_1(x),g_2(x),\\ldots,g_k(x)).\n\\]\n\nAssume that for each $i\\in\\{1,\\dots,k\\}$, one of the following holds:\n\n- $h$ is nondecreasing in the $i$th argument (with all other arguments fixed), and $g_i$ is convex;\n\n- $h$ is nonincreasing in the $i$th argument (with all other arguments fixed), and $g_i$ is concave;\n\n- $g_i$ is affine.\n\nShow that $f$ is convex on $\\mathbf{R}^n$. (This composition rule subsumes all the ones given in the book, and is the one used in software systems such as CVX. The result also holds in the general case when the monotonicity conditions listed above are imposed on $\\tilde h$, the extended-valued extension of $h$.)",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 20,
+    "source_idx": "Exercise 2.3-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.3\n\\emph{Logarithmic barrier for the second-order cone.} Let\n\\[\nf(x,t)=-\\log(t^2-x^Tx),\n\\]\nwhere $x\\in \\mathbf{R}^n$, $t\\in \\mathbf{R}$, and\n\\[\n\\operatorname{dom} f=\\{(x,t)\\in \\mathbf{R}^n\\times\\mathbf{R}\\mid t>\\|x\\|_2\\}\n\\]\n(i.e., the interior of the second-order cone). The function $f$ is convex. (The function $f$ is called the logarithmic barrier function for the second-order cone.) This can be shown many ways, for example by evaluating the Hessian and demonstrating that it is positive semidefinite. In this exercise you establish convexity of $f$ using a relatively painless method, leveraging some composition rules and known convexity of a few other functions.\n\n(a) Let $u\\in \\mathbf{R}^n$ and $t\\in \\mathbf{R}_{++}$, and consider the function\n\\[\n(u,t)\\mapsto t-(1/t)u^Tu\n\\]\non the domain $\\{(u,t)\\in \\mathbf{R}^n\\times\\mathbf{R}_{++}\\}$. Explain why this function is concave on $\\operatorname{dom} f=\\{(u,t)\\in \\mathbf{R}^n\\times\\mathbf{R}\\mid t>\\|u\\|_2\\}$. \\emph{Hint.} Use convexity of the quadratic-over-linear function.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 21,
+    "source_idx": "Exercise 2.3-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.3\n\\emph{Logarithmic barrier for the second-order cone.} Let $f(x,t)=-\\log(t^2-x^Tx)$, with\n\\[\n\\operatorname{dom} f=\\{(x,t)\\in \\mathbf{R}^n\\times\\mathbf{R}\\mid t>\\|x\\|_2\\},\n\\]\n(i.e., the interior of the second-order cone). The function $f$ is convex. In this exercise you establish convexity of $f$ using a relatively painless method, leveraging some composition rules and known convexity of a few other functions.\n\n(b) Let $u\\in \\mathbf{R}^n$ and $t\\in \\mathbf{R}$. Using the result established previously, show that the function\n\\[\n(u,t)\\mapsto -\\log\\!\\left(t-\\frac{1}{t}u^Tu\\right)\n\\]\nis convex on\n\\[\n\\{(u,t)\\in \\mathbf{R}^n\\times\\mathbf{R}\\mid t>\\|u\\|_2\\}=\\operatorname{dom} f.\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 22,
+    "source_idx": "Exercise 2.3-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.3\n\\emph{Logarithmic barrier for the second-order cone.} Let\n\\[\nf(x,t)=-\\log(t^2-x^Tx),\n\\]\nwhere $(x,t)\\in \\mathbf{R}^n\\times\\mathbf{R}$ and\n\\[\n\\operatorname{dom} f=\\{(x,t)\\in \\mathbf{R}^n\\times\\mathbf{R}\\mid t>\\|x\\|_2\\}.\n\\]\n(Thus $t^2-x^Tx>0$ on the domain.) The function $f$ is called the logarithmic barrier function for the second-order cone. In the previous parts, one establishes that\n\\[\nf(x,t)= -\\log(t-\\|x\\|_2)-\\log(t+\\|x\\|_2),\n\\]\nand that this representation can be obtained from standard convexity-preserving composition rules using known convexity of $-\\log(\\cdot)$ and properties of the functions $t\\pm\\|x\\|_2$ on the domain $t>\\|x\\|_2$.\n\n(c) Using these facts, show that $f$ is convex on its domain.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 23,
+    "source_idx": "Exercise 2.4",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.4\n\\emph{A quadratic-over-linear composition theorem.} Let $f:\\mathbf{R}^n \\to \\mathbf{R}$ be a convex function satisfying $f(x)\\ge 0$ for all $x\\in \\operatorname{dom} f$, and let $g:\\mathbf{R}^n \\to \\mathbf{R}$ be a concave function satisfying $g(x)>0$ for all $x\\in \\operatorname{dom} g$. Show that the function\n\\[\nh(x)=\\frac{f(x)^2}{g(x)},\n\\]\ndefined on the domain $\\operatorname{dom} h=\\operatorname{dom} f \\cap \\operatorname{dom} g$, is convex.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 24,
+    "source_idx": "Exercise 2.5-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.5\n\\emph{A perspective composition rule} [Maréchal]. Let $f:\\mathbf{R}^n\\to\\mathbf{R}$ be a convex function with domain $\\operatorname{dom} f=\\mathbf{R}^n$ and satisfying $f(0)\\leq 0$. Define its perspective by\n\\[\ng(x,t)=t f(x/t),\n\\]\nfor $(x,t)$ in the domain $\\{(x,t)\\mid t>0\\}$.\n\n(a) Show that for each fixed $x\\in \\mathbf{R}^n$, the function $t\\mapsto t f(x/t)$ is nonincreasing on $t>0$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 25,
+    "source_idx": "Exercise 2.5-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.5\n\\emph{A perspective composition rule} [Maréchal]. Let $f:\\mathbf{R}^n\\to\\mathbf{R}$ be a convex function with $f(0)\\leq 0$.\n\n(b) Let $g:\\mathbf{R}^n\\to\\mathbf{R}$ be a concave function, and assume $g(x)>0$ for all $x\\in \\operatorname{dom} g$. Show that the function\n\n\\[\nh(x)=g(x)f(x/g(x)), \\qquad \\operatorname{dom} h=\\{x\\in \\operatorname{dom} g\\mid x/g(x)\\in \\operatorname{dom} f\\}\n\\]\n\nis convex on its domain.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 26,
+    "source_idx": "Exercise 2.5-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.5\n\\emph{A perspective composition rule} [Maréchal]. Let $f:\\mathbf{R}^n\\to\\mathbf{R}$ be a convex function with $f(0)\\leq 0$.\n\n(c) As an example, show that the function $h:\\mathbf{R}_{++}^n\\to\\mathbf{R}$ defined by\n\n\\[\nh(x)=\\frac{x^Tx}{\\left(\\prod_{k=1}^n x_k\\right)^{1/n}}, \\qquad \\operatorname{dom} h=\\mathbf{R}_{++}^n,\n\\]\n\nwhere $\\mathbf{R}_{++}^n=\\{x\\in\\mathbf{R}^n\\mid x_k>0,\\ k=1,\\dots,n\\}$, is convex on $\\mathbf{R}_{++}^n$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 27,
+    "source_idx": "Exercise 2.6",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.6\nPerspective of log determinant. Let $X\\in \\mathbf{S}_{++}^n$ be an $n\\times n$ real symmetric positive definite matrix, and let $t\\in \\mathbf{R}_{++}$. Show that\n\\[\nf(X,t)=nt\\log t-t\\log\\det X,\n\\]\nwith domain $\\operatorname{dom} f=\\mathbf{S}_{++}^n\\times \\mathbf{R}_{++}$, is convex in the pair $(X,t)$.\n\nUse this to show that the function $g:\\mathbf{S}_{++}^n\\to \\mathbf{R}$ defined by\n\\[\ng(X)=n(\\operatorname{tr}X)\\log(\\operatorname{tr}X)-(\\operatorname{tr}X)(\\log\\det X)\n\\]\nthat is,\n\\[\ng(X)= n\\left(\\sum_{i=1}^n \\lambda_i\\right)\\left(\\log\\sum_{i=1}^n \\lambda_i-\\sum_{i=1}^n \\log\\lambda_i\\right),\n\\]\nwhere $\\lambda_1,\\dots,\\lambda_n$ are the eigenvalues of $X$, is convex on $\\mathbf{S}_{++}^n$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 28,
+    "source_idx": "Exercise 2.7",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.7\nPre-composition with a linear fractional mapping. Suppose $f:\\mathbf{R}^m\\to\\mathbf{R}$ is convex, and let $A\\in\\mathbf{R}^{m\\times n}$, $b\\in\\mathbf{R}^m$, $c\\in\\mathbf{R}^n$, and $d\\in\\mathbf{R}$. Define $g$ on the set\n\\[\n\\operatorname{dom} g=\\{x\\in\\mathbf{R}^n\\mid c^Tx+d>0\\}\n\\]\nby\n\\[\ng(x)=(c^Tx+d)\\,f\\!\\left(\\frac{Ax+b}{c^Tx+d}\\right),\n\\]\nwhere $\\dfrac{Ax+b}{c^Tx+d}$ denotes division of the vector $Ax+b\\in\\mathbf{R}^m$ by the positive scalar $c^Tx+d$. Show that $g$ is convex on $\\operatorname{dom} g$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 29,
+    "source_idx": "Exercise 2.8",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "其他"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.8\nScalar valued linear fractional functions. Let $a,c\\in\\mathbf{R}^n$ and $b,d\\in\\mathbf{R}$, and consider the function $f:\\mathbf{R}^n\\to\\mathbf{R}$ defined by\n$$\nf(x)=\\frac{a^T x+b}{c^T x+d},\n$$\nwith domain\n$$\n\\operatorname{dom} f=\\{x\\in\\mathbf{R}^n\\mid c^T x+d>0\\},\n$$\nassumed nonempty. Such a function is called linear fractional. Determine when a linear fractional function is convex, and when a linear fractional function is quasiconvex.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 30,
+    "source_idx": "Exercise 2.9",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.9\nLet $A\\in\\mathbb{R}^{m\\times n}$ and $b\\in\\mathbb{R}^m$. Show that the function\n\n\\[\nf(x)=\\frac{\\|Ax-b\\|_2^2}{1-x^Tx}, \\qquad x\\in\\mathbb{R}^n,\n\\]\n\nis convex on the open unit ball $\\{x\\in\\mathbb{R}^n\\mid \\|x\\|_2<1\\}$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 31,
+    "source_idx": "Exercise 2.10",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.10\nWeighted geometric mean. Let $n\\in\\mathbf{N}$, and consider the function $f:\\mathbf{R}_{++}^n\\to\\mathbf{R}$ defined by\n\n\\[\nf(x)=\\prod_{k=1}^n x_k^{\\alpha_k},\n\\]\n\nwhere the weights $\\alpha_k\\geq 0$ satisfy $\\sum_{k=1}^n \\alpha_k\\leq 1$. The geometric mean $f(x)=\\left(\\prod_k x_k\\right)^{1/n}$ with $\\operatorname{dom} f=\\mathbf{R}_{++}^n$ is concave, as shown on page 74. Extend that proof to show that the weighted geometric mean above is concave on $\\mathbf{R}_{++}^n$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 32,
+    "source_idx": "Exercise 2.11",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.11\nLet $f:\\mathbf{R}^n\\to\\mathbf{R}$ be a convex function. Define the function $g:\\operatorname{dom} g\\to\\mathbf{R}$ by\n\n\\[\ng(x,t)=f(x/t),\n\\]\n\nwith domain\n\n\\[\n\\operatorname{dom} g=\\{(x,t)\\in \\mathbf{R}^n\\times\\mathbf{R}\\mid x/t\\in \\operatorname{dom} f,\\ t>0\\}.\n\\]\n\nShow that $g$ is quasiconvex.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 33,
+    "source_idx": "Exercise 2.12",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.12\nContinued fraction function. Let $f:D\\to\\mathbb{R}$ be the function of $x=(x_1,x_2,x_3,x_4)\\in\\mathbb{R}^4$ defined by\n\n\\[\nf(x)=\\frac{1}{x_1-\\frac{1}{x_2-\\frac{1}{x_3-\\frac{1}{x_4}}}},\n\\]\n\nwhere the domain $D$ consists of all $x\\in\\mathbb{R}^4$ for which every denominator in the continued fraction is positive, i.e.,\n\\[\nx_4>0,\\qquad x_3-\\frac{1}{x_4}>0,\\qquad x_2-\\frac{1}{x_3-\\frac{1}{x_4}}>0,\\qquad x_1-\\frac{1}{x_2-\\frac{1}{x_3-\\frac{1}{x_4}}}>0.\n\\]\nShow that $f$ is convex on $D$ and decreasing in each variable. (There is nothing special about $n=4$ here; the same holds for any number of variables.)",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 34,
+    "source_idx": "Exercise 2.13",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "求值题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.13\nCircularly symmetric Huber function. Let $n\\in\\mathbf{N}$ and $x\\in\\mathbf{R}^n$. The scalar Huber function is defined as\n\n\\[\nf_{\\mathrm{hub}}(t)=\n\\begin{cases}\n(1/2)t^2 & |t|\\leq 1\\\\\n|t|-1/2 & |t|>1.\n\\end{cases}\n\\]\n\nThis convex function comes up in several applications, including robust estimation. This problem concerns generalizations of the Huber function to $\\mathbf{R}^n$. One generalization to $\\mathbf{R}^n$ is given by $f_{\\mathrm{hub}}(x_1)+\\cdots+f_{\\mathrm{hub}}(x_n)$, but this function is not circularly symmetric, i.e., invariant under transformation of $x$ by an orthogonal matrix. A generalization to $\\mathbf{R}^n$ that is circularly symmetric is\n\n\\[\nf_{\\mathrm{cshub}}(x)=f_{\\mathrm{hub}}(\\|x\\|_2)=\n\\begin{cases}\n(1/2)\\|x\\|_2^2 & \\|x\\|_2\\leq 1\\\\\n\\|x\\|_2-1/2 & \\|x\\|_2>1.\n\\end{cases}\n\\]\n\nwhere $\\|\\cdot\\|_2$ denotes the Euclidean norm. (The subscript stands for `circularly symmetric Huber function'.) Show that $f_{\\mathrm{cshub}}:\\mathbf{R}^n\\to\\mathbf{R}$ is convex. Find its conjugate function $f_{\\mathrm{cshub}}^*$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 35,
+    "source_idx": "Exercise 2.14",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.14\nReverse Jensen inequality. Let $f:\\mathbf{R}^m\\to\\mathbf{R}\\cup\\{+\\infty\\}$ be a convex function, and suppose $x_1,\\ldots,x_n\\in\\operatorname{dom} f$. Let scalars $\\lambda_1,\\ldots,\\lambda_n$ satisfy $\\lambda_1>0$, $\\lambda_i\\leq 0$ for $i=2,\\ldots,n$, and $\\lambda_1+\\cdots+\\lambda_n=1$. Show that\n\n\\[\nf(\\lambda_1x_1+\\cdots+\\lambda_nx_n)\\geq \\lambda_1f(x_1)+\\cdots+\\lambda_nf(x_n).\n\\]\n\nHints. Draw a picture for the $n=2$ case first. For the general case, express $x_1$ as a convex combination of $\\lambda_1x_1+\\cdots+\\lambda_nx_n$ and $x_2,\\ldots,x_n$, and use Jensen's inequality.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 36,
+    "source_idx": "Exercise 2.15",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "求值题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.15\nMonotone extension of a convex function. Suppose $f:\\mathbf{R}^n\\to\\mathbf{R}$ is convex. Recall that a function $h:\\mathbf{R}^n\\to\\mathbf{R}$ is monotone nondecreasing if $h(x)\\geq h(y)$ whenever $x\\geq y$, where the inequality is understood componentwise. The monotone extension of $f$ is defined as\n\n\\[\ng(x)=\\inf_{z\\in\\mathbf{R}^n,\\ z\\geq 0} f(x+z), \\qquad x\\in\\mathbf{R}^n,\n\\]\n\nwhere $z\\geq 0$ is also understood componentwise. Assume that $g(x)>-\\infty$ for all $x\\in\\mathbf{R}^n$. Show that $g$ is convex and monotone nondecreasing, and satisfies $g(x)\\leq f(x)$ for all $x\\in\\mathbf{R}^n$. Show that if $h:\\mathbf{R}^n\\to\\mathbf{R}$ is any other convex function that satisfies these properties, then $h(x)\\leq g(x)$ for all $x\\in\\mathbf{R}^n$. Thus, $g$ is the maximum convex monotone underestimator of $f$.\n\nRemark. For simple functions (say, on $\\mathbf{R}$) it is easy to work out what $g$ is, given $f$. On $\\mathbf{R}^n$, it can be very difficult to work out an explicit expression for $g$. However, systems such as CVX can immediately handle functions such as $g$, defined by partial minimization.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 37,
+    "source_idx": "Exercise 2.16",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.16\n\\emph{Circularly symmetric convex functions.} Let $f:\\mathbf{R}^n \\to \\mathbf{R}$ be a convex function that is symmetric with respect to rotations, i.e., for every orthogonal matrix $Q\\in \\mathbf{R}^{n\\times n}$ and every $x\\in \\mathbf{R}^n$, we have $f(Qx)=f(x)$; equivalently, $f(x)$ depends only on $\\|x\\|_2$. Show that there exists a function $\\phi:\\mathbf{R}\\to\\mathbf{R}$, convex and nondecreasing, such that\n\\[\nf(x)=\\phi(\\|x\\|_2), \\qquad x\\in \\mathbf{R}^n,\n\\]\nwith $\\operatorname{dom}\\phi=\\mathbf{R}$. (Conversely, any function of this form is symmetric and convex, so this form characterizes such functions.)",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 38,
+    "source_idx": "Exercise 2.17-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.17\n\\emph{Infimal convolution.} Let $f_1,\\ldots,f_m:\\mathbf{R}^n\\to \\mathbf{R}\\cup\\{+\\infty\\}$ be convex functions. Their infimal convolution, denoted $g=f_1 \\diamond \\cdots \\diamond f_m$ (several other notations are also used), is defined by\n\n\\[\ng(x)=\\inf\\{f_1(x_1)+\\cdots+f_m(x_m)\\mid x_1,\\ldots,x_m\\in\\mathbf{R}^n,\\ x_1+\\cdots+x_m=x\\},\n\\]\n\nfor $x\\in\\mathbf{R}^n$, with effective domain $\\operatorname{dom} g=\\{x\\in\\mathbf{R}^n\\mid g(x)<+\\infty\\}$. In one simple interpretation, $f_i(x_i)$ is the cost for the $i$th firm to produce a mix of products given by $x_i$; $g(x)$ is then the optimal cost obtained if the firms can freely exchange products to produce, all together, the mix given by $x$. (The name `convolution' presumably comes from the observation that if we replace the sum above with the product, and the infimum above with integration, then we obtain the normal convolution.)\n\n(a) Show that $g$ is convex.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 39,
+    "source_idx": "Exercise 2.17-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.17\n\\emph{Infimal convolution.} Let $f_1,\\ldots,f_m: \\mathbf{R}^n \\to \\mathbf{R}\\cup\\{\\infty\\}$ be convex functions. Their infimal convolution, denoted $g=f_1 \\diamond \\cdots \\diamond f_m$ (several other notations are also used), is defined by\n\n\\[\ng(x)=\\inf\\{f_1(x_1)+\\cdots+f_m(x_m)\\mid x_1,\\ldots,x_m\\in \\mathbf{R}^n,\\ x_1+\\cdots+x_m=x\\},\n\\]\n\nwith the natural domain (i.e., $\\operatorname{dom} g=\\{x\\in\\mathbf{R}^n\\mid g(x)<\\infty\\}$). In one simple interpretation, $f_i(x_i)$ is the cost for the $i$th firm to produce a mix of products given by $x_i$; $g(x)$ is then the optimal cost obtained if the firms can freely exchange products to produce, all together, the mix given by $x$. (The name `convolution' presumably comes from the observation that if we replace the sum above with the product, and the infimum above with integration, then we obtain the normal convolution.)\n\n(b) Let $f_i^*$ and $g^*$ denote the convex conjugates of $f_i$ and $g$, respectively, i.e.,\n\\[\nf_i^*(y)=\\sup_{x\\in\\mathbf{R}^n}(y^Tx-f_i(x)),\\qquad g^*(y)=\\sup_{x\\in\\mathbf{R}^n}(y^Tx-g(x)).\n\\]\nShow that\n\\[\ng^* = f_1^* + \\cdots + f_m^*.\n\\]\nIn other words, the conjugate of the infimal convolution is the sum of the conjugates.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 40,
+    "source_idx": "Exercise 2.18",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.18\n*Conjugate of composition of convex and linear function.* Let $A\\in\\mathbf{R}^{m\\times n}$ satisfy $\\operatorname{rank}A=m$, and let $f:\\mathbf{R}^m\\to\\mathbf{R}$ be a convex function. Define $g:\\mathbf{R}^n\\to\\mathbf{R}$ by\n\\[\ng(x)=f(Ax).\n\\]\nLet $f^*$ and $g^*$ denote the Fenchel conjugates of $f$ and $g$, respectively, i.e.,\n\\[\nf^*(u)=\\sup_{z\\in\\mathbf{R}^m}(u^Tz-f(z)),\\qquad g^*(y)=\\sup_{x\\in\\mathbf{R}^n}(y^Tx-g(x)).\n\\]\nShow that, for every $y\\in\\mathbf{R}^n$,\n\\[\ng^*(y)=f^*((A^\\dagger)^T y), \\qquad \\operatorname{dom}(g^*)=A^T\\operatorname{dom}(f^*),\n\\]\nwhere $A^\\dagger=(AA^T)^{-1}A$ is the pseudo-inverse of $A$. (This generalizes the formula given on page 95 for the case when $A$ is square and invertible.)",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 41,
+    "source_idx": "Exercise 2.19",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.19\n[Roberts and Varberg] Let $n\\ge 1$ and suppose $\\lambda_1,\\ldots,\\lambda_n$ are positive real numbers. Show that the function $f:\\mathbf{R}^n\\to\\mathbf{R}$, defined by\n\n\\[\nf(x)=\\prod_{i=1}^n (1-e^{-x_i})^{\\lambda_i},\n\\]\n\nis concave on the set\n\n\\[\n\\operatorname{dom} f=\\left\\{x\\in\\mathbf{R}_{++}^n\\ \\middle|\\ \\sum_{i=1}^n \\lambda_i e^{-x_i}\\leq 1\\right\\}.\n\\]\n\nHint. The Hessian is given by\n\n\\[\n\\nabla^2 f(x)=f(x)(yy^T-\\operatorname{diag}(z))\n\\]\n\nwhere, for $i=1,\\ldots,n$,\n\\[\ny_i=\\lambda_i e^{-x_i}/(1-e^{-x_i}), \\qquad z_i=y_i/(1-e^{-x_i}).\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 42,
+    "source_idx": "Exercise 2.20-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "求值题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.20\nShow that the following function is convex.\n\nLet $a,b\\in\\mathbf{R}$ with $a<b$. For each coefficient vector $x=(x_1,\\dots,x_n)\\in\\mathbf{R}^n$, define the polynomial\n\n\\[\np_x(t)=x_1+x_2 t+x_3 t^2+\\cdots+x_n t^{n-1}, \\qquad t\\in[a,b],\n\\]\n\nand define $f:\\mathbf{R}^n\\to\\mathbf{R}$ by\n\n\\[\nf(x)=\\sup_{t\\in[a,b]} p_x(t)-\\inf_{t\\in[a,b]} p_x(t).\n\\]\n\nShow that $f$ is convex on $\\mathbf{R}^n$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 43,
+    "source_idx": "Exercise 2.20-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.20\nShow that the following function is convex.\n\n(b) The ‘exponential barrier’ associated with a family of inequality functions:\n\nLet $f_i:\\mathbf{R}^n\\to\\mathbf{R}$, $i=1,\\ldots,m$, be convex functions, and define the function $f$ on its domain\n\\[\n\\operatorname{dom} f=\\{x\\in\\mathbf{R}^n\\mid f_i(x)<0,\\ i=1,\\ldots,m\\}\n\\]\nby\n\\[\nf(x)=\\sum_{i=1}^m e^{-1/f_i(x)}.\n\\]\nShow that $f$ is convex on $\\operatorname{dom} f$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 44,
+    "source_idx": "Exercise 2.20-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.20\nShow that the following function is convex.\n\n(c) Let $g:\\mathbf{R}^n\\to\\mathbf{R}\\cup\\{+\\infty\\}$ be a convex function, and let $y\\in\\operatorname{dom} g:=\\{z\\in\\mathbf{R}^n\\mid g(z)<+\\infty\\}$. Define\n\n\\[\nf(x)=\\inf_{\\alpha>0}\\frac{g(y+\\alpha x)-g(y)}{\\alpha},\\qquad x\\in\\mathbf{R}^n,\n\\]\n\nwhere the infimum is taken in the extended-real sense. Show that $f$ is convex. (It can be shown that this is the directional derivative of $g$ at $y$ in the direction $x$.)",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 45,
+    "source_idx": "Exercise 2.21-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.21\nSymmetric convex functions of eigenvalues. A function $f:\\mathbf{R}^n\\to\\mathbf{R}$ is said to be symmetric if it is invariant with respect to a permutation of its arguments, i.e., $f(x)=f(Px)$ for any permutation matrix $P\\in\\mathbf{R}^{n\\times n}$. An example of a symmetric function is $f(x)=\\log(\\sum_{k=1}^n \\exp x_k)$.\n\nIn this problem we show that if $f:\\mathbf{R}^n\\to\\mathbf{R}$ is convex and symmetric, then the function $g:S^n\\to\\mathbf{R}$ defined as $g(X)=f(\\lambda(X))$ is convex, where $\\lambda(X)=(\\lambda_1(X),\\ \\lambda_2(X),\\ldots,\\lambda_n(X))$ is the vector of eigenvalues of $X\\in S^n$. This implies, for example, that the function\n\n\\[\ng(X)=\\log \\operatorname{tr} e^X=\\log \\sum_{k=1}^n e^{\\lambda_k(X)}\n\\]\n\nis convex on $S^n$.\n\n(a) A square matrix $S\\in\\mathbf{R}^{n\\times n}$ is doubly stochastic if its elements are nonnegative and all row sums and column sums are equal to one. It can be shown that every doubly stochastic matrix is a convex combination of permutation matrices.\n\nShow that if $f:\\mathbf{R}^n\\to\\mathbf{R}$ is convex and symmetric, $S\\in\\mathbf{R}^{n\\times n}$ is doubly stochastic, and $x\\in\\mathbf{R}^n$, then\n\n\\[\nf(Sx)\\leq f(x).\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 46,
+    "source_idx": "Exercise 2.21-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.21\nSymmetric convex functions of eigenvalues. A function $f:\\mathbf{R}^n\\to\\mathbf{R}$ is said to be symmetric if it is invariant with respect to a permutation of its arguments, i.e., $f(x)=f(Px)$ for any permutation matrix $P$. An example of a symmetric function is $f(x)=\\log(\\sum_{k=1}^n \\exp x_k)$.\n\nIn this problem we show that if $f:\\mathbf{R}^n\\to\\mathbf{R}$ is convex and symmetric, then the function $g:S^n\\to\\mathbf{R}$ defined by $g(X)=f(\\lambda(X))$ is convex, where $S^n$ denotes the set of $n\\times n$ real symmetric matrices and $\\lambda(X)=(\\lambda_1(X),\\lambda_2(X),\\ldots,\\lambda_n(X))\\in\\mathbf{R}^n$ is the vector of eigenvalues of $X$. This implies, for example, that the function\n\n\\[\ng(X)=\\log \\operatorname{tr} e^X=\\log \\sum_{k=1}^n e^{\\lambda_k(X)}\n\\]\n\nis convex on $S^n$.\n\n(b) Let $Y\\in S^n$ and let\n\\[\nY = Q \\operatorname{diag}(\\lambda) Q^T\n\\]\nbe an eigenvalue decomposition of $Y$, where $Q\\in\\mathbf{R}^{n\\times n}$ is orthogonal and $\\lambda=(\\lambda_1,\\ldots,\\lambda_n)\\in\\mathbf{R}^n$ is the vector of eigenvalues of $Y$. Show that the $n \\times n$ matrix $S$ with elements $S_{ij} = Q_{ij}^2$ is doubly stochastic and that $\\operatorname{diag}(Y) = S\\lambda$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 47,
+    "source_idx": "Exercise 2.21-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.21\nSymmetric convex functions of eigenvalues. Let $f:\\mathbf{R}^n\\to\\mathbf{R}$ be a symmetric function, i.e., $f(x)=f(Px)$ for every permutation matrix $P\\in\\mathbf{R}^{n\\times n}$. An example is $f(x)=\\log(\\sum_{k=1}^n \\exp x_k)$.\n\nLet $S^n$ denote the space of $n\\times n$ real symmetric matrices. For $X\\in S^n$, let $\\lambda(X)=(\\lambda_1(X),\\lambda_2(X),\\ldots,\\lambda_n(X))\\in\\mathbf{R}^n$ denote the vector of eigenvalues of $X$, and for any square matrix $A$, let $\\operatorname{diag}(A)\\in\\mathbf{R}^n$ denote the vector of diagonal entries of $A$. In this problem we show that if $f$ is convex and symmetric, then the function $g:S^n\\to\\mathbf{R}$ defined by $g(X)=f(\\lambda(X))$ is convex. This implies, for example, that the function\n\n\\[\ng(X)=\\log \\operatorname{tr} e^X=\\log \\sum_{k=1}^n e^{\\lambda_k(X)}\n\\]\n\nis convex on $S^n$.\n\n(c) Using the results in parts (a) and (b), show that if $f$ is convex and symmetric and $X\\in S^n$, then\n\n\\[\nf(\\lambda(X))=\\sup_{V\\in\\mathcal{V}} f(\\operatorname{diag}(V^T X V))\n\\]\n\nwhere $\\mathcal{V}$ is the set of $n\\times n$ real orthogonal matrices. Show that this implies that $f(\\lambda(X))$ is convex in $X$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 48,
+    "source_idx": "Exercise 2.22",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.22\nConvexity of nonsymmetric matrix fractional function. Let $n\\ge 1$ be an integer, and consider the function $f:\\mathbf{R}^{n\\times n}\\times\\mathbf{R}^n\\to\\mathbf{R}$ defined by\n\n\\[\nf(X,y)=y^T X^{-1} y,\n\\qquad \\operatorname{dom} f=\\{(X,y)\\mid X+X^T\\succ 0\\},\n\\]\n\nwhere $X\\in \\mathbf{R}^{n\\times n}$ and $y\\in \\mathbf{R}^n$. (Note that the condition $X+X^T\\succ 0$ ensures that $X$ is invertible, so $f$ is well defined on its domain.) Let $S^n$ denote the set of $n\\times n$ real symmetric matrices.\n\nIt is known that when this function is restricted to $X\\in S^n$, it is convex.\n\nIs $f$ convex on its domain? If so, prove it. If not, give a (simple) counterexample.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 49,
+    "source_idx": "Exercise 2.23-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.23\nShow that the following function is convex.\n\n(a) Let $g$ be a twice differentiable function on a convex domain $\\operatorname{dom} g\\subseteq \\mathbf{R}^n$, and define\n\\[\nf(x)=-\\exp(-g(x)), \\qquad x\\in \\operatorname{dom} g.\n\\]\nAssume that for every $x\\in \\operatorname{dom} g$,\n\\[\n\\begin{bmatrix}\n\\nabla^2 g(x) & \\nabla g(x) \\\\\n\\nabla g(x)^T & 1\n\\end{bmatrix} \\succeq 0.\n\\]\nShow that $f$ is convex on $\\operatorname{dom} g$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 50,
+    "source_idx": "Exercise 2.23-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.23\nShow that the following function $f:\\mathbf{R}^n \\to \\mathbf{R}$ is convex.\n\n(b) Let $A \\in \\mathbf{R}^{m\\times n}$, $b \\in \\mathbf{R}^m$, and let $\\|\\cdot\\|$ be a norm on $\\mathbf{R}^m$. Define\n\n\\[\nf(x)=\\max\\{\\|APx-b\\| \\mid P \\in \\mathbf{R}^{n\\times n} \\text{ is a permutation matrix}\\}, \\qquad x\\in \\mathbf{R}^n.\n\\]\n\nShow that $f$ is convex.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 51,
+    "source_idx": "Exercise 2.24",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.24\n\\emph{Convex hull of functions.} Let $g,h:\\mathbf{R}^n\\to\\mathbf{R}$ be convex functions that are bounded below (equivalently, have finite lower bounds), with $\\operatorname{dom} g=\\operatorname{dom} h=\\mathbf{R}^n$. Define the convex hull function of $g$ and $h$ by\n\n\\[\nf(x)=\\inf\\{\\theta g(y)+(1-\\theta)h(z)\\mid y,z\\in\\mathbf{R}^n,\\ \\theta y+(1-\\theta)z=x,\\ 0\\leq \\theta\\leq 1\\},\n\\]\n\nwhere the infimum is taken over $\\theta\\in[0,1]$ and $y,z\\in\\mathbf{R}^n$. Show that $f$ is convex. Describe $\\operatorname{epi} f$ in terms of $\\operatorname{epi} g$ and $\\operatorname{epi} h$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 52,
+    "source_idx": "Exercise 2.25",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.25\nLet $f:\\mathbf{R}\\to\\mathbf{R}\\cup\\{+\\infty\\}$, and let $\\operatorname{dom} f=\\{x\\in\\mathbf{R}\\mid f(x)<+\\infty\\}$. Show that $f$ is convex if and only if $\\operatorname{dom} f$ is convex and\n\n\\[\n\\det\n\\begin{bmatrix}\n1 & 1 & 1 \\\\\nx & y & z \\\\\nf(x) & f(y) & f(z)\n\\end{bmatrix}\n\\geq 0\n\\]\n\nfor all $x,y,z\\in \\operatorname{dom} f$ with $x<y<z$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 53,
+    "source_idx": "Exercise 2.26-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.26\n\\emph{Generalization of the convexity of $\\log \\det X^{-1}$.} Let $P \\in \\mathbf{R}^{n\\times m}$ have full column rank $m$ (so $m\\le n$). In this problem we show that the function $f:\\mathbf{S}^n \\to \\mathbf{R}$, with $\\operatorname{dom} f=\\mathbf{S}_{++}^n$, and\n\n\\[\nf(X)=\\log\\det(P^T X^{-1}P)\n\\]\n\nis convex. To prove this, we assume (without loss of generality) that $P$ has the form\n\n\\[\nP=\n\\begin{bmatrix}\nI \\\\\n0\n\\end{bmatrix},\n\\]\n\nwhere $I$ is the $m\\times m$ identity matrix and the zero block has size $(n-m)\\times m$. The matrix $P^T X^{-1}P$ is then the leading $m\\times m$ principal submatrix of $X^{-1}$.\n\n(a) Let $Y,Z\\in \\mathbf{S}^m$ satisfy $0 \\prec Y \\preceq Z$. Show that $\\det Y \\leq \\det Z$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 54,
+    "source_idx": "Exercise 2.26-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.26\n\\emph{Generalization of the convexity of $\\log \\det X^{-1}$.} Let $P \\in \\mathbf{R}^{n\\times m}$ have rank $m$, with $m\\le n$. In this problem we show that the function $f:\\mathbf{S}^n \\to \\mathbf{R}$, with $\\operatorname{dom} f=\\mathbf{S}_{++}^n$, and\n\n\\[\nf(X)=\\log\\det(P^T X^{-1}P)\n\\]\n\nis convex. To prove this, we assume (without loss of generality) that $P$ has the form\n\n\\[\nP=\n\\begin{bmatrix}\nI \\\\\n0\n\\end{bmatrix},\n\\]\n\nwhere $I$ is the $m\\times m$ identity matrix (so the zero block has size $(n-m)\\times m$). The matrix $P^T X^{-1}P$ is then the leading $m\\times m$ principal submatrix of $X^{-1}$.\n\n(b) Let $X\\in \\mathbf{S}_{++}^n$, partitioned conformably as\n\n\\[\nX=\n\\begin{bmatrix}\nX_{11} & X_{12} \\\\\nX_{12}^T & X_{22}\n\\end{bmatrix},\n\\]\n\nwith $X_{11}\\in \\mathbf{S}^m$, $X_{12}\\in \\mathbf{R}^{m\\times (n-m)}$, and $X_{22}\\in \\mathbf{S}^{n-m}$. Show that the optimization problem\n\n\\[\n\\begin{aligned}\n\\text{minimize}\\quad & \\log\\det Y^{-1} \\\\\n\\text{subject to}\\quad & \\begin{bmatrix}\nY & 0 \\\\\n0 & 0\n\\end{bmatrix}\n\\preceq\n\\begin{bmatrix}\nX_{11} & X_{12} \\\\\nX_{12}^T & X_{22}\n\\end{bmatrix},\n\\end{aligned}\n\\]\n\nwith variable $Y \\in \\mathbf{S}^m$, has the solution\n\n\\[\nY = X_{11} - X_{12}X_{22}^{-1}X_{12}^T.\n\\]\n\n(As usual, we take $\\mathbf{S}_{++}^m$ as the domain of $\\log \\det Y^{-1}$.)\nHint. Use the Schur complement characterization of positive definite block matrices (page 651 of the book): if $C \\succ 0$ then\n\n\\[\n\\begin{bmatrix}\nA & B \\\\\nB^T & C\n\\end{bmatrix}\n\\succeq 0\n\\]\n\nif and only if $A - BC^{-1}B^T \\succeq 0$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 55,
+    "source_idx": "Exercise 2.26-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.26\n\\emph{Generalization of the convexity of $\\log \\det X^{-1}$.} Let $P \\in \\mathbf{R}^{n\\times m}$ have rank $m$. In this problem we show that the function $f:\\mathbf{S}^n \\to \\mathbf{R}$, with $\\operatorname{dom} f=\\mathbf{S}_{++}^n$, and\n\n\\[\nf(X)=\\log\\det(P^T X^{-1}P)\n\\]\n\nis convex. To prove this, we assume (without loss of generality) that $P$ has the form\n\n\\[\nP=\n\\begin{bmatrix}\nI \\\\\n0\n\\end{bmatrix},\n\\]\n\nwhere $I$ is the $m\\times m$ identity matrix, so that $P \\in \\mathbf{R}^{n\\times m}$. Then $P^T X^{-1}P$ is the leading $m\\times m$ principal submatrix of $X^{-1}$.\n\n(c) Let $X \\in \\mathbf{S}_{++}^n$ be partitioned conformally with $P$ as\n\\[\nX=\n\\begin{bmatrix}\nX_{11} & X_{12}\\\\\nX_{12}^T & X_{22}\n\\end{bmatrix},\n\\]\nwhere $X_{11} \\in \\mathbf{S}^m$, $X_{22} \\in \\mathbf{S}^{n-m}$, and $X_{12} \\in \\mathbf{R}^{m\\times (n-m)}$. Using the result in part (b) and the minimization property (page 3-19, lecture notes), show that the function\n\n\\[\nf(X) = \\log \\det (X_{11} - X_{12}X_{22}^{-1}X_{12}^T)^{-1},\n\\]\n\nwith $\\mathbf{dom}\\,f = \\mathbf{S}_{++}^n$, is convex.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 56,
+    "source_idx": "Exercise 2.26-(d)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.26\n\\emph{Generalization of the convexity of $\\log \\det X^{-1}$.} Let $P \\in \\mathbf{R}^{n\\times m}$ have rank $m$. In this problem we show that the function $f:\\mathbf{S}^n \\to \\mathbf{R}$, with $\\operatorname{dom} f=\\mathbf{S}_{++}^n$, and\n\n\\[\nf(X)=\\log\\det(P^T X^{-1}P)\n\\]\n\nis convex. To prove this, we assume (without loss of generality) that $P$ has the form\n\n\\[\nP=\n\\begin{bmatrix}\nI \\\\\n0\n\\end{bmatrix},\n\\]\n\nwhere $I$ is the $m\\times m$ identity matrix, so that $P \\in \\mathbf{R}^{n\\times m}$. Let $X\\in \\mathbf{S}_{++}^n$ be partitioned conformably with $P$ as\n\n\\[\nX=\n\\begin{bmatrix}\nX_{11} & X_{12} \\\\\nX_{12}^T & X_{22}\n\\end{bmatrix},\n\\]\n\nwhere $X_{11}\\in \\mathbf{S}^m$, $X_{22}\\in \\mathbf{S}^{n-m}$, and $X_{12}\\in \\mathbf{R}^{m\\times (n-m)}$. The matrix $P^T X^{-1}P$ is then the leading $m\\times m$ principal submatrix of $X^{-1}$.\n\n(d) Show that $(X_{11} - X_{12}X_{22}^{-1}X_{12}^T)^{-1}$ is the leading $m \\times m$ principal submatrix of $X^{-1}$, i.e.,\n\n\\[\n(X_{11} - X_{12}X_{22}^{-1}X_{12}^T)^{-1} = P^T X^{-1} P.\n\\]\n\nHence, the convex function $f$ defined in part (c) can also be expressed as $f(X) = \\log \\det (P^T X^{-1}P)$.\nHint. Use the formula for the inverse of a symmetric block matrix:\n\n\\[\n\\begin{bmatrix}\nA & B \\\\\nB^T & C\n\\end{bmatrix}^{-1}\n=\n\\begin{bmatrix}\n0 & 0 \\\\\n0 & C^{-1}\n\\end{bmatrix}\n+\n\\begin{bmatrix}\n-I \\\\\nC^{-1}B^T\n\\end{bmatrix}\n(A - BC^{-1}B^T)^{-1}\n\\begin{bmatrix}\n-I \\\\\nC^{-1}B^T\n\\end{bmatrix}^T\n\\]\n\nif $C$ and $A - BC^{-1}B^T$ are invertible.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 57,
+    "source_idx": "Exercise 2.27-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.27\nFunctions of a random variable with log-concave density. Suppose the random variable $X$ on $\\mathbf{R}^n$ has a density $p$ with respect to Lebesgue measure on $\\mathbf{R}^n$, and assume that this density is log-concave. Let $g : \\mathbf{R}^n \\to \\mathbf{R}$, and define the scalar random variable $Y = g(X)$. For each of the following statements, either give a counterexample, or show that the statement is true.\n\n(a) If $g$ is affine and not constant, then $Y$ has a log-concave density (with respect to Lebesgue measure on $\\mathbf{R}$).",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 58,
+    "source_idx": "Exercise 2.27-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.27\nFunctions of a random variable with log-concave density. Let $X$ be an $\\mathbf{R}^n$-valued random variable with density $p : \\mathbf{R}^n \\to \\mathbf{R}_+$ (with respect to Lebesgue measure), and suppose $p$ is log-concave on $\\mathbf{R}^n$. Let $g : \\mathbf{R}^n \\to \\mathbf{R}$, and define the real-valued random variable $Y = g(X)$. For each of the following statements, either give a counterexample or show that the statement is true.\n\n(b) If $g$ is convex, then the function $a \\mapsto \\mathbf{prob}(Y \\leq a)$ is log-concave in $a \\in \\mathbf{R}$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 59,
+    "source_idx": "Exercise 2.27-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.27\nFunctions of a random variable with log-concave density. Suppose the random variable $X$ on $\\mathbf{R}^n$ has a log-concave probability density (with respect to Lebesgue measure), and let $Y=g(X)$, where $g:\\mathbf{R}^n\\to\\mathbf{R}$ is measurable. For each of the following statements, either give a counterexample, or show that the statement is true.\n\n(c) Assume $g$ is concave. Show or disprove that $\\mathbf{E}\\,((Y-a)_+)$ is a convex and log-concave function of $a\\in\\mathbf{R}$. (This quantity is called the tail expectation of $Y$; you may assume the expectation exists for all relevant $a$. We define $(s)_+$ by $(s)_+=\\max\\{s,0\\}$.)",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 60,
+    "source_idx": "Exercise 2.28-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "求值题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.28\nMajorization. Let $a\\in\\mathbb{R}^n$ be a given vector, and define $C\\subseteq\\mathbb{R}^n$ as the set of all permutations of $a$, i.e.,\n\\[\nC=\\{(a_{\\pi_1}, a_{\\pi_2}, \\ldots, a_{\\pi_n})\\mid (\\pi_1,\\pi_2,\\ldots,\\pi_n)\\text{ is a permutation of }(1,2,\\ldots,n)\\}.\n\\]\n\n(a) For $y\\in\\mathbb{R}^n$, the support function of $C$ is defined by\n\\[\nS_C(y)=\\max_{x\\in C} y^T x.\n\\]\nShow that\n\\[\nS_C(y) = a_{[1]}y_{[1]} + a_{[2]}y_{[2]} + \\cdots + a_{[n]}y_{[n]}.\n\\]\n\nHere, for any vector $u\\in\\mathbb{R}^n$, $u_{[1]}, u_{[2]}, \\ldots, u_{[n]}$ denote the components of $u$ arranged in nonincreasing order.\n\nHint. To find the maximum of $y^T x$ over $x \\in C$, write the inner product as\n\n\\[\ny^T x\n=\n(y_1-y_2)x_1 + (y_2-y_3)(x_1+x_2) + (y_3-y_4)(x_1+x_2+x_3) + \\cdots\n\\]\n\n\n\\[\n\\qquad + (y_{n-1}-y_n)(x_1+x_2+\\cdots+x_{n-1}) + y_n(x_1+x_2+\\cdots+x_n)\n\\]\n\nand assume that the components of $y$ are sorted in nonincreasing order.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 61,
+    "source_idx": "Exercise 2.28-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.28\nMajorization. Let $a\\in\\mathbb{R}^n$ be given, and define $C\\subset\\mathbb{R}^n$ as the set of all permutations of $a$, i.e.,\n\\[\nC=\\{(a_{\\pi_1},a_{\\pi_2},\\ldots,a_{\\pi_n})\\mid (\\pi_1,\\pi_2,\\ldots,\\pi_n)\\text{ is a permutation of }(1,2,\\ldots,n)\\}.\n\\]\nLet $S_C(y)=\\sup\\{y^T z\\mid z\\in C\\}$ denote the support function of $C$. For a vector $u\\in\\mathbb{R}^n$, let $u_{[1]}\\geq u_{[2]}\\geq\\cdots\\geq u_{[n]}$ denote its components sorted in nonincreasing order, and define\n\\[\ns_k(u)=u_{[1]}+u_{[2]}+\\cdots+u_{[k]},\\qquad k=1,\\ldots,n.\n\\]\n\n(b) Show that, for $x\\in\\mathbb{R}^n$, the condition\n\\[\nx^T y \\leq S_C(y)\\quad\\text{for all } y\\in\\mathbb{R}^n\n\\]\nholds if and only if\n\\[\ns_k(x) \\leq s_k(a), \\quad k = 1,\\ldots,n-1, \\qquad s_n(x) = s_n(a).\n\\]\nWhen these inequalities hold, we say the vector $a$ majorizes the vector $x$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 62,
+    "source_idx": "Exercise 2.28-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.28\nMajorization. Let $a\\in\\mathbb{R}^n$ be given, and define $C\\subset\\mathbb{R}^n$ as the set of all permutations of $a$, i.e.,\n\\[\nC=\\{(a_{\\pi_1},a_{\\pi_2},\\ldots,a_{\\pi_n})\\mid (\\pi_1,\\pi_2,\\ldots,\\pi_n)\\text{ is a permutation of }(1,2,\\ldots,n)\\}.\n\\]\nLet $S_C$ denote the support function of $C$, i.e.,\n\\[\nS_C(y)=\\sup_{z\\in C} y^Tz,\n\\]\nand let $S_C^*$ denote its convex conjugate,\n\\[\nS_C^*(x)=\\sup_{y\\in\\mathbb{R}^n}(x^Ty-S_C(y)).\n\\]\nAssume the notion of majorization is the standard one: $x\\in\\mathbb{R}^n$ is majorized by $a$ if, after rearranging the components of both vectors in nonincreasing order,\n\\[\n\\sum_{i=1}^k x_{[i]}\\le \\sum_{i=1}^k a_{[i]},\\quad k=1,\\ldots,n-1,\n\\qquad\\text{and}\\qquad\n\\sum_{i=1}^n x_i=\\sum_{i=1}^n a_i.\n\\]\n\n(c) Conclude that the conjugate of $S_C$ is given by\n\n\\[\nS_C^*(x)=\n\\begin{cases}\n0 & \\text{if } x \\text{ is majorized by } a,\\\\\n+\\infty & \\text{otherwise.}\n\\end{cases}\n\\]\n\nSince $S_C^*$ is the indicator function of the convex hull of $C$, this establishes the following result: $x$ is a convex combination of the permutations of $a$ if and only if $a$ majorizes $x$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 63,
+    "source_idx": "Exercise 2.29-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.29\n\\emph{Convexity of products of powers.} This problem concerns the product of powers function $f:\\mathbf{R}_{++}^n \\to \\mathbf{R}$ given by $f(x)=x_1^{\\theta_1}\\cdots x_n^{\\theta_n}$, where $\\theta \\in \\mathbf{R}^n$ is a vector of powers and $\\mathbf{R}_{++}^n$ denotes the set of vectors with all components strictly positive. We are interested in finding values of $\\theta$ for which $f$ is convex or concave. You already know a few, for example when $n=2$ and $\\theta=(2,-1)$, $f$ is convex (the quadratic-over-linear function), and when $\\theta=(1/n)1$, $f$ is concave (geometric mean). Of course, if $n=1$, $f$ is convex when $\\theta \\geq 1$ or $\\theta \\leq 0$, and concave when $0 \\leq \\theta \\leq 1$.\n\nShow each of the statements below. We will not read long or complicated proofs, or ones that involve Hessians. We are looking for short, snappy ones, that (where possible) use composition rules, perspective, partial minimization, or other operations, together with known convex or concave functions, such as the ones listed in the previous paragraph. Feel free to use the results of earlier statements in later ones.\n\n(a) When $n=2$, $x\\in \\mathbf{R}_{++}^2$, $\\theta \\succeq 0$ (i.e., $\\theta_1,\\theta_2\\ge 0$), and $1^T\\theta=1$, show that $f$ is concave on $\\mathbf{R}_{++}^2$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 64,
+    "source_idx": "Exercise 2.29-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.29\n\\emph{Convexity of products of powers.} Let $f:\\mathbf{R}_{++}^n \\to \\mathbf{R}$ be the product-of-powers function defined by\n\\[\nf(x)=x_1^{\\theta_1}\\cdots x_n^{\\theta_n},\n\\]\nwhere $x=(x_1,\\dots,x_n)\\in \\mathbf{R}_{++}^n$ and $\\theta=(\\theta_1,\\dots,\\theta_n)\\in \\mathbf{R}^n$ is a vector of exponents. We are interested in determining for which values of $\\theta$ the function $f$ is convex or concave.\n\nShow the following statement. Do not use Hessians; instead, give a short proof using composition rules, perspective, partial minimization, or other standard convex-analysis operations, together with known convex or concave functions.\n\n(b) Assume $\\theta \\succeq 0$ (i.e., $\\theta_i\\ge 0$ for all $i=1,\\dots,n$) and $1^T\\theta=1$. Show that $f$ is concave on $\\mathbf{R}_{++}^n$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 65,
+    "source_idx": "Exercise 2.29-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.29\n\\emph{Convexity of products of powers.} Let $n\\geq 1$, and consider the product-of-powers function $f:\\mathbf{R}_{++}^n \\to \\mathbf{R}$ defined by\n\\[\nf(x)=x_1^{\\theta_1}\\cdots x_n^{\\theta_n},\n\\]\nwhere $\\theta=(\\theta_1,\\ldots,\\theta_n)\\in \\mathbf{R}^n$ is a vector of powers, $\\mathbf{R}_{++}^n=\\{x\\in\\mathbf{R}^n\\mid x_i>0,\\ i=1,\\ldots,n\\}$, and $1\\in\\mathbf{R}^n$ denotes the all-ones vector. We are interested in finding values of $\\theta$ for which $f$ is convex or concave. You already know a few, for example when $n=2$ and $\\theta=(2,-1)$, $f$ is convex (the quadratic-over-linear function), and when $\\theta=(1/n)1$, $f$ is concave (geometric mean). Of course, if $n=1$, $f$ is convex when $\\theta \\geq 1$ or $\\theta \\leq 0$, and concave when $0 \\leq \\theta \\leq 1$.\n\nShow each of the statements below. We will not read long or complicated proofs, or ones that involve Hessians. We are looking for short, snappy ones, that (where possible) use composition rules, perspective, partial minimization, or other operations, together with known convex or concave functions, such as the ones listed in the previous paragraph. Feel free to use the results of earlier statements in later ones.\n\n(c) Show that if $\\theta \\succeq 0$ (i.e., $\\theta_i\\geq 0$ for all $i$) and $1^T\\theta \\leq 1$, then $f$ is concave on $\\mathbf{R}_{++}^n$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 66,
+    "source_idx": "Exercise 2.29-(d)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.29\n\\emph{Convexity of products of powers.} Let $n\\in\\mathbf{N}$, and consider the product-of-powers function $f:\\mathbf{R}_{++}^n\\to\\mathbf{R}$ defined by\n\\[\nf(x)=x_1^{\\theta_1}\\cdots x_n^{\\theta_n},\n\\]\nwhere $\\theta=(\\theta_1,\\dots,\\theta_n)\\in\\mathbf{R}^n$ is a vector of exponents and $\\mathbf{R}_{++}^n=\\{x\\in\\mathbf{R}^n\\mid x_i>0,\\ i=1,\\dots,n\\}$. We are interested in determining for which values of $\\theta$ the function $f$ is convex or concave. You already know a few examples: when $n=2$ and $\\theta=(2,-1)$, $f$ is convex (the quadratic-over-linear function), and when $\\theta=(1/n)1$, $f$ is concave (the geometric mean). Of course, if $n=1$, $f$ is convex when $\\theta\\geq 1$ or $\\theta\\leq 0$, and concave when $0\\leq \\theta\\leq 1$.\n\nShow each of the statements below. We will not read long or complicated proofs, or ones that involve Hessians. We are looking for short, snappy ones that, where possible, use composition rules, perspective, partial minimization, or other operations, together with known convex or concave functions, such as the ones listed in the previous paragraph. Feel free to use the results of earlier statements in later ones.\n\n(d) Show that if $\\theta\\preceq 0$ (i.e., $\\theta_i\\leq 0$ for all $i=1,\\dots,n$), then $f$ is convex on $\\mathbf{R}_{++}^n$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 67,
+    "source_idx": "Exercise 2.29-(e)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.29\n\\emph{Convexity of products of powers.} Let $n\\geq 1$ and consider the product-of-powers function $f:\\mathbf{R}_{++}^n \\to \\mathbf{R}$ defined by\n\\[\nf(x)=x_1^{\\theta_1}\\cdots x_n^{\\theta_n},\n\\]\nwhere $\\theta=(\\theta_1,\\ldots,\\theta_n)\\in \\mathbf{R}^n$ is a vector of powers and $\\mathbf{R}_{++}^n$ denotes the set of vectors with all components strictly positive. We are interested in finding values of $\\theta$ for which $f$ is convex or concave. You already know a few examples: when $n=2$ and $\\theta=(2,-1)$, $f$ is convex (the quadratic-over-linear function), and when $\\theta=(1/n)1$, $f$ is concave (geometric mean). Of course, if $n=1$, $f$ is convex when $\\theta \\geq 1$ or $\\theta \\leq 0$, and concave when $0 \\leq \\theta \\leq 1$.\n\nShow the following statement. We will not read long or complicated proofs, or ones that involve Hessians. We are looking for short, snappy ones, that (where possible) use composition rules, perspective, partial minimization, or other operations, together with known convex or concave functions, such as the ones listed in the previous paragraph.\n\n(e) Show that if $1^T\\theta=1$ and exactly one component of $\\theta$ is positive (equivalently, one component is $>0$ and all the others are $\\leq 0$), then $f$ is convex on $\\mathbf{R}_{++}^n$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 68,
+    "source_idx": "Exercise 2.29-(f)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.29\n\\emph{Convexity of products of powers.} Let $n\\in\\mathbf{N}$, and consider the product-of-powers function $f:\\mathbf{R}_{++}^n \\to \\mathbf{R}$ defined by\n\\[\nf(x)=x_1^{\\theta_1}\\cdots x_n^{\\theta_n},\n\\]\nwhere $\\theta=(\\theta_1,\\dots,\\theta_n)\\in\\mathbf{R}^n$ is a vector of exponents and $\\mathbf{R}_{++}^n=\\{x\\in\\mathbf{R}^n\\mid x_i>0,\\ i=1,\\dots,n\\}$. We are interested in finding values of $\\theta$ for which $f$ is convex or concave. You already know a few, for example when $n=2$ and $\\theta=(2,-1)$, $f$ is convex (the quadratic-over-linear function), and when $\\theta=(1/n)1$, $f$ is concave (geometric mean). Of course, if $n=1$, $f$ is convex when $\\theta \\geq 1$ or $\\theta \\leq 0$, and concave when $0 \\leq \\theta \\leq 1$.\n\nShow the following statement. We will not read long or complicated proofs, or ones that involve Hessians. We are looking for short, snappy ones, that (where possible) use composition rules, perspective, partial minimization, or other operations, together with known convex or concave functions, such as the ones listed in the previous paragraph. Feel free to use the results of earlier statements in later ones.\n\n(f) Show that if $1^T\\theta \\geq 1$ and exactly one component of $\\theta$ is positive (i.e., there exists a unique index $i$ such that $\\theta_i>0$, and $\\theta_j\\leq 0$ for all $j\\neq i$), then $f$ is convex on $\\mathbf{R}_{++}^n$.\n\n\\emph{Remark.} Parts (c), (d), and (f) exactly characterize the cases when $f$ is either convex or concave. That is, if none of these conditions on $\\theta$ hold, $f$ is neither convex nor concave. Your teaching staff has, however, kindly refrained from asking you to show this.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 69,
+    "source_idx": "Exercise 2.30",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.30\nHuber penalty. Let $f,g:\\mathbf{R}^n\\to\\mathbf{R}$ be defined by\n\\[\nf(x)=\\|x\\|_1, \\qquad g(x)=\\frac{1}{2}\\|x\\|_2^2,\n\\]\nwhere $\\|\\cdot\\|_1$ and $\\|\\cdot\\|_2$ denote the usual $\\ell_1$- and Euclidean norms on $\\mathbf{R}^n$. The infimal convolution of two functions $f$ and $g$ on $\\mathbf{R}^n$ is defined as\n\\[\nh(x)=\\inf_{y\\in\\mathbf{R}^n} \\left(f(y)+g(x-y)\\right)\n\\]\n(see exercise 2.17). Show that the infimal convolution of $f$ and $g$, i.e., the function\n\\[\nh(x)=\\inf_{y\\in\\mathbf{R}^n} \\left(f(y)+g(x-y)\\right)\n=\\inf_{y\\in\\mathbf{R}^n} \\left(\\|y\\|_1+\\frac{1}{2}\\|x-y\\|_2^2\\right),\n\\]\ncan be written as the Huber penalty\n\\[\nh(x)=\\sum_{i=1}^n \\phi(x_i), \\qquad\n\\phi(u)=\n\\begin{cases}\n u^2/2, & |u|\\leq 1,\\\\\n |u|-1/2, & |u|>1.\n\\end{cases}\n\\]\nfor all $x=(x_1,\\dots,x_n)\\in\\mathbf{R}^n$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 70,
+    "source_idx": "Exercise 2.31-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.31\nLet $n\\geq 1$. Suppose the function $h:\\mathbf{R}\\to\\mathbf{R}$ is convex and nondecreasing, with $\\operatorname{dom} h=\\mathbf{R}$, and satisfies $h(t)=h(0)$ for all $t\\leq 0$.\n\n(a) Show that the function $f:\\mathbf{R}^n\\to\\mathbf{R}$ defined by\n$$\nf(x)=h(\\|x\\|_2)\n$$\nis convex on $\\mathbf{R}^n$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 71,
+    "source_idx": "Exercise 2.31-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.31\nSuppose $h:\\mathbf{R}\\to\\mathbf{R}$ is convex and nondecreasing, with $\\operatorname{dom} h=\\mathbf{R}$, and satisfies $h(t)=h(0)$ for all $t\\leq 0$. Define $f:\\mathbf{R}^n\\to\\mathbf{R}$ by\n\\[\nf(x)=h(\\|x\\|_2).\n\\]\n(b) Show that the conjugate of $f$ is\n\\[\nf^*(y)=h^*(\\|y\\|_2), \\qquad y\\in \\mathbf{R}^n.\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 72,
+    "source_idx": "Exercise 2.31-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Exercise 2.31\nSuppose the function $h:\\mathbf{R}\\to\\mathbf{R}$ is convex, nondecreasing, with $\\operatorname{dom} h=\\mathbf{R}$, and $h(t)=h(0)$ for $t\\leq 0$. Let $h^*$ denote its convex conjugate. In part (b), one shows that if $g:\\mathbf{R}^n\\to\\mathbf{R}$ is defined by $g(x)=h(\\|x\\|_2)$, then\n\\[\ng^*(y)=h^*(\\|y\\|_2),\\qquad y\\in\\mathbf{R}^n.\n\\]\n\n(c) As an example, for $p>1$ and $x\\in\\mathbf{R}^n$, derive the conjugate of $f(x)=(1/p)\\|x\\|_2^p$ by applying the result of part (b) with the function\n\n\\[\nh(t)=\\frac{1}{p}\\max\\{0,t\\}^p=\n\\begin{cases}\n\\frac{1}{p}t^p & t\\geq 0\\\\\n0 & t<0.\n\\end{cases}\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  }
+]

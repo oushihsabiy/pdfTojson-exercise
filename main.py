@@ -19,6 +19,7 @@ INPUT_PDF_DIR: Path
 OUTPUT_JSON_DIR: Path
 WORK_DIR: Path
 PIPELINE_MODE: str
+RAWJSON_SRC_DIR: Optional[Path]
 OCR_MAX_TOKENS: Optional[int]
 ONLY_THESE_STEMS: set[str]
 OVERWRITE_JSON: bool
@@ -55,12 +56,13 @@ def run_cmd(cmd: list[str]) -> None:
         raise SystemExit(proc.returncode)
 
 
-def ensure_scripts_exist(script_dir: Path, mode: str) -> tuple[Path, Path, Path, Path, Path]:
+def ensure_scripts_exist(script_dir: Path, mode: str, rawjson_src_dir: Optional[Path] = None) -> tuple[Path, Path, Path, Path, Path]:
     if mode not in {"book", "exercise", "paper"}:
         raise SystemExit(
             f"Unsupported mode: {mode!r} (expected 'book', 'exercise', or 'paper')")
 
-    src_dir_rawjson = script_dir / "src" / mode / "rawjson"
+    src_dir_rawjson = rawjson_src_dir if rawjson_src_dir is not None else script_dir / \
+        "src" / mode / "rawjson"
     pdf_to_md = src_dir_rawjson / "pdfTomd.py"
     md_to_tex = src_dir_rawjson / "mdTotex.py"
     tex_to_json = src_dir_rawjson / "texTojson.py"
@@ -420,7 +422,7 @@ def parse_args() -> argparse.Namespace:
         description="Run the OCR -> Markdown -> TeX -> JSON pipeline.")
     ap.add_argument(
         "--mode",
-        choices=["book", "paper"],
+        choices=["book", "paper", "exercise"],
         default=str(get_setting(settings, "PIPELINE_MODE", "book")),
         help="Pipeline mode to run (default: %(default)s)",
     )
@@ -442,6 +444,9 @@ def main() -> None:
     OCR_MAX_TOKENS = get_setting(settings, "OCR_MAX_TOKENS", None)
     ONLY_THESE_STEMS = set(get_setting(settings, "ONLY_THESE_STEMS", []))
     OVERWRITE_JSON = bool(get_setting(settings, "OVERWRITE_JSON", False))
+    _rawjson_str = get_setting(settings, "RAWJSON_SRC_DIR", None)
+    RAWJSON_SRC_DIR = (PROJECT_ROOT / str(_rawjson_str)
+                       ) if _rawjson_str else None
     OCR_WORKERS = get_setting(settings, "OCR_WORKERS", 4)
     THINK_WORKERS = get_setting(settings, "THINK_WORKERS", 4)
     STRICT_RESUME = bool(get_setting(settings, "STRICT_RESUME", True))
@@ -456,7 +461,7 @@ def main() -> None:
     WORK_DIR.mkdir(parents=True, exist_ok=True)
 
     pdf_to_md, md_to_tex, tex_to_json, raw_to_complete, complete_to_lean = ensure_scripts_exist(
-        PROJECT_ROOT, mode)
+        PROJECT_ROOT, mode, rawjson_src_dir=RAWJSON_SRC_DIR)
     mode_input_dir = INPUT_PDF_DIR / mode
     mode_input_dir.mkdir(parents=True, exist_ok=True)
 

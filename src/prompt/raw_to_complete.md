@@ -10,7 +10,7 @@ Your task is to process a JSON dataset of optimization exercises. Each exercise 
 - "proof"
 - "direct_answer"
 
-Your goal is to **modify only the "problem" field** in each exercise object, rewriting the original problem statement into a version that is condition-complete, self-contained, and clearly stated. Other than that, **all remaining fields must be copied exactly as they are, without any change**.
+Your goal is to **modify only the "problem" field** in each exercise object, rewriting the original problem statement into a version that is condition-complete, self-contained, and clearly stated. Other than that, **all remaining fields must be copied exactly as they are, without any change, especially mathematics definition and hypothesis**.
 
 Your task is not to solve the problems, but to complete the problem statements. The exercises all belong to the field of optimization, including but not limited to convex optimization, nonlinear programming, linear programming, duality, KKT conditions, subgradients, constrained optimization, variational analysis, and first-order methods.
 
@@ -40,6 +40,7 @@ You should add conditions that are clearly intended by the original exercise but
 - linear, affine, or convex nature of constraints
 - domain and codomain of functions
 - basic prerequisites required before an object used in the problem is meaningful
+- domain of variables and parameters
 
 However, you must strictly follow the principles below:
 
