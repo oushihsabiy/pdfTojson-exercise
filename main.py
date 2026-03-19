@@ -56,7 +56,7 @@ def run_cmd(cmd: list[str]) -> None:
         raise SystemExit(proc.returncode)
 
 
-def ensure_scripts_exist(script_dir: Path, mode: str, rawjson_src_dir: Optional[Path] = None) -> tuple[Path, Path, Path, Path, Path]:
+def ensure_scripts_exist(script_dir: Path, mode: str, rawjson_src_dir: Optional[Path] = None) -> tuple[Path, Path, Path, Path, Path, Path]:
     if mode not in {"book", "exercise", "paper"}:
         raise SystemExit(
             f"Unsupported mode: {mode!r} (expected 'book', 'exercise', or 'paper')")
@@ -70,13 +70,14 @@ def ensure_scripts_exist(script_dir: Path, mode: str, rawjson_src_dir: Optional[
     src_dir_stdjson = script_dir / "src" / "stdjson"
     raw_to_complete = src_dir_stdjson / "raw_to_complete.py"
     complete_to_lean = src_dir_stdjson / "complete_to_lean.py"
+    lean_to_formal = src_dir_stdjson / "lean_to_formal.py"
 
     missing = [p for p in [pdf_to_md, md_to_tex, tex_to_json,
-                           raw_to_complete, complete_to_lean] if not p.exists()]
+                           raw_to_complete, complete_to_lean, lean_to_formal] if not p.exists()]
     if missing:
         raise SystemExit("Missing scripts:\n" + "\n".join(str(p)
                          for p in missing))
-    return pdf_to_md, md_to_tex, tex_to_json, raw_to_complete, complete_to_lean
+    return pdf_to_md, md_to_tex, tex_to_json, raw_to_complete, complete_to_lean, lean_to_formal
 
 
 def _tmp_path(final_path: Path) -> Path:
@@ -354,15 +355,16 @@ def process_json(
     json_path: Path,
     raw_to_complete: Path,
     complete_to_lean: Path,
+    lean_to_formal: Path,
     *,
     mode: str,
     input_json_dir: Path,
     output_json_dir: Path,
     work_dir: Path,
 ) -> Path:
-    """Run stdjson stages: raw_to_complete -> complete_to_lean.
+    """Run stdjson stages: raw_to_complete -> complete_to_lean -> lean_to_formal.
 
-    Uses atomic stage runner when configured. Returns final lean JSON path.
+    Uses atomic stage runner when configured. Returns final formal JSON path.
     """
     rel = json_path.relative_to(input_json_dir)
     rel_no_suffix = rel.with_suffix("")
@@ -373,6 +375,7 @@ def process_json(
     stem = json_path.stem
     complete_json = job_dir / f"{stem}.complete.json"
     lean_json = (output_json_dir / rel).with_suffix(".lean.json")
+    formal_json = (output_json_dir / rel).with_suffix(".formal.json")
     lean_json.parent.mkdir(parents=True, exist_ok=True)
 
     # Stage 1: raw -> complete
@@ -386,8 +389,8 @@ def process_json(
                                   validate_out=json_complete)
             if not ok:
                 print(
-                    f"[warn] RAW->COMPLETE stage failed for {json_path}; skipping COMPLETE->LEAN", file=sys.stderr)
-                return lean_json
+                    f"[warn] RAW->COMPLETE stage failed for {json_path}; skipping COMPLETE->LEAN and LEAN->FORMAL", file=sys.stderr)
+                return formal_json
         else:
             run_cmd(cmd1)
             if not json_complete(complete_json):
@@ -397,23 +400,42 @@ def process_json(
     # Stage 2: complete -> lean
     if json_complete(lean_json) and not OVERWRITE_JSON:
         print(f"[skip] COMPLETE->LEAN (complete): {lean_json}")
-        return lean_json
-
-    cmd2 = [sys.executable, str(complete_to_lean), str(
-        complete_json), str(lean_json)]
-    if ATOMIC_OUTPUTS:
-        ok = run_stage_atomic(cmd=cmd2, out_path=lean_json,
-                              validate_out=json_complete)
-        if not ok:
-            print(
-                f"[warn] COMPLETE->LEAN stage failed for {complete_json}; skipping", file=sys.stderr)
-            return lean_json
     else:
-        run_cmd(cmd2)
-        if not json_complete(lean_json):
-            raise SystemExit(f"COMPLETE->LEAN output incomplete: {lean_json}")
+        cmd2 = [sys.executable, str(complete_to_lean), str(
+            complete_json), str(lean_json)]
+        if ATOMIC_OUTPUTS:
+            ok = run_stage_atomic(cmd=cmd2, out_path=lean_json,
+                                  validate_out=json_complete)
+            if not ok:
+                print(
+                    f"[warn] COMPLETE->LEAN stage failed for {complete_json}; skipping LEAN->FORMAL", file=sys.stderr)
+                return formal_json
+        else:
+            run_cmd(cmd2)
+            if not json_complete(lean_json):
+                raise SystemExit(
+                    f"COMPLETE->LEAN output incomplete: {lean_json}")
 
-    return lean_json
+    # Stage 3: lean -> formal
+    if json_complete(formal_json) and not OVERWRITE_JSON:
+        print(f"[skip] LEAN->FORMAL (complete): {formal_json}")
+    else:
+        cmd3 = [sys.executable, str(lean_to_formal), str(
+            lean_json), str(formal_json)]
+        if ATOMIC_OUTPUTS:
+            ok = run_stage_atomic(cmd=cmd3, out_path=formal_json,
+                                  validate_out=json_complete)
+            if not ok:
+                print(
+                    f"[warn] LEAN->FORMAL stage failed for {lean_json}; skipping", file=sys.stderr)
+                return formal_json
+        else:
+            run_cmd(cmd3)
+            if not json_complete(formal_json):
+                raise SystemExit(
+                    f"LEAN->FORMAL output incomplete: {formal_json}")
+
+    return formal_json
 
 
 def parse_args() -> argparse.Namespace:
@@ -460,7 +482,7 @@ def main() -> None:
     OUTPUT_JSON_DIR.mkdir(parents=True, exist_ok=True)
     WORK_DIR.mkdir(parents=True, exist_ok=True)
 
-    pdf_to_md, md_to_tex, tex_to_json, raw_to_complete, complete_to_lean = ensure_scripts_exist(
+    pdf_to_md, md_to_tex, tex_to_json, raw_to_complete, complete_to_lean, lean_to_formal = ensure_scripts_exist(
         PROJECT_ROOT, mode, rawjson_src_dir=RAWJSON_SRC_DIR)
     mode_input_dir = INPUT_PDF_DIR / mode
     mode_input_dir.mkdir(parents=True, exist_ok=True)
@@ -529,18 +551,19 @@ def main() -> None:
         )
         print(f"[ok] JSON -> {out_json}")
 
-        # Run stdjson processing (raw_to_complete, complete_to_lean)
+        # Run stdjson processing (raw_to_complete, complete_to_lean, lean_to_formal)
         try:
-            lean = process_json(
+            formal = process_json(
                 out_json,
                 raw_to_complete,
                 complete_to_lean,
+                lean_to_formal,
                 mode=mode,
                 input_json_dir=OUTPUT_JSON_DIR,
                 output_json_dir=OUTPUT_JSON_DIR,
                 work_dir=WORK_DIR,
             )
-            print(f"[ok] STDJSON -> {lean}")
+            print(f"[ok] STDJSON -> {formal}")
         except Exception as e:
             print(f"[warn] stdjson processing failed for {out_json}: {e}")
 

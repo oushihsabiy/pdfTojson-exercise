@@ -1,0 +1,866 @@
+[
+  {
+    "index": 1,
+    "source_idx": "Exercise 1.1",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "其他"
+    ],
+    "预估难度": [],
+    "problem": "Let k \\in \\mathbf{N} and let \\alpha, \\beta \\in \\mathbf{R} with \\alpha \\leq \\beta. For a = (a_1, \\dots, a_k) \\in \\mathbf{R}^k, define\n\\[\np(t) = a_1 + a_2 t + \\cdots + a_k t^{k-1}.\n\\]\nDetermine whether the set\n\\[\nS = \\{a \\in \\mathbf{R}^k \\mid p(0) = 1,\\ |p(t)| \\leq 1 \\text{ for all } t \\in [\\alpha, \\beta]\\}\n\\]\nis convex.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 2,
+    "source_idx": "Exercise 1.2",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $C \\subseteq \\mathbf{R}^n$. For a scalar $\\alpha$, define $\\alpha C = \\{\\alpha x \\mid x \\in C\\}$, and for scalars $\\alpha, \\beta$, define $\\alpha C + \\beta C = \\{u+v \\mid u \\in \\alpha C,\\ v \\in \\beta C\\}$. Prove that $C$ is convex if and only if\n\\[\n(\\alpha + \\beta)C = \\alpha C + \\beta C\n\\]\nfor all nonnegative scalars $\\alpha, \\beta$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 3,
+    "source_idx": "Exercise 1.3",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $A \\in \\mathbf{R}^{m \\times n}$, $b \\in \\mathbf{R}^m$, $c \\in \\mathbf{R}^n$, $d \\in \\mathbf{R}$, and let $E \\in \\mathbf{R}^{p \\times m}$, $f \\in \\mathbf{R}^p$, $g \\in \\mathbf{R}^m$, $h \\in \\mathbf{R}$. Define the linear-fractional maps\n\\[\n\\phi : \\mathbf{R}^n \\to \\mathbf{R}^m, \\qquad \\phi(x) = \\frac{Ax + b}{c^T x + d},\n\\]\nand\n\\[\n\\psi : \\mathbf{R}^m \\to \\mathbf{R}^p, \\qquad \\psi(y) = \\frac{Ey + f}{g^T y + h},\n\\]\nwith domains\n\\[\n\\mathbf{dom}\\,\\phi = \\{x \\in \\mathbf{R}^n \\mid c^T x + d > 0\\}, \\qquad \\mathbf{dom}\\,\\psi = \\{y \\in \\mathbf{R}^m \\mid g^T y + h > 0\\}.\n\\]\nLet\n\\[\nM_\\phi = \\begin{bmatrix} A & b \\\\ c^T & d \\end{bmatrix}, \\qquad M_\\psi = \\begin{bmatrix} E & f \\\\ g^T & h \\end{bmatrix},\n\\]\nand define $\\Gamma = \\psi \\circ \\phi$ on\n\\[\n\\mathbf{dom}\\,\\Gamma = \\{x \\in \\mathbf{dom}\\,\\phi \\mid \\phi(x) \\in \\mathbf{dom}\\,\\psi\\}.\n\\]\nShow that $\\Gamma$ is linear-fractional, and that its associated matrix is\n\\[\nM_\\psi M_\\phi =\n\\begin{bmatrix} E & f \\\\ g^T & h \\end{bmatrix}\n\\begin{bmatrix} A & b \\\\ c^T & d \\end{bmatrix}.\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 4,
+    "source_idx": "Exercise 1.4",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "求值题"
+    ],
+    "预估难度": [],
+    "problem": "Consider the exponential cone\n\\[\nK_{\\exp} = \\{(x,y,z) \\in \\mathbf{R}^3 \\mid y > 0,\\ ye^{x/y} \\le z\\}.\n\\]\nIts dual cone is defined by\n\\[\nK_{\\exp}^* = \\{u \\in \\mathbf{R}^3 \\mid u^T v \\ge 0 \\text{ for all } v \\in K_{\\exp}\\}.\n\\]\nThe closure of $K_{\\exp}$ is obtained by adjoining the points\n\\[\n\\{(x,y,z) \\mid x \\le 0,\\ y = 0,\\ z \\ge 0\\},\n\\]\nand you may ignore boundary issues and use the fact that a cone and its closure have the same dual. Determine $K_{\\exp}^*$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 5,
+    "source_idx": "Exercise 1.5-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $C, D \\subseteq \\mathbf{R}^n$ be closed convex cones. For any cone $K \\subseteq \\mathbf{R}^n$, define its dual cone by\n\\[\nK^* = \\{y \\in \\mathbf{R}^n \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}.\n\\]\nAlso define\n\\[\nC^* + D^* = \\{u + v \\mid u \\in C^*,\\ v \\in D^*\\}.\n\\]\nProve that $C \\cap D$ is a convex cone and that $C^* + D^*$ is a convex cone.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 6,
+    "source_idx": "Exercise 1.5-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let C, D \\subseteq \\mathbf{R}^n be closed convex cones. For any cone K \\subseteq \\mathbf{R}^n, define its dual cone by\n\\[\nK^* = \\{y \\in \\mathbf{R}^n \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}.\n\\]\nShow that\n\\[\n(C \\cap D)^* \\supseteq C^* + D^*,\n\\]\nwhere\n\\[\nC^* + D^* = \\{u + v \\mid u \\in C^*,\\ v \\in D^*\\}.\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 7,
+    "source_idx": "Exercise 1.5-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $C, D \\subseteq \\mathbf{R}^n$ be closed convex cones. For any cone $K \\subseteq \\mathbf{R}^n$, define its dual cone by\n\\[\nK^* = \\{y \\in \\mathbf{R}^n \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\},\n\\]\nand define\n\\[\nC^* + D^* = \\{u + v \\mid u \\in C^*,\\ v \\in D^*\\}.\n\\]\nAssume that for every closed convex cone $K \\subseteq \\mathbf{R}^n$, we have $K^{**} = K$. Prove that\n\\[\n(C \\cap D)^* = C^* + D^*.\n\\]\nIn particular, first show that\n\\[\n(C \\cap D)^* \\subseteq C^* + D^* \\quad \\Longleftrightarrow \\quad C \\cap D \\supseteq (C^* + D^*)^*,\n\\]\nthen prove\n\\[\nC \\cap D \\supseteq (C^* + D^*)^*.\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 8,
+    "source_idx": "Exercise 1.5-(d)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let A \\in \\mathbf{R}^{m \\times n}, and define\n\\[\nV = \\{x \\in \\mathbf{R}^n \\mid Ax \\succeq 0\\},\n\\]\nwhere Ax \\succeq 0 means that each component of Ax is nonnegative. Prove that the dual cone of V is\n\\[\nV^* = \\{A^T v \\mid v \\succeq 0\\},\n\\]\nwhere v \\in \\mathbf{R}^m and v \\succeq 0 means that each component of v is nonnegative.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 9,
+    "source_idx": "Exercise 1.6-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let C \\subseteq \\mathbf{R}^n, and define its polar set by\n\\[\nC^\\circ = \\{y \\in \\mathbf{R}^n \\mid y^T x \\leq 1 \\text{ for all } x \\in C\\}.\n\\]\nShow that C^\\circ is convex.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 10,
+    "source_idx": "Exercise 1.6-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "求值题"
+    ],
+    "预估难度": [],
+    "problem": "Let $C \\subseteq \\mathbf{R}^n$ be a cone, and let its polar set be defined by\n\\[\nC^\\circ = \\{y \\in \\mathbf{R}^n \\mid y^T x \\leq 1 \\text{ for all } x \\in C\\}.\n\\]\nDetermine the polar set $C^\\circ$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 11,
+    "source_idx": "Exercise 1.6-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "求值题"
+    ],
+    "预估难度": [],
+    "problem": "Let $\\|\\cdot\\|$ be a norm on $\\mathbf{R}^n$, and let\n\\[\nB = \\{x \\in \\mathbf{R}^n \\mid \\|x\\| \\leq 1\\}\n\\]\nbe its unit ball. For any set $C \\subseteq \\mathbf{R}^n$, define its polar set by\n\\[\nC^\\circ = \\{y \\in \\mathbf{R}^n \\mid y^T x \\leq 1 \\text{ for all } x \\in C\\}.\n\\]\nDetermine the polar set $B^\\circ$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 12,
+    "source_idx": "Exercise 1.6-(d)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "求值题"
+    ],
+    "预估难度": [],
+    "problem": "Let \\mathbf{1} \\in \\mathbf{R}^n denote the all-ones vector, and consider the set\n\\[\nC = \\{x \\in \\mathbf{R}^n \\mid \\mathbf{1}^T x = 1,\\ x \\succeq 0\\}.\n\\]\nDetermine the polar set\n\\[\nC^\\circ = \\{y \\in \\mathbf{R}^n \\mid y^T x \\le 1 \\text{ for all } x \\in C\\}.\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 13,
+    "source_idx": "Exercise 1.6-(e)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let C \\subseteq \\mathbf{R}^n be a closed convex set containing 0, and define its polar set by\n\\[\nC^\\circ = \\{y \\in \\mathbf{R}^n \\mid y^T x \\le 1 \\text{ for all } x \\in C\\}.\n\\]\nProve that\n\\[\n(C^\\circ)^\\circ = C.\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 14,
+    "source_idx": "Exercise 1.7-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "其他"
+    ],
+    "预估难度": [],
+    "problem": "Let $K = \\{0\\} \\subseteq \\mathbf{R}^2$. The dual cone of $K$ is defined by\n\\[\nK^* = \\{y \\in \\mathbf{R}^2 \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}.\n\\]\nDescribe the dual cone $K^*$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 15,
+    "source_idx": "Exercise 1.7-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "其他"
+    ],
+    "预估难度": [],
+    "problem": "Let $K \\subseteq \\mathbf{R}^2$ and define its dual cone by\n\\[\nK^* = \\{y \\in \\mathbf{R}^2 \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}.\n\\]\nDescribe the dual cone $K^*$ in the case $K = \\mathbf{R}^2$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 16,
+    "source_idx": "Exercise 1.7-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "其他"
+    ],
+    "预估难度": [],
+    "problem": "Let\n\\[\nK = \\{(x_1, x_2) \\in \\mathbf{R}^2 \\mid |x_1| \\le x_2\\}.\n\\]\nDefine its dual cone by\n\\[\nK^* = \\{y \\in \\mathbf{R}^2 \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}.\n\\]\nDescribe the set $K^*$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 17,
+    "source_idx": "Exercise 1.7-(d)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "其他"
+    ],
+    "预估难度": [],
+    "problem": "Let\n\\[\nK = \\{(x_1, x_2) \\in \\mathbf{R}^2 \\mid x_1 + x_2 = 0\\}.\n\\]\nDefine its dual cone by\n\\[\nK^* = \\{y \\in \\mathbf{R}^2 \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}.\n\\]\nDescribe the set \\(K^*\\).",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 18,
+    "source_idx": "Exercise 2.1",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "求值题"
+    ],
+    "预估难度": [],
+    "problem": "Let v_1, \\ldots, v_k \\in \\mathbf{R}^n, and let\n\\[\nP = \\operatorname{conv}\\{v_1, \\ldots, v_k\\} \\subseteq \\mathbf{R}^n.\n\\]\nIf f : \\mathbf{R}^n \\to \\mathbf{R} is convex, show that\n\\[\n\\sup_{x \\in P} f(x) = \\max_{i=1, \\ldots, k} f(v_i).\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 19,
+    "source_idx": "Exercise 2.2",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let h : \\mathbf{R}^k \\to \\mathbf{R} be a convex function with \\operatorname{dom} h = \\mathbf{R}^k. For each i \\in \\{1, \\dots, k\\}, let g_i : \\mathbf{R}^n \\to \\mathbf{R}, and define\n\\[\nf(x) = h(g_1(x), g_2(x), \\ldots, g_k(x)).\n\\]\nAssume that for each i \\in \\{1, \\dots, k\\}, at least one of the following holds: (i) h is nondecreasing in its i-th argument, with all other arguments fixed, and g_i is convex; (ii) h is nonincreasing in its i-th argument, with all other arguments fixed, and g_i is concave; or (iii) g_i is affine. Show that f is convex on \\mathbf{R}^n.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 20,
+    "source_idx": "Exercise 2.3-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let u \\in \\mathbf{R}^n and t \\in \\mathbf{R}_{++}, and define\n\\[\ng(u,t)=t-\\frac{1}{t}u^T u.\n\\]\nShow that g is concave on the domain\n\\[\n\\{(u,t)\\in \\mathbf{R}^n\\times \\mathbf{R}\\mid t>\\|u\\|_2\\},\n\\]\nusing the convexity of the quadratic-over-linear function.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 21,
+    "source_idx": "Exercise 2.3-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $u \\in \\mathbf{R}^n$ and $t \\in \\mathbf{R}$, and define\n\\[\ng(u,t) = -\\log\\!\\left(t - \\frac{1}{t} u^T u\\right).\n\\]\nLet\n\\[\n\\operatorname{dom} f = \\{(u,t) \\in \\mathbf{R}^n \\times \\mathbf{R} \\mid t > \\|u\\|_2\\}.\n\\]\nUsing the result established previously, prove that $g$ is convex on $\\operatorname{dom} f$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 22,
+    "source_idx": "Exercise 2.3-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let\n\\[\nf(x,t) = -\\log(t^2 - x^T x), \\qquad (x,t) \\in \\mathbf{R}^n \\times \\mathbf{R},\n\\]\nwith domain\n\\[\n\\operatorname{dom} f = \\{(x,t) \\in \\mathbf{R}^n \\times \\mathbf{R} \\mid t > \\|x\\|_2\\}.\n\\]\nUsing the identity\n\\[\nf(x,t) = -\\log(t-\\|x\\|_2) - \\log(t+\\|x\\|_2),\n\\]\nprove that \\(f\\) is convex on \\(\\operatorname{dom} f\\).",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 23,
+    "source_idx": "Exercise 2.4",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let f : \\mathbf{R}^n \\to \\mathbf{R} be a convex function satisfying f(x) \\ge 0 for all x \\in \\operatorname{dom} f, and let g : \\mathbf{R}^n \\to \\mathbf{R} be a concave function satisfying g(x) > 0 for all x \\in \\operatorname{dom} g. Define h on \\operatorname{dom} h = \\operatorname{dom} f \\cap \\operatorname{dom} g by\n\\[\nh(x) = \\frac{f(x)^2}{g(x)}.\n\\]\nShow that h is convex.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 24,
+    "source_idx": "Exercise 2.5-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let f : \\mathbf{R}^n \\to \\mathbf{R} be a convex function with \\operatorname{dom} f = \\mathbf{R}^n and f(0) \\leq 0. For fixed x \\in \\mathbf{R}^n, define g(x,t) = t f(x/t) for t > 0. Show that the function t \\mapsto t f(x/t) is nonincreasing for t > 0.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 25,
+    "source_idx": "Exercise 2.5-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $f : \\mathbf{R}^n \\to \\mathbf{R}$ be a convex function with $f(0) \\le 0$, and let $g : \\mathbf{R}^n \\to \\mathbf{R}$ be a concave function such that $g(x) > 0$ for all $x \\in \\operatorname{dom} g$. Define\n\\[\nh(x) = g(x) f\\bigl(x / g(x)\\bigr)\n\\]\non the domain\n\\[\n\\operatorname{dom} h = \\{x \\in \\operatorname{dom} g \\mid x / g(x) \\in \\operatorname{dom} f\\}.\n\\]\nShow that $h$ is convex on $\\operatorname{dom} h$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 26,
+    "source_idx": "Exercise 2.5-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Define the function h : \\mathbf{R}_{++}^n \\to \\mathbf{R} by\n\\[\nh(x) = \\frac{x^T x}{\\left(\\prod_{k=1}^n x_k\\right)^{1/n}},\n\\]\nwhere\n\\[\n\\mathbf{R}_{++}^n = \\{x \\in \\mathbf{R}^n \\mid x_k > 0,\\ k = 1, \\dots, n\\}.\n\\]\nShow that h is convex on \\mathbf{R}_{++}^n.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 27,
+    "source_idx": "Exercise 2.6",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $X \\in \\mathbf{S}_{++}^n$ and $t \\in \\mathbf{R}_{++}$. Define\n\\[\nf(X,t) = nt \\log t - t \\log \\det X.\n\\]\nAlso define $g : \\mathbf{S}_{++}^n \\to \\mathbf{R}$ by\n\\[\ng(X) = n(\\operatorname{tr} X) \\log(\\operatorname{tr} X) - (\\operatorname{tr} X)(\\log \\det X).\n\\]\nIf $\\lambda_1, \\dots, \\lambda_n$ are the eigenvalues of $X$, then\n\\[\ng(X) = n\\left(\\sum_{i=1}^n \\lambda_i\\right)\\left(\\log \\sum_{i=1}^n \\lambda_i - \\sum_{i=1}^n \\log \\lambda_i\\right).\n\\]\nShow that $f$ is convex in the pair $(X,t)$ on $\\mathbf{S}_{++}^n \\times \\mathbf{R}_{++}$, and use this to prove that $g$ is convex on $\\mathbf{S}_{++}^n$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 28,
+    "source_idx": "Exercise 2.7",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let f : \\mathbf{R}^m \\to \\mathbf{R} be a convex function, and let A \\in \\mathbf{R}^{m \\times n}, b \\in \\mathbf{R}^m, c \\in \\mathbf{R}^n, and d \\in \\mathbf{R}. Define the domain of g by\n\\[\n\\operatorname{dom} g = \\{x \\in \\mathbf{R}^n \\mid c^T x + d > 0\\},\n\\]\nand define\n\\[\ng(x) = (c^T x + d)\\, f\\!\\left(\\frac{Ax+b}{c^T x+d}\\right), \\qquad x \\in \\operatorname{dom} g,\n\\]\nwhere \\( (Ax+b)/(c^T x+d) \\) denotes the vector \\(Ax+b \\in \\mathbf{R}^m\\) divided by the positive scalar \\(c^T x+d\\). Prove that g is convex on \\(\\operatorname{dom} g\\).",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 29,
+    "source_idx": "Exercise 2.8",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "其他"
+    ],
+    "预估难度": [],
+    "problem": "Let a, c \\in \\mathbf{R}^n and b, d \\in \\mathbf{R}. Consider the function\n\\[\nf : \\mathbf{R}^n \\to \\mathbf{R}, \\qquad f(x) = \\frac{a^T x + b}{c^T x + d},\n\\]\nwith domain\n\\[\n\\operatorname{dom} f = \\{x \\in \\mathbf{R}^n \\mid c^T x + d > 0\\},\n\\]\nand assume that \\(\\operatorname{dom} f\\) is nonempty. Determine the conditions under which \\(f\\) is convex, and the conditions under which \\(f\\) is quasiconvex.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 30,
+    "source_idx": "Exercise 2.9",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $A \\in \\mathbf{R}^{m \\times n}$ and $b \\in \\mathbf{R}^m$. Define $f : \\mathbf{R}^n \\to \\mathbf{R}$ by\n\\[\nf(x) = \\frac{\\|Ax-b\\|_2^2}{1-x^T x},\n\\]\nand let\n\\[\nB = \\{x \\in \\mathbf{R}^n \\mid \\|x\\|_2 < 1\\}.\n\\]\nShow that $f$ is convex on $B$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 31,
+    "source_idx": "Exercise 2.10",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let n \\in \\mathbf{N}, and let \\alpha_1, \\ldots, \\alpha_n \\in \\mathbf{R} satisfy \\alpha_k \\ge 0 for k = 1, \\ldots, n, and \\sum_{k=1}^n \\alpha_k \\le 1. Define f : \\mathbf{R}_{++}^n \\to \\mathbf{R} by\n\\[\nf(x) = \\prod_{k=1}^n x_k^{\\alpha_k}.\n\\]\nProve that f is concave on \\mathbf{R}_{++}^n.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 32,
+    "source_idx": "Exercise 2.11",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let f : \\mathbf{R}^n \\to \\mathbf{R} be a convex function, and define g by\n\\[\ng(x,t) = f(x/t),\n\\]\nwith domain\n\\[\n\\operatorname{dom} g = \\{(x,t) \\in \\mathbf{R}^n \\times \\mathbf{R} \\mid x/t \\in \\operatorname{dom} f,\\ t > 0\\}.\n\\]\nProve that g is quasiconvex.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 33,
+    "source_idx": "Exercise 2.12",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let\n\\[\nx=(x_1,x_2,x_3,x_4) \\in \\mathbf{R}^4,\n\\]\nand define\n\\[\nD=\\left\\{x \\in \\mathbf{R}^4 \\mid x_4>0,\\ x_3-\\frac{1}{x_4}>0,\\ x_2-\\frac{1}{x_3-\\frac{1}{x_4}}>0,\\ x_1-\\frac{1}{x_2-\\frac{1}{x_3-\\frac{1}{x_4}}}>0\\right\\}.\n\\]\nDefine the function $f:D \\to \\mathbf{R}$ by\n\\[\nf(x)=\\frac{1}{x_1-\\frac{1}{x_2-\\frac{1}{x_3-\\frac{1}{x_4}}}}.\n\\]\nShow that $f$ is convex on $D$ and decreasing in each variable on $D$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 34,
+    "source_idx": "Exercise 2.13",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "求值题"
+    ],
+    "预估难度": [],
+    "problem": "Let n \\in \\mathbf{N} and x \\in \\mathbf{R}^n. Define the scalar Huber function f_{\\mathrm{hub}} : \\mathbf{R} \\to \\mathbf{R} by\n\\[\nf_{\\mathrm{hub}}(t)=\\begin{cases}(1/2)t^2 & |t| \\le 1\\\\ |t|-1/2 & |t|>1.\\end{cases}\n\\]\nThe circularly symmetric Huber function f_{\\mathrm{cshub}} : \\mathbf{R}^n \\to \\mathbf{R} is defined by\n\\[\nf_{\\mathrm{cshub}}(x)=f_{\\mathrm{hub}}(\\|x\\|_2)=\\begin{cases}(1/2)\\|x\\|_2^2 & \\|x\\|_2 \\le 1\\\\ \\|x\\|_2-1/2 & \\|x\\|_2>1,\\end{cases}\n\\]\nwhere \\|\\cdot\\|_2 denotes the Euclidean norm. Show that f_{\\mathrm{cshub}} is convex, and find its conjugate function f_{\\mathrm{cshub}}^*.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 35,
+    "source_idx": "Exercise 2.14",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let f : \\mathbf{R}^m \\to \\mathbf{R} \\cup \\{+\\infty\\} be a convex function, and let x_1, \\ldots, x_n \\in \\operatorname{dom} f. Suppose \\lambda_1, \\ldots, \\lambda_n are scalars such that \\lambda_1 > 0, \\lambda_i \\leq 0 for i = 2, \\ldots, n, and \\lambda_1 + \\cdots + \\lambda_n = 1. Show that\n\\[\nf(\\lambda_1 x_1 + \\cdots + \\lambda_n x_n) \\geq \\lambda_1 f(x_1) + \\cdots + \\lambda_n f(x_n).\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 36,
+    "source_idx": "Exercise 2.15",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "求值题"
+    ],
+    "预估难度": [],
+    "problem": "Let f : \\mathbf{R}^n \\to \\mathbf{R} be convex, and define\n\\[\ng(x) = \\inf_{\\substack{z \\in \\mathbf{R}^n \\\\ z \\ge 0}} f(x+z), \\qquad x \\in \\mathbf{R}^n,\n\\]\nwhere z \\ge 0 is interpreted componentwise. Assume that g(x) > -\\infty for all x \\in \\mathbf{R}^n. A function h : \\mathbf{R}^n \\to \\mathbf{R} is called monotone nondecreasing if h(x) \\ge h(y) whenever x \\ge y componentwise. Show that g is convex, monotone nondecreasing, and satisfies g(x) \\le f(x) for all x \\in \\mathbf{R}^n. Then, if h : \\mathbf{R}^n \\to \\mathbf{R} is any convex monotone nondecreasing function such that h(x) \\le f(x) for all x \\in \\mathbf{R}^n, prove that h(x) \\le g(x) for all x \\in \\mathbf{R}^n. Conclude that g is the maximum convex monotone underestimator of f.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 37,
+    "source_idx": "Exercise 2.16",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let f : \\mathbf{R}^n \\to \\mathbf{R} be a convex function such that for every orthogonal matrix Q \\in \\mathbf{R}^{n \\times n} and every x \\in \\mathbf{R}^n, we have f(Qx) = f(x). Equivalently, f(x) depends only on \\|x\\|_2. Prove that there exists a function \\phi : \\mathbf{R} \\to \\mathbf{R} with \\operatorname{dom} \\phi = \\mathbf{R} such that \\phi is convex and nondecreasing, and\n\\[\nf(x) = \\phi(\\|x\\|_2) \\quad \\text{for all } x \\in \\mathbf{R}^n.\n\\]\nAlso prove the converse: every function of the form f(x) = \\phi(\\|x\\|_2), where \\phi is convex and nondecreasing, is rotationally symmetric and convex.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 38,
+    "source_idx": "Exercise 2.17-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $f_1, \\ldots, f_m : \\mathbf{R}^n \\to \\mathbf{R} \\cup \\{+\\infty\\}$ be convex functions. Define their infimal convolution $g = f_1 \\diamond \\cdots \\diamond f_m$ by\n\\[\ng(x) = \\inf\\{f_1(x_1) + \\cdots + f_m(x_m) \\mid x_1, \\ldots, x_m \\in \\mathbf{R}^n,\\ x_1 + \\cdots + x_m = x\\}, \\qquad x \\in \\mathbf{R}^n.\n\\]\nShow that $g$ is convex.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 39,
+    "source_idx": "Exercise 2.17-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let m \\in \\mathbf{N}, and for each i = 1, \\ldots, m, let f_i : \\mathbf{R}^n \\to \\mathbf{R} \\cup \\{\\infty\\} be convex. Define their infimal convolution g = f_1 \\diamond \\cdots \\diamond f_m by\n$$g(x) = \\inf\\{f_1(x_1) + \\cdots + f_m(x_m) \\mid x_1, \\ldots, x_m \\in \\mathbf{R}^n,\\ x_1 + \\cdots + x_m = x\\}.$$ \nLet \\operatorname{dom} g = \\{x \\in \\mathbf{R}^n \\mid g(x) < \\infty\\}. For each i = 1, \\ldots, m, let the convex conjugate of f_i be\n$$f_i^*(y) = \\sup_{x \\in \\mathbf{R}^n} (y^T x - f_i(x)),$$\nand let the convex conjugate of g be\n$$g^*(y) = \\sup_{x \\in \\mathbf{R}^n} (y^T x - g(x)).$$\nProve that\n$$g^* = f_1^* + \\cdots + f_m^*.$$",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 40,
+    "source_idx": "Exercise 2.18",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $A \\in \\mathbf{R}^{m \\times n}$ have rank $m$, let $f : \\mathbf{R}^m \\to \\mathbf{R}$ be convex, and define $g : \\mathbf{R}^n \\to \\mathbf{R}$ by $g(x) = f(Ax)$. Let\n\\[\nf^*(u) = \\sup_{z \\in \\mathbf{R}^m} (u^T z - f(z)), \\qquad g^*(y) = \\sup_{x \\in \\mathbf{R}^n} (y^T x - g(x)),\n\\]\nand define $A^\\dagger = (A A^T)^{-1} A$. Show that for every $y \\in \\mathbf{R}^n$,\n\\[\ng^*(y) = f^*((A^\\dagger)^T y),\n\\]\nand that\n\\[\n\\operatorname{dom}(g^*) = A^T \\operatorname{dom}(f^*).\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 41,
+    "source_idx": "Exercise 2.19",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $n \\ge 1$, and let $\\lambda_1, \\ldots, \\lambda_n$ be positive real numbers. Define $f : \\mathbf{R}^n \\to \\mathbf{R}$ by\n\\[\nf(x) = \\prod_{i=1}^n (1 - e^{-x_i})^{\\lambda_i},\n\\]\nwith domain\n\\[\n\\operatorname{dom} f = \\left\\{x \\in \\mathbf{R}_{++}^n \\mid \\sum_{i=1}^n \\lambda_i e^{-x_i} \\le 1\\right\\}.\n\\]\nFor $i = 1, \\ldots, n$, define\n\\[\ny_i = \\frac{\\lambda_i e^{-x_i}}{1 - e^{-x_i}}, \\qquad z_i = \\frac{y_i}{1 - e^{-x_i}},\n\\]\nand note that the Hessian is given by\n\\[\n\\nabla^2 f(x) = f(x)(yy^T - \\operatorname{diag}(z)).\n\\]\nProve that $f$ is concave on $\\operatorname{dom} f$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 42,
+    "source_idx": "Exercise 2.20-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "求值题"
+    ],
+    "预估难度": [],
+    "problem": "Let $a,b \\in \\mathbf{R}$ with $a<b$. For each $x=(x_1,\\dots,x_n) \\in \\mathbf{R}^n$, define the polynomial\n\\[\np_x(t)=x_1+x_2 t+x_3 t^2+\\cdots+x_n t^{n-1}, \\qquad t \\in [a,b].\n\\]\nDefine $f : \\mathbf{R}^n \\to \\mathbf{R}$ by\n\\[\nf(x)=\\sup_{t\\in[a,b]} p_x(t)-\\inf_{t\\in[a,b]} p_x(t).\n\\]\nShow that $f$ is convex on $\\mathbf{R}^n$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 43,
+    "source_idx": "Exercise 2.20-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $f_i : \\mathbf{R}^n \\to \\mathbf{R}$, $i=1,\\ldots,m$, be convex functions, and define\n\\[\n\\operatorname{dom} f = \\{x \\in \\mathbf{R}^n \\mid f_i(x) < 0,\\ i=1,\\ldots,m\\}.\n\\]\nFor $x \\in \\operatorname{dom} f$, define\n\\[\nf(x) = \\sum_{i=1}^m e^{-1/f_i(x)}.\n\\]\nShow that $f$ is convex on $\\operatorname{dom} f$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 44,
+    "source_idx": "Exercise 2.20-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let g : \\mathbf{R}^n \\to \\mathbf{R} \\cup \\{+\\infty\\} be a convex function, and let\n\\[\n\\operatorname{dom} g := \\{ z \\in \\mathbf{R}^n \\mid g(z) < +\\infty \\}.\n\\]\nSuppose y \\in \\operatorname{dom} g. Define f : \\mathbf{R}^n \\to \\mathbf{R} \\cup \\{+\\infty\\} by\n\\[\nf(x) = \\inf_{\\alpha > 0} \\frac{g(y + \\alpha x) - g(y)}{\\alpha}, \\qquad x \\in \\mathbf{R}^n,\n\\]\nwhere the infimum is taken in the extended-real sense. Prove that f is convex.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 45,
+    "source_idx": "Exercise 2.21-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $f : \\mathbf{R}^n \\to \\mathbf{R}$ be a convex symmetric function, meaning that $f(x) = f(Px)$ for every permutation matrix $P \\in \\mathbf{R}^{n \\times n}$. Let $S \\in \\mathbf{R}^{n \\times n}$ be doubly stochastic, i.e., all entries of $S$ are nonnegative and each row sum and each column sum is equal to $1$. Show that for every $x \\in \\mathbf{R}^n$, one has $f(Sx) \\leq f(x)$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 46,
+    "source_idx": "Exercise 2.21-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $Y \\in S^n$ have spectral decomposition\n\\[\nY = Q \\, \\operatorname{diag}(\\lambda) \\, Q^T,\n\\]\nwhere $Q \\in \\mathbf{R}^{n \\times n}$ is orthogonal and $\\lambda = (\\lambda_1, \\ldots, \\lambda_n) \\in \\mathbf{R}^n$ is the vector of eigenvalues of $Y$. Define $S \\in \\mathbf{R}^{n \\times n}$ by $S_{ij} = Q_{ij}^2$ for all $i,j$. Show that $S$ is doubly stochastic and that\n\\[\n\\operatorname{diag}(Y) = S\\lambda.\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 47,
+    "source_idx": "Exercise 2.21-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $f : \\mathbf{R}^n \\to \\mathbf{R}$ be a convex symmetric function, meaning that $f(x) = f(Px)$ for every permutation matrix $P \\in \\mathbf{R}^{n \\times n}$. Let $S^n$ denote the space of $n \\times n$ real symmetric matrices. For $X \\in S^n$, let $\\lambda(X) = (\\lambda_1(X), \\ldots, \\lambda_n(X)) \\in \\mathbf{R}^n$ be the vector of eigenvalues of $X$, and for any square matrix $A$, let $\\operatorname{diag}(A) \\in \\mathbf{R}^n$ denote the vector of diagonal entries of $A$. If $\\mathcal{V}$ is the set of $n \\times n$ real orthogonal matrices, use the results of parts (a) and (b) to show that for every $X \\in S^n$,\n\\[\nf(\\lambda(X)) = \\sup_{V \\in \\mathcal{V}} f(\\operatorname{diag}(V^T X V)).\n\\]\nDeduce that the function $X \\mapsto f(\\lambda(X))$ is convex on $S^n$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 48,
+    "source_idx": "Exercise 2.22",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let n \\ge 1, and define the function f : \\mathbf{R}^{n \\times n} \\times \\mathbf{R}^n \\to \\mathbf{R} by\n\\[\nf(X,y) = y^T X^{-1} y,\n\\]\nwith domain\n\\[\n\\operatorname{dom} f = \\{(X,y) \\mid X + X^T \\succ 0\\}.\n\\]\nLet S^n denote the set of n \\times n real symmetric matrices. It is known that f is convex when restricted to X \\in S^n. Determine whether f is convex on its full domain \\operatorname{dom} f. If it is convex, prove it; if it is not, give a simple counterexample.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 49,
+    "source_idx": "Exercise 2.23-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let \\operatorname{dom} g \\subseteq \\mathbf{R}^n be convex, and suppose that g is twice differentiable on \\operatorname{dom} g. Define\n\\[\nf(x) = -\\exp(-g(x)), \\qquad x \\in \\operatorname{dom} g.\n\\]\nAssume that for every x \\in \\operatorname{dom} g,\n\\[\n\\begin{bmatrix} \\nabla^2 g(x) & \\nabla g(x) \\\\ \\nabla g(x)^T & 1 \\end{bmatrix} \\succeq 0.\n\\]\nShow that f is convex on \\operatorname{dom} g.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 50,
+    "source_idx": "Exercise 2.23-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let A \\in \\mathbf{R}^{m \\times n}, b \\in \\mathbf{R}^m, and let \\|\\cdot\\| be a norm on \\mathbf{R}^m. Define f : \\mathbf{R}^n \\to \\mathbf{R} by\n\\[\nf(x) = \\max\\{\\|APx - b\\| \\mid P \\in \\mathbf{R}^{n \\times n} \\text{ is a permutation matrix}\\}.\n\\]\nShow that f is convex.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 51,
+    "source_idx": "Exercise 2.24",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let g,h : \\mathbf{R}^n \\to \\mathbf{R} be convex functions that are bounded below and satisfy \\operatorname{dom} g = \\operatorname{dom} h = \\mathbf{R}^n. Define f : \\mathbf{R}^n \\to \\mathbf{R} by\n\\[\nf(x)=\\inf\\{\\theta g(y)+(1-\\theta)h(z) \\mid y,z \\in \\mathbf{R}^n,\\ \\theta y+(1-\\theta)z=x,\\ 0 \\le \\theta \\le 1\\}.\n\\]\nShow that f is convex, and describe \\operatorname{epi} f in terms of \\operatorname{epi} g and \\operatorname{epi} h.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 52,
+    "source_idx": "Exercise 2.25",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let f : \\mathbf{R} \\to \\mathbf{R} \\cup \\{+\\infty\\}, and let \\operatorname{dom} f = \\{x \\in \\mathbf{R} \\mid f(x) < +\\infty\\}. Prove that f is convex if and only if \\operatorname{dom} f is convex and, for all x,y,z \\in \\operatorname{dom} f with x<y<z,\n\\[\n\\det\n\\begin{bmatrix}\n1 & 1 & 1 \\\\\nx & y & z \\\\\nf(x) & f(y) & f(z)\n\\end{bmatrix}\n\\geq 0.\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 53,
+    "source_idx": "Exercise 2.26-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let Y, Z \\in \\mathbf{S}^m satisfy \\(0 \\prec Y \\preceq Z\\). Show that\n\\[\n\\det Y \\leq \\det Z.\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 54,
+    "source_idx": "Exercise 2.26-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let X \\in \\mathbf{S}_{++}^n be partitioned as\n\\[\nX = \\begin{bmatrix} X_{11} & X_{12} \\\\ X_{12}^T & X_{22} \\end{bmatrix},\n\\]\nwhere X_{11} \\in \\mathbf{S}^m, X_{12} \\in \\mathbf{R}^{m \\times (n-m)}, and X_{22} \\in \\mathbf{S}^{n-m}. Consider the optimization problem\n\\[\n\\begin{array}{ll}\n\\text{minimize} & \\log \\det Y^{-1} \\\\\n\\text{subject to} & \\begin{bmatrix} Y & 0 \\\\ 0 & 0 \\end{bmatrix} \\preceq \\begin{bmatrix} X_{11} & X_{12} \\\\ X_{12}^T & X_{22} \\end{bmatrix},\n\\end{array}\n\\]\nwith variable Y \\in \\mathbf{S}^m, where \\log \\det Y^{-1} has domain \\mathbf{S}_{++}^m. Prove that the solution is\n\\[\nY = X_{11} - X_{12} X_{22}^{-1} X_{12}^T.\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 55,
+    "source_idx": "Exercise 2.26-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $P \\in \\mathbf{R}^{n \\times m}$ have rank $m$, and assume without loss of generality that\n\\[\nP = \\begin{bmatrix} I \\\\ 0 \\end{bmatrix},\n\\]\nwhere $I$ is the $m \\times m$ identity matrix. For $X \\in \\mathbf{S}_{++}^n$, partition $X$ conformally with $P$ as\n\\[\nX = \\begin{bmatrix} X_{11} & X_{12} \\\\ X_{12}^T & X_{22} \\end{bmatrix},\n\\]\nwhere $X_{11} \\in \\mathbf{S}^m$, $X_{22} \\in \\mathbf{S}^{n-m}$, and $X_{12} \\in \\mathbf{R}^{m \\times (n-m)}$. Define\n\\[\nf(X) = \\log \\det \\left( X_{11} - X_{12} X_{22}^{-1} X_{12}^T \\right)^{-1},\n\\]\nwith domain $\\operatorname{dom} f = \\mathbf{S}_{++}^n$. Using the result of part (b) and the minimization property from page 3-19 of the lecture notes, prove that $f$ is convex.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 56,
+    "source_idx": "Exercise 2.26-(d)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let\n\\[\nP = \\begin{bmatrix} I \\\\ 0 \\end{bmatrix} \\in \\mathbf{R}^{n \\times m},\n\\]\nwhere $I$ is the $m \\times m$ identity matrix. Let $X \\in \\mathbf{S}_{++}^n$ be partitioned as\n\\[\nX = \\begin{bmatrix} X_{11} & X_{12} \\\\ X_{12}^T & X_{22} \\end{bmatrix},\n\\]\nwhere $X_{11} \\in \\mathbf{S}^m$, $X_{22} \\in \\mathbf{S}^{n-m}$, and $X_{12} \\in \\mathbf{R}^{m \\times (n-m)}$. Prove that\n\\[\n\\left( X_{11} - X_{12} X_{22}^{-1} X_{12}^T \\right)^{-1} = P^T X^{-1} P,\n\\]\nand conclude that the function $f$ from part (c) can be written as\n\\[\nf(X) = \\log \\det \\left( P^T X^{-1} P \\right).\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 57,
+    "source_idx": "Exercise 2.27-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let X be an \\mathbf{R}^n-valued random variable with density p with respect to Lebesgue measure on \\mathbf{R}^n, and assume that p is log-concave. Let g : \\mathbf{R}^n \\to \\mathbf{R} be a nonconstant affine function, and define Y = g(X). Determine whether Y must have a log-concave density with respect to Lebesgue measure on \\mathbf{R}; either prove that this is true or give a counterexample.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 58,
+    "source_idx": "Exercise 2.27-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $X$ be an $\\mathbf{R}^n$-valued random variable with density $p : \\mathbf{R}^n \\to \\mathbf{R}_+$ with respect to Lebesgue measure, and assume that $p$ is log-concave on $\\mathbf{R}^n$. Let $g : \\mathbf{R}^n \\to \\mathbf{R}$ be a convex function, and define $Y = g(X)$. Determine whether the function $a \\mapsto \\mathbf{prob}(Y \\leq a)$ is log-concave on $\\mathbf{R}$. If it is, prove it; if not, give a counterexample.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 59,
+    "source_idx": "Exercise 2.27-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let X be a random variable on \\mathbf{R}^n with a log-concave probability density with respect to Lebesgue measure, and let g : \\mathbf{R}^n \\to \\mathbf{R} be a measurable concave function. Define Y = g(X), and for s \\in \\mathbf{R} let (s)_+ = \\max\\{s,0\\}. For a \\in \\mathbf{R}, define\n\\[\nF(a) = \\mathbf{E}\\big((Y-a)_+\\big),\n\\]\nassuming this expectation exists for all relevant a. Determine whether F(a) is convex in a \\in \\mathbf{R}, and whether it is log-concave in a \\in \\mathbf{R}. Prove the statement or give a counterexample.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 60,
+    "source_idx": "Exercise 2.28-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "求值题"
+    ],
+    "预估难度": [],
+    "problem": "Let a \\in \\mathbf{R}^n, and let\n\\[\nC = \\{(a_{\\pi_1}, a_{\\pi_2}, \\ldots, a_{\\pi_n}) \\mid (\\pi_1, \\pi_2, \\ldots, \\pi_n) \\text{ is a permutation of } (1,2,\\ldots,n)\\} \\subseteq \\mathbf{R}^n.\n\\]\nFor y \\in \\mathbf{R}^n, define\n\\[\nS_C(y) = \\max_{x \\in C} y^T x.\n\\]\nIf for any vector u \\in \\mathbf{R}^n, the components u_{[1]}, u_{[2]}, \\ldots, u_{[n]} denote the entries of u arranged in nonincreasing order, show that\n\\[\nS_C(y) = a_{[1]}y_{[1]} + a_{[2]}y_{[2]} + \\cdots + a_{[n]}y_{[n]}.\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 61,
+    "source_idx": "Exercise 2.28-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $a \\in \\mathbf{R}^n$, and let $C \\subset \\mathbf{R}^n$ be the set of all permutations of $a$, i.e.,\n\\[\nC = \\{(a_{\\pi_1}, a_{\\pi_2}, \\ldots, a_{\\pi_n}) \\mid (\\pi_1, \\pi_2, \\ldots, \\pi_n) \\text{ is a permutation of } (1,2,\\ldots,n)\\}.\n\\]\nFor $y \\in \\mathbf{R}^n$, define\n\\[\nS_C(y) = \\sup\\{y^T z \\mid z \\in C\\}.\n\\]\nFor any $u \\in \\mathbf{R}^n$, let $u_{[1]} \\ge u_{[2]} \\ge \\cdots \\ge u_{[n]}$ denote the components of $u$ sorted in nonincreasing order, and for $k = 1, \\ldots, n$, define\n\\[\ns_k(u) = u_{[1]} + u_{[2]} + \\cdots + u_{[k]}.\n\\]\nGiven $x \\in \\mathbf{R}^n$, prove that the condition\n\\[\nx^T y \\le S_C(y) \\quad \\text{for all } y \\in \\mathbf{R}^n\n\\]\nholds if and only if\n\\[\ns_k(x) \\le s_k(a), \\quad k = 1, \\ldots, n-1, \\qquad \\text{and} \\qquad s_n(x) = s_n(a).\n\\]\nWhen these inequalities hold, one says that $a$ majorizes $x$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 62,
+    "source_idx": "Exercise 2.28-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $a \\in \\mathbf{R}^n$, and let\n\\[\nC = \\{(a_{\\pi_1}, a_{\\pi_2}, \\ldots, a_{\\pi_n}) \\mid (\\pi_1, \\pi_2, \\ldots, \\pi_n) \\text{ is a permutation of } (1, 2, \\ldots, n)\\} \\subset \\mathbf{R}^n.\n\\]\nLet $S_C(y) = \\sup_{z \\in C} y^T z$ be the support function of $C$, and let its convex conjugate be\n\\[\nS_C^*(x) = \\sup_{y \\in \\mathbf{R}^n} (x^T y - S_C(y)).\n\\]\nFor $x \\in \\mathbf{R}^n$, say that $x$ is majorized by $a$ if, after rearranging the components of $x$ and $a$ in nonincreasing order, one has\n\\[\n\\sum_{i=1}^k x_{[i]} \\le \\sum_{i=1}^k a_{[i]} \\quad \\text{for } k = 1, \\ldots, n-1,\n\\]\nand\n\\[\n\\sum_{i=1}^n x_i = \\sum_{i=1}^n a_i.\n\\]\nShow that\n\\[\nS_C^*(x) =\n\\begin{cases}\n0 & \\text{if } x \\text{ is majorized by } a,\\\\\n+\\infty & \\text{otherwise.}\n\\end{cases}\n\\]\nConclude that $x$ is a convex combination of the permutations of $a$ if and only if $a$ majorizes $x$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 63,
+    "source_idx": "Exercise 2.29-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let \\(\\theta \\in \\mathbf{R}^2\\) satisfy \\(\\theta \\succeq 0\\) and \\(\\mathbf{1}^T\\theta = 1\\). Define \\(f : \\mathbf{R}_{++}^2 \\to \\mathbf{R}\\) by\n\\[\nf(x) = x_1^{\\theta_1} x_2^{\\theta_2}.\n\\]\nShow that \\(f\\) is concave on \\(\\mathbf{R}_{++}^2\\).",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 64,
+    "source_idx": "Exercise 2.29-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let \\(\\theta = (\\theta_1, \\dots, \\theta_n) \\in \\mathbf{R}^n\\) satisfy \\(\\theta_i \\ge 0\\) for all \\(i = 1, \\dots, n\\) and \\(1^T\\theta = 1\\). Define \\(f : \\mathbf{R}_{++}^n \\to \\mathbf{R}\\) by\n\\[\nf(x) = x_1^{\\theta_1} \\cdots x_n^{\\theta_n}, \\qquad x = (x_1, \\dots, x_n) \\in \\mathbf{R}_{++}^n.\n\\]\nShow that \\(f\\) is concave on \\(\\mathbf{R}_{++}^n\\).",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 65,
+    "source_idx": "Exercise 2.29-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $n \\geq 1$ and let $\\theta = (\\theta_1,\\ldots,\\theta_n) \\in \\mathbf{R}^n$ satisfy $\\theta_i \\geq 0$ for all $i$ and $1^T\\theta \\leq 1$, where $1 \\in \\mathbf{R}^n$ denotes the all-ones vector. Define $f : \\mathbf{R}_{++}^n \\to \\mathbf{R}$ by\n\\[\nf(x) = x_1^{\\theta_1} \\cdots x_n^{\\theta_n}, \\qquad \\mathbf{R}_{++}^n = \\{x \\in \\mathbf{R}^n \\mid x_i > 0,\\ i=1,\\ldots,n\\}.\n\\]\nShow that $f$ is concave on $\\mathbf{R}_{++}^n$.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 66,
+    "source_idx": "Exercise 2.29-(d)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let n \\in \\mathbf{N} and let \\theta = (\\theta_1, \\dots, \\theta_n) \\in \\mathbf{R}^n satisfy \\theta_i \\leq 0 for all i = 1, \\dots, n. Define f : \\mathbf{R}_{++}^n \\to \\mathbf{R} by\n\\[\nf(x) = x_1^{\\theta_1} \\cdots x_n^{\\theta_n},\n\\]\nwhere \\(\\mathbf{R}_{++}^n = \\{x \\in \\mathbf{R}^n \\mid x_i > 0,\\ i = 1, \\dots, n\\}\\). Prove that f is convex on \\(\\mathbf{R}_{++}^n\\).",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 67,
+    "source_idx": "Exercise 2.29-(e)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let n \\geq 1 and let \\theta = (\\theta_1, \\ldots, \\theta_n) \\in \\mathbf{R}^n satisfy \\mathbf{1}^T\\theta = 1$. Define $f : \\mathbf{R}_{++}^n \\to \\mathbf{R}$ by\n\\[\nf(x) = x_1^{\\theta_1} \\cdots x_n^{\\theta_n},\n\\]\nwhere\n\\[\n\\mathbf{R}_{++}^n = \\{x \\in \\mathbf{R}^n \\mid x_i > 0,\\ i = 1, \\ldots, n\\}.\n\\]\nAssume that exactly one component of \\theta is positive; equivalently, there is exactly one index i such that \\theta_i > 0, and \\theta_j \\leq 0 for all j \\neq i. Prove that f is convex on \\mathbf{R}_{++}^n.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 68,
+    "source_idx": "Exercise 2.29-(f)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let n \\in \\mathbf{N} and let \\theta = (\\theta_1, \\dots, \\theta_n) \\in \\mathbf{R}^n. Consider the function f : \\mathbf{R}_{++}^n \\to \\mathbf{R} defined by\n\\[\nf(x) = x_1^{\\theta_1} \\cdots x_n^{\\theta_n},\n\\]\nwhere\n\\[\n\\mathbf{R}_{++}^n = \\{x \\in \\mathbf{R}^n \\mid x_i > 0,\\ i = 1, \\dots, n\\}.\n\\]\nAssume that \\(1^T \\theta \\ge 1\\), that there exists a unique index \\(i\\) such that \\(\\theta_i > 0\\), and that \\(\\theta_j \\le 0\\) for all \\(j \\ne i\\). Show that f is convex on \\(\\mathbf{R}_{++}^n\\).",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 69,
+    "source_idx": "Exercise 2.30",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $f,g : \\mathbf{R}^n \\to \\mathbf{R}$ be defined by\n\\[\nf(x) = \\|x\\|_1, \\qquad g(x) = \\frac{1}{2}\\|x\\|_2^2,\n\\]\nand let $h : \\mathbf{R}^n \\to \\mathbf{R}$ be their infimal convolution,\n\\[\nh(x) = \\inf_{y \\in \\mathbf{R}^n} \\left( \\|y\\|_1 + \\frac{1}{2}\\|x-y\\|_2^2 \\right).\n\\]\nDefine $\\phi : \\mathbf{R} \\to \\mathbf{R}$ by\n\\[\n\\phi(u) = \\begin{cases} u^2/2, & |u| \\leq 1,\\\\ |u|-1/2, & |u| > 1. \\end{cases}\n\\]\nShow that for every $x = (x_1, \\dots, x_n) \\in \\mathbf{R}^n$,\n\\[\nh(x) = \\sum_{i=1}^n \\phi(x_i).\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 70,
+    "source_idx": "Exercise 2.31-(a)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let n \\ge 1, and let h : \\mathbf{R} \\to \\mathbf{R} be a convex, nondecreasing function with \\operatorname{dom} h = \\mathbf{R}, such that h(t) = h(0) for all t \\le 0. Define f : \\mathbf{R}^n \\to \\mathbf{R} by\n\\[\nf(x) = h(\\|x\\|_2).\n\\]\nShow that f is convex on \\mathbf{R}^n.",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 71,
+    "source_idx": "Exercise 2.31-(b)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let h : \\mathbf{R} \\to \\mathbf{R} be a convex, nondecreasing function with \\operatorname{dom} h = \\mathbf{R}, and suppose that h(t) = h(0) for all t \\leq 0. Define f : \\mathbf{R}^n \\to \\mathbf{R} by\n\\[\nf(x) = h(\\|x\\|_2).\n\\]\nFor y \\in \\mathbf{R}^n, prove that\n\\[\nf^*(y) = h^*(\\|y\\|_2).\n\\]",
+    "proof": "",
+    "direct_answer": ""
+  },
+  {
+    "index": 72,
+    "source_idx": "Exercise 2.31-(c)",
+    "source": "bv_cvxbook_extra_exercises",
+    "题目类型": [
+      "证明题"
+    ],
+    "预估难度": [],
+    "problem": "Let $p > 1$ and define $f : \\mathbf{R}^n \\to \\mathbf{R}$ by\n\\[\nf(x) = \\frac{1}{p}\\|x\\|_2^p.\n\\]\nAlso define $h : \\mathbf{R} \\to \\mathbf{R}$ by\n\\[\nh(t) = \\frac{1}{p}\\max\\{0,t\\}^p = \\begin{cases} \\frac{1}{p} t^p & t \\ge 0,\\\\ 0 & t < 0. \\end{cases}\n\\]\nUsing the result from part (b), namely that if $g : \\mathbf{R}^n \\to \\mathbf{R}$ is defined by $g(x) = h(\\|x\\|_2)$, then $g^*(y) = h^*(\\|y\\|_2)$ for all $y \\in \\mathbf{R}^n$, derive the convex conjugate $f^*$.",
+    "proof": "",
+    "direct_answer": ""
+  }
+]

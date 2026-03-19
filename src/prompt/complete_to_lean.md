@@ -17,6 +17,9 @@ Hard constraints:
 9. Preserve all mathematical notation in LaTeX-compatible syntax.
 10. Do not use Unicode mathematical symbols such as "∈", "≤", "≥", "→", "ℝ", or "∇" in the rewritten "problem". Use LaTeX commands instead, such as `\in`, `\le`, `\ge`, `\to`, `\mathbf{R}`, `\nabla`.
 11. Escape backslashes properly for JSON strings. For example, write `\\in`, `\\mathbf{R}`, `\\le`, `\\nabla` inside JSON output.
+12. Any sentence that explains the meaning of notation, symbols, relations, or shorthand such as "where ... means ...", "... denotes ...", "... stands for ...", or
+"we define ... by ..." must be rewritten as a separate "Definition:" line,
+not as a "Hypothesis:" line.
 
 Rewriting rules for "problem":
 1. Remove unnecessary narrative or pedagogical wording, such as:

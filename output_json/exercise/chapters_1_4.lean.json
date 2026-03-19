@@ -7,7 +7,7 @@
       "其他"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } k \\in \\mathbf{N},\\ \\alpha, \\beta \\in \\mathbf{R}.\\]\\[\\text{Hypothesis: } \\alpha \\leq \\beta.\\]\\[\\text{Definition: for } a=(a_1,\\dots,a_k) \\in \\mathbf{R}^k,\\ p(t)=a_1+a_2 t+\\cdots+a_k t^{k-1}\\ \\text{for } t \\in \\mathbf{R}.\\]\\[\\text{Definition: } S=\\{a \\in \\mathbf{R}^k \\mid p(0)=1,\\ |p(t)| \\leq 1\\ \\text{for all } t \\in [\\alpha,\\beta]\\}.\\]\\[\\text{Goal: determine whether } S \\text{ is convex.}\\]",
+    "problem": "\\[\\begin{aligned}\n&\\text{Definition: } k \\in \\mathbf{N}.\\\\\n&\\text{Definition: } \\alpha, \\beta \\in \\mathbf{R}.\\\\\n&\\text{Hypothesis: } \\alpha \\leq \\beta.\\\\\n&\\text{Definition: } a = (a_1, \\dots, a_k) \\in \\mathbf{R}^k.\\\\\n&\\text{Definition: } p : \\mathbf{R} \\to \\mathbf{R} \\text{ is defined by } p(t) = a_1 + a_2 t + \\cdots + a_k t^{k-1}.\\\\\n&\\text{Definition: } S = \\{a \\in \\mathbf{R}^k \\mid p(0) = 1,\\ |p(t)| \\leq 1 \\text{ for all } t \\in [\\alpha, \\beta]\\}.\\\\\n&\\text{Goal: determine whether } S \\text{ is convex.}\n\\end{aligned}\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -19,7 +19,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } C \\subseteq \\mathbf{R}^n.\\]\n\\[\\text{Definition: for a scalar } \\alpha,\\ \\alpha C = \\{\\alpha x \\mid x \\in C\\}.\\]\n\\[\\text{Definition: for scalars } \\alpha, \\beta,\\ \\alpha C + \\beta C = \\{u+v \\mid u \\in \\alpha C,\\ v \\in \\beta C\\}.\\]\n\\[\\text{Goal: prove that } C \\text{ is convex if and only if } (\\alpha + \\beta)C = \\alpha C + \\beta C \\text{ for all } \\alpha, \\beta \\ge 0.\\]",
+    "problem": "Definition: $C \\subseteq \\mathbf{R}^n$.\\\\ Definition: for a scalar $\\alpha$, $\\alpha C = \\{\\alpha x \\mid x \\in C\\}$.\\\\ Definition: for scalars $\\alpha, \\beta$, $\\alpha C + \\beta C = \\{u+v \\mid u \\in \\alpha C,\\ v \\in \\beta C\\}$.\\\\ Hypothesis: $\\alpha, \\beta$ are nonnegative scalars.\\\\ Goal: prove that $C$ is convex if and only if $(\\alpha + \\beta)C = \\alpha C + \\beta C$ for all nonnegative scalars $\\alpha, \\beta$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -31,7 +31,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } A \\in \\mathbf{R}^{m\\times n},\\ b \\in \\mathbf{R}^m,\\ c \\in \\mathbf{R}^n,\\ d \\in \\mathbf{R}.\\]\\[\\text{Definition: } E \\in \\mathbf{R}^{p\\times m},\\ f \\in \\mathbf{R}^p,\\ g \\in \\mathbf{R}^m,\\ h \\in \\mathbf{R}.\\]\\[\\text{Definition: } \\phi : \\mathbf{R}^n \\to \\mathbf{R}^m,\\ \\phi(x) = \\frac{Ax+b}{c^T x + d}.\\]\\[\\text{Definition: } \\psi : \\mathbf{R}^m \\to \\mathbf{R}^p,\\ \\psi(y) = \\frac{Ey+f}{g^T y + h}.\\]\\[\\text{Definition: } \\mathbf{dom}\\,\\phi = \\{x \\in \\mathbf{R}^n \\mid c^T x + d > 0\\}.\\]\\[\\text{Definition: } \\mathbf{dom}\\,\\psi = \\{y \\in \\mathbf{R}^m \\mid g^T y + h > 0\\}.\\]\\[\\text{Definition: } M_\\phi = \\begin{bmatrix} A & b \\\\ c^T & d \\end{bmatrix},\\quad M_\\psi = \\begin{bmatrix} E & f \\\\ g^T & h \\end{bmatrix}.\\]\\[\\text{Definition: } \\Gamma = \\psi \\circ \\phi,\\ \\Gamma(x) = \\psi(\\phi(x)).\\]\\[\\text{Definition: } \\mathbf{dom}\\,\\Gamma = \\{x \\in \\mathbf{dom}\\,\\phi \\mid \\phi(x) \\in \\mathbf{dom}\\,\\psi\\}.\\]\\[\\text{Goal: } \\text{prove that } \\Gamma \\text{ is linear-fractional, and its associated matrix is } M_\\psi M_\\phi = \\begin{bmatrix} E & f \\\\ g^T & h \\end{bmatrix}\\begin{bmatrix} A & b \\\\ c^T & d \\end{bmatrix}.\\]",
+    "problem": "\\[\\begin{aligned}\n&\\text{Definition: } A \\in \\mathbf{R}^{m \\times n},\\ b \\in \\mathbf{R}^m,\\ c \\in \\mathbf{R}^n,\\ d \\in \\mathbf{R}.\\\\\n&\\text{Definition: } E \\in \\mathbf{R}^{p \\times m},\\ f \\in \\mathbf{R}^p,\\ g \\in \\mathbf{R}^m,\\ h \\in \\mathbf{R}.\\\\\n&\\text{Definition: } \\phi : \\mathbf{R}^n \\to \\mathbf{R}^m,\\quad \\phi(x) = \\frac{Ax + b}{c^T x + d}.\\\\\n&\\text{Definition: } \\psi : \\mathbf{R}^m \\to \\mathbf{R}^p,\\quad \\psi(y) = \\frac{Ey + f}{g^T y + h}.\\\\\n&\\text{Definition: } \\mathbf{dom}\\,\\phi = \\{x \\in \\mathbf{R}^n \\mid c^T x + d > 0\\}.\\\\\n&\\text{Definition: } \\mathbf{dom}\\,\\psi = \\{y \\in \\mathbf{R}^m \\mid g^T y + h > 0\\}.\\\\\n&\\text{Definition: } M_\\phi = \\begin{bmatrix} A & b \\\\ c^T & d \\end{bmatrix}.\\\\\n&\\text{Definition: } M_\\psi = \\begin{bmatrix} E & f \\\\ g^T & h \\end{bmatrix}.\\\\\n&\\text{Definition: } \\Gamma = \\psi \\circ \\phi.\\\\\n&\\text{Definition: } \\mathbf{dom}\\,\\Gamma = \\{x \\in \\mathbf{dom}\\,\\phi \\mid \\phi(x) \\in \\mathbf{dom}\\,\\psi\\}.\\\\\n&\\text{Goal: prove that } \\Gamma \\text{ is linear-fractional.}\\\\\n&\\text{Goal: prove that the matrix associated with } \\Gamma \\text{ is } M_\\psi M_\\phi =\n\\begin{bmatrix} E & f \\\\ g^T & h \\end{bmatrix}\n\\begin{bmatrix} A & b \\\\ c^T & d \\end{bmatrix}. \n\\end{aligned}\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -43,7 +43,7 @@
       "求值题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } K_{\\exp} = \\{(x,y,z) \\in \\mathbf{R}^3 \\mid y > 0,\\ ye^{x/y} \\leq z\\}.\\]\\[\\text{Definition: } K_{\\exp}^* = \\{u \\in \\mathbf{R}^3 \\mid u^T v \\geq 0\\ \\text{for all } v \\in K_{\\exp}\\}.\\]\\[\\text{Hypothesis: boundary issues may be ignored.}\\]\\[\\text{Hypothesis: } K_{\\exp} \\text{ is not closed, and its closure is obtained by adding } \\{(x,y,z) \\mid x \\leq 0,\\ y = 0,\\ z \\geq 0\\}.\\]\\[\\text{Hypothesis: the dual of a cone is equal to the dual of its closure.}\\]\\[\\text{Goal: determine } K_{\\exp}^*.\\]",
+    "problem": "Definition: $K_{\\exp} \\subseteq \\mathbf{R}^3$.\\\\ Definition: $K_{\\exp} = \\{(x,y,z) \\in \\mathbf{R}^3 \\mid y > 0,\\ y e^{x/y} \\le z\\}$.\\\\ Definition: $K_{\\exp}^* = \\{u \\in \\mathbf{R}^3 \\mid u^T v \\ge 0 \\text{ for all } v \\in K_{\\exp}\\}$.\\\\ Definition: the closure of $K_{\\exp}$ is obtained by adding the points $\\{(x,y,z) \\mid x \\le 0,\\ y = 0,\\ z \\ge 0\\}$.\\\\ Hypothesis: boundary issues may be ignored.\\\\ Hypothesis: the dual of a cone is equal to the dual of its closure.\\\\ Goal: determine $K_{\\exp}^*$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -55,7 +55,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "Definition: $C, D \\subseteq \\mathbf{R}^n$.\\\\\nHypothesis: $C$ and $D$ are closed convex cones.\\\\\nDefinition: for any cone $K \\subseteq \\mathbf{R}^n$, its dual cone is $K^* = \\{y \\in \\mathbf{R}^n \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}$.\\\\\nDefinition: $C^* + D^* = \\{u + v \\mid u \\in C^*,\\ v \\in D^*\\}$.\\\\\nGoal: prove that $C \\cap D$ is a convex cone.\\\\\nGoal: prove that $C^* + D^*$ is a convex cone.",
+    "problem": "Definition: $C, D \\subseteq \\mathbf{R}^n$.\\\\ Hypothesis: $C$ and $D$ are closed convex cones.\\\\ Definition: for any cone $K \\subseteq \\mathbf{R}^n$, $K^* = \\{y \\in \\mathbf{R}^n \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}$.\\\\ Definition: $C^* + D^* = \\{u + v \\mid u \\in C^*,\\ v \\in D^*\\}$.\\\\ Goal: prove that $C \\cap D$ is a convex cone.\\\\ Goal: prove that $C^* + D^*$ is a convex cone.",
     "proof": "",
     "direct_answer": ""
   },
@@ -67,7 +67,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\begin{array}{l}\n\\text{Definition: } C, D \\subseteq \\mathbf{R}^n \\text{ are closed convex cones.}\\\\\n\\text{Definition: For any cone } K \\subseteq \\mathbf{R}^n,\\ K^* = \\{y \\in \\mathbf{R}^n \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}.\\\\\n\\text{Definition: } C^* + D^* = \\{u + v \\mid u \\in C^*,\\ v \\in D^*\\}.\\\\\n\\text{Goal: prove that } (C \\cap D)^* \\supseteq C^* + D^*.\n\\end{array}\\]",
+    "problem": "Definition: $C, D \\subseteq \\mathbf{R}^n$.\\\\\nHypothesis: $C$ and $D$ are closed convex cones.\\\\\nDefinition: for any cone $K \\subseteq \\mathbf{R}^n$, $K^* = \\{y \\in \\mathbf{R}^n \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}$.\\\\\nDefinition: $C^* + D^* = \\{u + v \\mid u \\in C^*,\\ v \\in D^*\\}$.\\\\\nGoal: prove that $(C \\cap D)^* \\supseteq C^* + D^*$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -79,7 +79,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "Definition: $C, D$ are closed convex cones in $\\mathbf{R}^n$.\\\\ Definition: For any cone $K \\subseteq \\mathbf{R}^n$, define $K^* = \\{y \\in \\mathbf{R}^n \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}$.\\\\ Definition: $C^* + D^* = \\{u+v \\mid u \\in C^*,\\ v \\in D^*\\}$.\\\\ Hypothesis: For every closed convex cone $K \\subseteq \\mathbf{R}^n$, one has $K^{**} = K$.\\\\ Goal: prove $(C \\cap D)^* \\subseteq C^* + D^*$.\\\\ Goal: first prove that $(C \\cap D)^* \\subseteq C^* + D^*$ if and only if $C \\cap D \\supseteq (C^* + D^*)^*$.\\\\ Goal: then prove $C \\cap D \\supseteq (C^* + D^*)^*$.\\\\ Goal: conclude that $(C \\cap D)^* = C^* + D^*$.",
+    "problem": "Definition: $C, D \\subseteq \\mathbf{R}^n$.\\\\ Definition: $C$ and $D$ are closed convex cones.\\\\ Definition: for any cone $K \\subseteq \\mathbf{R}^n$, $K^* = \\{y \\in \\mathbf{R}^n \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}$.\\\\ Definition: $C^* + D^* = \\{u + v \\mid u \\in C^*,\\ v \\in D^*\\}$.\\\\ Hypothesis: for every closed convex cone $K \\subseteq \\mathbf{R}^n$, $K^{**} = K$.\\\\ Goal: prove $(C \\cap D)^* \\subseteq C^* + D^*$.\\\\ Goal: first prove that $(C \\cap D)^* \\subseteq C^* + D^* \\Longleftrightarrow C \\cap D \\supseteq (C^* + D^*)^*$.\\\\ Goal: then prove $C \\cap D \\supseteq (C^* + D^*)^*$.\\\\ Goal: conclude that $(C \\cap D)^* = C^* + D^*$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -91,7 +91,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } A \\in \\mathbf{R}^{m \\times n}.\\]\n\\[\\text{Definition: } V = \\{x \\in \\mathbf{R}^n \\mid Ax \\succeq 0\\}.\\]\n\\[\\text{Definition: } \\{A^T v \\mid v \\succeq 0\\} = \\{A^T v \\mid v \\in \\mathbf{R}^m,\\ v \\succeq 0\\}.\\]\n\\[\\text{Hypothesis: } Ax \\succeq 0 \\text{ means that each component of } Ax \\text{ is nonnegative.}\\]\n\\[\\text{Hypothesis: } v \\succeq 0 \\text{ means that each component of } v \\text{ is nonnegative.}\\]\n\\[\\text{Goal: prove that } V^* = \\{A^T v \\mid v \\succeq 0\\}.\\]",
+    "problem": "\\[\\begin{array}{l}\n\\text{Definition: } A \\in \\mathbf{R}^{m \\times n}. \\\\\n\\text{Definition: } V = \\{x \\in \\mathbf{R}^n \\mid Ax \\succeq 0\\}. \\\\\n\\text{Definition: } Ax \\succeq 0 \\text{ means that each component of } Ax \\text{ is nonnegative.} \\\\\n\\text{Definition: } \\{A^T v \\mid v \\succeq 0\\} \\text{ is a subset of } \\mathbf{R}^n \\text{ with } v \\in \\mathbf{R}^m. \\\\\n\\text{Definition: } v \\succeq 0 \\text{ means that each component of } v \\text{ is nonnegative.} \\\\\n\\text{Goal: prove that } V^* = \\{A^T v \\mid v \\succeq 0\\}. \n\\end{array}\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -115,7 +115,7 @@
       "求值题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } C \\subseteq \\mathbf{R}^n.\\]\n\\[\\text{Definition: } C^\\circ = \\{y \\in \\mathbf{R}^n \\mid y^T x \\leq 1 \\text{ for all } x \\in C\\}.\\]\n\\[\\text{Hypothesis: } C \\text{ is a cone, i.e., for all } x \\in C \\text{ and all } \\theta \\ge 0,\\ \\theta x \\in C.\\]\n\\[\\text{Goal: determine } C^\\circ.\\]",
+    "problem": "Definition: $C \\subseteq \\mathbf{R}^n$.\\\\ Definition: The polar set of $C$ is $C^\\circ = \\{y \\in \\mathbf{R}^n \\mid y^T x \\leq 1 \\text{ for all } x \\in C\\}$.\\\\ Definition: $C$ is a cone if $\\theta x \\in C$ for all $x \\in C$ and all $\\theta \\ge 0$.\\\\ Hypothesis: $C$ is a cone.\\\\ Goal: determine the polar set $C^\\circ$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -127,7 +127,7 @@
       "求值题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } C \\subseteq \\mathbf{R}^n,\\quad C^\\circ = \\{y \\in \\mathbf{R}^n \\mid y^T x \\leq 1 \\text{ for all } x \\in C\\}.\\]\\[\\text{Definition: } \\|\\cdot\\| \\text{ is a norm on } \\mathbf{R}^n.\\]\\[\\text{Definition: } B = \\{x \\in \\mathbf{R}^n \\mid \\|x\\| \\leq 1\\}.\\]\\[\\text{Goal: determine } B^\\circ.\\]",
+    "problem": "Definition: $\\|\\cdot\\|$ is a norm on $\\mathbf{R}^n$.\\\\\nDefinition: $B = \\{x \\in \\mathbf{R}^n \\mid \\|x\\| \\leq 1\\}$.\\\\\nDefinition: For any set $C \\subseteq \\mathbf{R}^n$, its polar set is $C^\\circ = \\{y \\in \\mathbf{R}^n \\mid y^T x \\leq 1 \\text{ for all } x \\in C\\}$.\\\\\nGoal: determine the polar set $B^\\circ$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -151,7 +151,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "Definition: $C \\subseteq \\mathbf{R}^n$. \\\\ Definition: $C^\\circ = \\{y \\in \\mathbf{R}^n \\mid y^T x \\le 1 \\text{ for all } x \\in C\\}$. \\\\ Hypothesis: $C$ is closed. \\\\ Hypothesis: $C$ is convex. \\\\ Hypothesis: $0 \\in C$. \\\\ Goal: prove that $(C^\\circ)^\\circ = C$.",
+    "problem": "\\[\\text{Definition: } C \\subseteq \\mathbf{R}^n.\\]\n\\[\\text{Definition: } C^\\circ = \\{y \\in \\mathbf{R}^n \\mid y^T x \\le 1 \\text{ for all } x \\in C\\}.\\]\n\\[\\text{Hypothesis: } C \\text{ is closed.}\\]\n\\[\\text{Hypothesis: } C \\text{ is convex.}\\]\n\\[\\text{Hypothesis: } 0 \\in C.\\]\n\\[\\text{Goal: prove that } (C^\\circ)^\\circ = C.\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -163,7 +163,7 @@
       "其他"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } K \\subseteq \\mathbf{R}^2,\\quad K = \\{0\\}.\\]\n\\[\\text{Definition: } K^* = \\{y \\in \\mathbf{R}^2 \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}.\\]\n\\[\\text{Goal: describe the dual cone } K^*.\\]",
+    "problem": "Definition: $K \\subseteq \\mathbf{R}^2$.\\\\ Definition: $K = \\{0\\}$.\\\\ Definition: $K^* = \\{y \\in \\mathbf{R}^2 \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}$.\\\\ Goal: describe the dual cone $K^*$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -175,7 +175,7 @@
       "其他"
     ],
     "预估难度": [],
-    "problem": "Definition: $K \\subseteq \\mathbf{R}^2$.\\\\\nDefinition: $K^* = \\{y \\in \\mathbf{R}^2 \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}$.\\\\\nHypothesis: $K = \\mathbf{R}^2$.\\\\\nGoal: describe the dual cone $K^*$.",
+    "problem": "Definition: $K \\subseteq \\mathbf{R}^2$.\\\\ Definition: $K^* = \\{y \\in \\mathbf{R}^2 \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}$.\\\\ Hypothesis: $K = \\mathbf{R}^2$.\\\\ Goal: describe the dual cone $K^*$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -187,7 +187,7 @@
       "其他"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } K = \\{(x_1, x_2) \\in \\mathbf{R}^2 \\mid |x_1| \\leq x_2\\}.\\]\n\\[\\text{Definition: } K^* = \\{y \\in \\mathbf{R}^2 \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}.\\]\n\\[\\text{Goal: describe } K^*.\\]",
+    "problem": "\\[\n\\text{Definition: } K \\subseteq \\mathbf{R}^2 \\text{ is given by } K = \\{(x_1, x_2) \\in \\mathbf{R}^2 \\mid |x_1| \\le x_2\\}.\n\\]\n\\[\n\\text{Definition: } K^* = \\{y \\in \\mathbf{R}^2 \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}.\n\\]\n\\[\n\\text{Goal: describe } K^*.\n\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -199,7 +199,7 @@
       "其他"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } K = \\{(x_1, x_2) \\in \\mathbf{R}^2 \\mid x_1 + x_2 = 0\\}.\\]\n\\[\\text{Definition: } K^* = \\{y \\in \\mathbf{R}^2 \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}.\\]\n\\[\\text{Goal: describe the dual cone } K^*.\\]",
+    "problem": "\\[\\text{Definition: } K \\subseteq \\mathbf{R}^2 \\text{ is given by } K = \\{(x_1, x_2) \\in \\mathbf{R}^2 \\mid x_1 + x_2 = 0\\}.\\]\n\\[\\text{Definition: } K^* = \\{y \\in \\mathbf{R}^2 \\mid y^T x \\ge 0 \\text{ for all } x \\in K\\}.\\]\n\\[\\text{Goal: describe } K^*.\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -211,7 +211,7 @@
       "求值题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } v_1,\\ldots,v_k \\in \\mathbb{R}^n.\\]\n\\[\\text{Definition: } P = \\operatorname{conv}\\{v_1,\\ldots,v_k\\} \\subseteq \\mathbb{R}^n.\\]\n\\[\\text{Definition: } f : \\mathbb{R}^n \\to \\mathbb{R}.\\]\n\\[\\text{Hypothesis: } f \\text{ is convex on } \\mathbb{R}^n.\\]\n\\[\\text{Goal: } \\sup_{x \\in P} f(x) = \\max_{i=1,\\ldots,k} f(v_i).\\]",
+    "problem": "\\[\\text{Definition: } v_1,\\ldots,v_k \\in \\mathbf{R}^n.\\]\n\\[\\text{Definition: } P = \\operatorname{conv}\\{v_1,\\ldots,v_k\\} \\subseteq \\mathbf{R}^n.\\]\n\\[\\text{Definition: } f : \\mathbf{R}^n \\to \\mathbf{R}.\\]\n\\[\\text{Hypothesis: } f \\text{ is convex.}\\]\n\\[\\text{Goal: } \\sup_{x \\in P} f(x) = \\max_{i=1,\\ldots,k} f(v_i).\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -223,7 +223,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } h : \\mathbf{R}^k \\to \\mathbf{R}.\\]\\[\\text{Hypothesis: } h \\text{ is convex and } \\operatorname{dom} h = \\mathbf{R}^k.\\]\\[\\text{Definition: For each } i=1,\\dots,k,\\ g_i : \\mathbf{R}^n \\to \\mathbf{R}.\\]\\[\\text{Definition: } f : \\mathbf{R}^n \\to \\mathbf{R}, \\quad f(x) = h(g_1(x), g_2(x), \\ldots, g_k(x)).\\]\\[\\text{Hypothesis: For each } i \\in \\{1,\\dots,k\\}, \\text{ at least one of the following holds.}\\]\\[\\text{Hypothesis: } h \\text{ is nondecreasing in the } i\\text{th argument, and } g_i \\text{ is convex.}\\]\\[\\text{Hypothesis: } h \\text{ is nonincreasing in the } i\\text{th argument, and } g_i \\text{ is concave.}\\]\\[\\text{Hypothesis: } g_i \\text{ is affine.}\\]\\[\\text{Goal: Prove that } f \\text{ is convex on } \\mathbf{R}^n.\\]",
+    "problem": "\\[\\begin{array}{l}\n\\text{Definition: } h : \\mathbf{R}^k \\to \\mathbf{R}. \\\\\n\\text{Hypothesis: } h \\text{ is convex.} \\\\\n\\text{Hypothesis: } \\operatorname{dom} h = \\mathbf{R}^k. \\\\\n\\text{Definition: For each } i \\in \\{1,\\dots,k\\},\\ g_i : \\mathbf{R}^n \\to \\mathbf{R}. \\\\\n\\text{Definition: } f : \\mathbf{R}^n \\to \\mathbf{R} \\text{ is defined by } f(x) = h(g_1(x), g_2(x), \\ldots, g_k(x)). \\\\\n\\text{Hypothesis: For each } i \\in \\{1,\\dots,k\\}, \\text{ at least one of the following holds.} \\\\\n\\text{Hypothesis: } h \\text{ is nondecreasing in the } i\\text{th argument, with all other arguments fixed, and } g_i \\text{ is convex.} \\\\\n\\text{Hypothesis: } h \\text{ is nonincreasing in the } i\\text{th argument, with all other arguments fixed, and } g_i \\text{ is concave.} \\\\\n\\text{Hypothesis: } g_i \\text{ is affine.} \\\\\n\\text{Goal: prove that } f \\text{ is convex on } \\mathbf{R}^n.\n\\end{array}\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -235,7 +235,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "Definition: $u \\in \\mathbf{R}^n$ and $t \\in \\mathbf{R}_{++}$.\n\nDefinition: $g(u,t) = t - (1/t) u^T u$.\n\nDefinition: $g$ is defined on $\\{(u,t) \\in \\mathbf{R}^n \\times \\mathbf{R}_{++}\\}$.\n\nDefinition: $\\operatorname{dom} f = \\{(u,t) \\in \\mathbf{R}^n \\times \\mathbf{R} \\mid t > \\|u\\|_2\\}$.\n\nGoal: explain why $g$ is concave on $\\operatorname{dom} f$.\n\nHypothesis: use the convexity of the quadratic-over-linear function.",
+    "problem": "\\[\\text{Definition: } u \\in \\mathbf{R}^n,\\ t \\in \\mathbf{R}_{++}.\\]\n\\[\\text{Definition: } g(u,t)=t-(1/t)u^T u.\\]\n\\[\\text{Definition: } \\operatorname{dom} f=\\{(u,t)\\in \\mathbf{R}^n\\times \\mathbf{R}\\mid t>\\|u\\|_2\\}.\\]\n\\[\\text{Goal: prove that } g \\text{ is concave on } \\operatorname{dom} f.\\]\n\\[\\text{Definition: use the convexity of the quadratic-over-linear function.}\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -247,7 +247,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } u \\in \\mathbf{R}^n \\text{ and } t \\in \\mathbf{R}.\\]\n\\[\\text{Definition: } g(u,t) = -\\log\\!\\left(t - \\frac{1}{t} u^T u\\right).\\]\n\\[\\text{Definition: } \\operatorname{dom} f = \\{(u,t) \\in \\mathbf{R}^n \\times \\mathbf{R} \\mid t > \\|u\\|_2\\}.\\]\n\\[\\text{Hypothesis: use the result established previously.}\\]\n\\[\\text{Goal: prove that } g \\text{ is convex on } \\operatorname{dom} f.\\]",
+    "problem": "Definition: $u \\in \\mathbf{R}^n$ and $t \\in \\mathbf{R}$.\\\\\nDefinition: $g(u,t) = -\\log\\!\\left(t - \\frac{1}{t} u^T u\\right)$.\\\\\nDefinition: $\\operatorname{dom} f = \\{(u,t) \\in \\mathbf{R}^n \\times \\mathbf{R} \\mid t > \\|u\\|_2\\}$.\\\\\nHypothesis: use the result established previously.\\\\\nGoal: prove that $g$ is convex on $\\operatorname{dom} f$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -259,7 +259,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } f(x,t) = -\\log(t^2 - x^T x), \\quad (x,t) \\in \\mathbf{R}^n \\times \\mathbf{R}.\\]\n\\[\\text{Definition: } \\operatorname{dom} f = \\{(x,t) \\in \\mathbf{R}^n \\times \\mathbf{R} \\mid t > \\|x\\|_2\\}.\\]\n\\[\\text{Hypothesis: } f(x,t) = -\\log(t - \\|x\\|_2) - \\log(t + \\|x\\|_2).\\]\n\\[\\text{Hypothesis: this representation follows from standard convexity-preserving composition rules, using convexity of } -\\log(\\cdot) \\text{ and properties of } t \\pm \\|x\\|_2 \\text{ on } t > \\|x\\|_2.\\]\n\\[\\text{Goal: prove that } f \\text{ is convex on } \\operatorname{dom} f.\\]",
+    "problem": "\\[\\text{Definition: } f(x,t) = -\\log(t^2 - x^T x).\\]\n\\[\\text{Definition: } (x,t) \\in \\mathbf{R}^n \\times \\mathbf{R}.\\]\n\\[\\text{Definition: } \\operatorname{dom} f = \\{(x,t) \\in \\mathbf{R}^n \\times \\mathbf{R} \\mid t > \\|x\\|_2\\}.\\]\n\\[\\text{Hypothesis: } f(x,t) = -\\log(t-\\|x\\|_2) - \\log(t+\\|x\\|_2).\\]\n\\[\\text{Hypothesis: this representation follows from standard convexity-preserving composition rules, using the known convexity of } -\\log(\\cdot) \\text{ and the properties of } t \\pm \\|x\\|_2 \\text{ on the domain } t > \\|x\\|_2.\\]\n\\[\\text{Goal: prove that } f \\text{ is convex on } \\operatorname{dom} f.\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -271,7 +271,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\begin{aligned} &\\text{Definition: } f : \\mathbf{R}^n \\to \\mathbf{R}. \\\\ &\\text{Definition: } g : \\mathbf{R}^n \\to \\mathbf{R}. \\\\ &\\text{Definition: } h(x) = \\frac{f(x)^2}{g(x)}. \\\\ &\\text{Definition: } \\operatorname{dom} h = \\operatorname{dom} f \\cap \\operatorname{dom} g. \\\\ &\\text{Hypothesis: } f \\text{ is convex.} \\\\ &\\text{Hypothesis: } f(x) \\ge 0 \\text{ for all } x \\in \\operatorname{dom} f. \\\\ &\\text{Hypothesis: } g \\text{ is concave.} \\\\ &\\text{Hypothesis: } g(x) > 0 \\text{ for all } x \\in \\operatorname{dom} g. \\\\ &\\text{Goal: prove that } h \\text{ is convex on } \\operatorname{dom} h.\\end{aligned}\\]",
+    "problem": "\\[\\text{Definition: } f : \\mathbf{R}^n \\to \\mathbf{R}.\\]\\[\\text{Definition: } g : \\mathbf{R}^n \\to \\mathbf{R}.\\]\\[\\text{Hypothesis: } f \\text{ is convex.}\\]\\[\\text{Hypothesis: } f(x) \\ge 0 \\text{ for all } x \\in \\operatorname{dom} f.\\]\\[\\text{Hypothesis: } g \\text{ is concave.}\\]\\[\\text{Hypothesis: } g(x) > 0 \\text{ for all } x \\in \\operatorname{dom} g.\\]\\[\\text{Definition: } \\operatorname{dom} h = \\operatorname{dom} f \\cap \\operatorname{dom} g.\\]\\[\\text{Definition: } h(x) = \\frac{f(x)^2}{g(x)} \\text{ for } x \\in \\operatorname{dom} h.\\]\\[\\text{Goal: prove that } h \\text{ is convex.}\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -283,7 +283,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\begin{array}{l}\n\\text{Definition: } f : \\mathbf{R}^n \\to \\mathbf{R}.\\\\\n\\text{Hypothesis: } f \\text{ is convex.}\\\\\n\\text{Hypothesis: } \\operatorname{dom} f = \\mathbf{R}^n.\\\\\n\\text{Hypothesis: } f(0) \\leq 0.\\\\\n\\text{Definition: } g(x,t) = t f(x/t).\\\\\n\\text{Definition: } g \\text{ is defined for } (x,t) \\text{ such that } t > 0.\\\\\n\\text{Definition: } x \\in \\mathbf{R}^n \\text{ is fixed.}\\\\\n\\text{Goal: prove that the function } t \\mapsto t f(x/t) \\text{ is nonincreasing on } t > 0.\n\\end{array}\\]",
+    "problem": "\\[\\begin{aligned}&\\text{Definition: } f : \\mathbf{R}^n \\to \\mathbf{R}.\\\\&\\text{Hypothesis: } f \\text{ is convex on } \\mathbf{R}^n.\\\\&\\text{Hypothesis: } \\operatorname{dom} f = \\mathbf{R}^n.\\\\&\\text{Hypothesis: } f(0) \\le 0.\\\\&\\text{Definition: } g(x,t) = t f(x/t).\\\\&\\text{Definition: } \\operatorname{dom} g = \\{(x,t) \\mid t > 0\\}.\\\\&\\text{Definition: } x \\in \\mathbf{R}^n \\text{ is fixed}.\\\\&\\text{Goal: prove that the function } t \\mapsto t f(x/t) \\text{ is nonincreasing on } t > 0.\\end{aligned}\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -295,7 +295,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } f : \\mathbf{R}^n \\to \\mathbf{R}.\\]\\[\\text{Definition: } g : \\mathbf{R}^n \\to \\mathbf{R}.\\]\\[\\text{Hypothesis: } f \\text{ is convex and } f(0) \\le 0.\\]\\[\\text{Hypothesis: } g \\text{ is concave.}\\]\\[\\text{Hypothesis: } g(x) > 0 \\text{ for all } x \\in \\operatorname{dom} g.\\]\\[\\text{Definition: } h(x) = g(x) f\\bigl(x / g(x)\\bigr).\\]\\[\\text{Definition: } \\operatorname{dom} h = \\{x \\in \\operatorname{dom} g \\mid x / g(x) \\in \\operatorname{dom} f\\}.\\]\\[\\text{Goal: prove that } h \\text{ is convex on } \\operatorname{dom} h.\\]",
+    "problem": "Definition: $f : \\mathbf{R}^n \\to \\mathbf{R}$.\\\\\nHypothesis: $f$ is convex.\\\\\nHypothesis: $f(0) \\le 0$.\\\\\nDefinition: $g : \\mathbf{R}^n \\to \\mathbf{R}$.\\\\\nHypothesis: $g$ is concave.\\\\\nHypothesis: for all $x \\in \\operatorname{dom} g$, $g(x) > 0$.\\\\\nDefinition: $h(x) = g(x) f(x / g(x))$.\\\\\nDefinition: $\\operatorname{dom} h = \\{x \\in \\operatorname{dom} g \\mid x / g(x) \\in \\operatorname{dom} f\\}$.\\\\\nGoal: prove that $h$ is convex on $\\operatorname{dom} h$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -307,7 +307,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "Definition: $\\mathbf{R}_{++}^n = \\{x \\in \\mathbf{R}^n \\mid x_k > 0,\\ k = 1, \\dots, n\\}$.\\\\\nDefinition: $h : \\mathbf{R}_{++}^n \\to \\mathbf{R}$ is defined by $h(x) = \\dfrac{x^T x}{\\left(\\prod_{k=1}^n x_k\\right)^{1/n}}$.\\\\\nHypothesis: $\\operatorname{dom} h = \\mathbf{R}_{++}^n$.\\\\\nGoal: prove that $h$ is convex on $\\mathbf{R}_{++}^n$.",
+    "problem": "\\[\\text{Definition: } f : \\mathbf{R}^n \\to \\mathbf{R}.\\]\\[\\text{Hypothesis: } f \\text{ is convex.}\\]\\[\\text{Hypothesis: } f(0) \\leq 0.\\]\\[\\text{Definition: } \\mathbf{R}_{++}^n = \\{x \\in \\mathbf{R}^n \\mid x_k > 0,\\ k = 1, \\dots, n\\}.\\]\\[\\text{Definition: } h : \\mathbf{R}_{++}^n \\to \\mathbf{R}.\\]\\[\\text{Definition: } h(x) = \\dfrac{x^T x}{\\left(\\prod_{k=1}^n x_k\\right)^{1/n}}.\\]\\[\\text{Hypothesis: } \\operatorname{dom} h = \\mathbf{R}_{++}^n.\\]\\[\\text{Goal: prove that } h \\text{ is convex on } \\mathbf{R}_{++}^n.\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -319,7 +319,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\begin{aligned}\n&\\text{Definition: } X \\in \\mathbf{S}_{++}^n,\\ t \\in \\mathbf{R}_{++}.\\\\\n&\\text{Definition: } f(X,t)=nt\\log t-t\\log\\det X.\\\\\n&\\text{Definition: } \\operatorname{dom} f=\\mathbf{S}_{++}^n\\times \\mathbf{R}_{++}.\\\\\n&\\text{Goal: prove that } f \\text{ is convex in } (X,t).\\\\\n&\\text{Definition: } g:\\mathbf{S}_{++}^n\\to \\mathbf{R}.\\\\\n&\\text{Definition: } g(X)=n(\\operatorname{tr}X)\\log(\\operatorname{tr}X)-(\\operatorname{tr}X)(\\log\\det X).\\\\\n&\\text{Definition: if } \\lambda_1,\\dots,\\lambda_n \\text{ are the eigenvalues of } X, \\text{ then }\\\\\n&\\qquad g(X)=n\\left(\\sum_{i=1}^n \\lambda_i\\right)\\left(\\log\\sum_{i=1}^n \\lambda_i-\\sum_{i=1}^n \\log\\lambda_i\\right).\\\\\n&\\text{Goal: using the convexity of } f, \\text{ prove that } g \\text{ is convex on } \\mathbf{S}_{++}^n.\n\\end{aligned}\\]",
+    "problem": "Definition: $X \\in \\mathbf{S}_{++}^n$ is an $n \\times n$ real symmetric positive definite matrix.\\\\\nDefinition: $t \\in \\mathbf{R}_{++}$.\\\\\nDefinition: $f : \\mathbf{S}_{++}^n \\times \\mathbf{R}_{++} \\to \\mathbf{R}$ is given by $f(X,t) = nt \\log t - t \\log \\det X$.\\\\\nDefinition: $g : \\mathbf{S}_{++}^n \\to \\mathbf{R}$ is given by $g(X) = n(\\operatorname{tr} X) \\log(\\operatorname{tr} X) - (\\operatorname{tr} X)(\\log \\det X)$.\\\\\nDefinition: if $\\lambda_1, \\dots, \\lambda_n$ are the eigenvalues of $X$, then $g(X) = n\\left(\\sum_{i=1}^n \\lambda_i\\right)\\left(\\log \\sum_{i=1}^n \\lambda_i - \\sum_{i=1}^n \\log \\lambda_i\\right)$.\\\\\nGoal: prove that $f$ is convex in the pair $(X,t)$ on $\\mathbf{S}_{++}^n \\times \\mathbf{R}_{++}$.\\\\\nGoal: using this, prove that $g$ is convex on $\\mathbf{S}_{++}^n$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -331,7 +331,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } f : \\mathbf{R}^m \\to \\mathbf{R}.\\]\\n\\[\\text{Definition: } A \\in \\mathbf{R}^{m \\times n},\\ b \\in \\mathbf{R}^m,\\ c \\in \\mathbf{R}^n,\\ d \\in \\mathbf{R}.\\]\\n\\[\\text{Hypothesis: } f \\text{ is convex.}\\]\\n\\[\\text{Definition: } \\operatorname{dom} g = \\{x \\in \\mathbf{R}^n \\mid c^T x + d > 0\\}.\\]\\n\\[\\text{Definition: for } x \\in \\operatorname{dom} g,\\ g(x) = (c^T x + d)\\, f\\!\\left(\\frac{Ax+b}{c^T x+d}\\right).\\]\\n\\[\\text{Definition: } \\frac{Ax+b}{c^T x+d} \\text{ denotes division of the vector } Ax+b \\in \\mathbf{R}^m \\text{ by the positive scalar } c^T x+d.\\]\\n\\[\\text{Goal: prove that } g \\text{ is convex on } \\operatorname{dom} g.\\]",
+    "problem": "\\[\\text{Definition: } f : \\mathbf{R}^m \\to \\mathbf{R}.\\]\\n\\[\\text{Hypothesis: } f \\text{ is convex.}\\]\\n\\[\\text{Definition: } A \\in \\mathbf{R}^{m \\times n},\\ b \\in \\mathbf{R}^m,\\ c \\in \\mathbf{R}^n,\\ d \\in \\mathbf{R}.\\]\\n\\[\\text{Definition: } \\operatorname{dom} g = \\{x \\in \\mathbf{R}^n \\mid c^T x + d > 0\\}.\\]\\n\\[\\text{Definition: } g(x) = (c^T x + d)\\, f\\!\\left(\\frac{Ax+b}{c^T x+d}\\right) \\text{ for } x \\in \\operatorname{dom} g.\\]\\n\\[\\text{Definition: } \\frac{Ax+b}{c^T x+d} \\text{ is the vector } Ax+b \\in \\mathbf{R}^m \\text{ divided by the positive scalar } c^T x+d.\\]\\n\\[\\text{Goal: prove that } g \\text{ is convex on } \\operatorname{dom} g.\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -355,7 +355,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } A \\in \\mathbb{R}^{m \\times n},\\ b \\in \\mathbb{R}^m.\\]\\[\\text{Definition: } f : \\mathbb{R}^n \\to \\mathbb{R},\\quad f(x) = \\frac{\\|Ax-b\\|_2^2}{1-x^T x}.\\]\\[\\text{Definition: } B = \\{x \\in \\mathbb{R}^n \\mid \\|x\\|_2 < 1\\}.\\]\\[\\text{Goal: prove that } f \\text{ is convex on } B.\\]",
+    "problem": "Definition: $A \\in \\mathbf{R}^{m \\times n}$.\\\\\nDefinition: $b \\in \\mathbf{R}^m$.\\\\\nDefinition: $f : \\mathbf{R}^n \\to \\mathbf{R}$ is given by $f(x) = \\dfrac{\\|Ax-b\\|_2^2}{1-x^T x}$.\\\\\nDefinition: $B = \\{x \\in \\mathbf{R}^n \\mid \\|x\\|_2 < 1\\}$.\\\\\nGoal: prove that $f$ is convex on $B$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -367,7 +367,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } n \\in \\mathbf{N}.\\]\n\\[\\text{Definition: } \\alpha_1,\\dots,\\alpha_n \\in \\mathbf{R}.\\]\n\\[\\text{Hypothesis: } \\alpha_k \\ge 0 \\text{ for } k=1,\\dots,n.\\]\n\\[\\text{Hypothesis: } \\sum_{k=1}^n \\alpha_k \\le 1.\\]\n\\[\\text{Definition: } f : \\mathbf{R}_{++}^n \\to \\mathbf{R}, \\quad f(x)=\\prod_{k=1}^n x_k^{\\alpha_k}.\\]\n\\[\\text{Goal: prove that } f \\text{ is concave on } \\mathbf{R}_{++}^n.\\]",
+    "problem": "\\[\\text{Definition: } n \\in \\mathbf{N}.\\]\n\\[\\text{Definition: } f : \\mathbf{R}_{++}^n \\to \\mathbf{R}, \\quad f(x) = \\prod_{k=1}^n x_k^{\\alpha_k}.\\]\n\\[\\text{Definition: } \\alpha_1, \\ldots, \\alpha_n \\in \\mathbf{R}.\\]\n\\[\\text{Hypothesis: } \\alpha_k \\ge 0 \\text{ for all } k = 1, \\ldots, n.\\]\n\\[\\text{Hypothesis: } \\sum_{k=1}^n \\alpha_k \\le 1.\\]\n\\[\\text{Goal: prove that } f \\text{ is concave on } \\mathbf{R}_{++}^n.\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -379,7 +379,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "Definition: $f : \\mathbf{R}^n \\to \\mathbf{R}$.\\\\\nHypothesis: $f$ is convex.\\\\\nDefinition: $g : \\operatorname{dom} g \\to \\mathbf{R}$ is defined by $g(x,t) = f(x/t)$.\\\\\nDefinition: $\\operatorname{dom} g = \\{(x,t) \\in \\mathbf{R}^n \\times \\mathbf{R} \\mid x/t \\in \\operatorname{dom} f,\\ t > 0\\}$.\\\\\nGoal: prove that $g$ is quasiconvex.",
+    "problem": "\\[\\text{Definition: } f : \\mathbf{R}^n \\to \\mathbf{R}.\\]\\[\\text{Hypothesis: } f \\text{ is convex.}\\]\\[\\text{Definition: } g(x,t) = f(x/t).\\]\\[\\text{Definition: } \\operatorname{dom} g = \\{(x,t) \\in \\mathbf{R}^n \\times \\mathbf{R} \\mid x/t \\in \\operatorname{dom} f,\\ t > 0\\}.\\]\\[\\text{Goal: prove that } g \\text{ is quasiconvex.}\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -391,7 +391,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "Definition: $x = (x_1,x_2,x_3,x_4) \\in \\mathbf{R}^4$.\\\\\nDefinition: $f : D \\to \\mathbf{R}$ is defined by\n\\[\nf(x)=\\frac{1}{x_1-\\frac{1}{x_2-\\frac{1}{x_3-\\frac{1}{x_4}}}}.\n\\]\\\\\nDefinition: $D$ is the set of all $x \\in \\mathbf{R}^4$ such that every denominator in the continued fraction is positive.\\\\\nHypothesis: $x_4 > 0$.\\\\\nHypothesis: $x_3-\\frac{1}{x_4} > 0$.\\\\\nHypothesis: $x_2-\\frac{1}{x_3-\\frac{1}{x_4}} > 0$.\\\\\nHypothesis: $x_1-\\frac{1}{x_2-\\frac{1}{x_3-\\frac{1}{x_4}}} > 0$.\\\\\nGoal: prove that $f$ is convex on $D$.\\\\\nGoal: prove that $f$ is decreasing in each variable.",
+    "problem": "\\[\\text{Definition: } x = (x_1,x_2,x_3,x_4) \\in \\mathbf{R}^4.\\]\n\\[\\text{Definition: } D = \\left\\{x \\in \\mathbf{R}^4 \\mid x_4 > 0,\\ x_3 - \\frac{1}{x_4} > 0,\\ x_2 - \\frac{1}{x_3 - \\frac{1}{x_4}} > 0,\\ x_1 - \\frac{1}{x_2 - \\frac{1}{x_3 - \\frac{1}{x_4}}} > 0\\right\\}.\\]\n\\[\\text{Definition: } f : D \\to \\mathbf{R}, \\quad f(x) = \\frac{1}{x_1 - \\frac{1}{x_2 - \\frac{1}{x_3 - \\frac{1}{x_4}}}}.\\]\n\\[\\text{Goal: prove that } f \\text{ is convex on } D.\\]\n\\[\\text{Goal: prove that } f \\text{ is decreasing in each variable on } D.\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -403,7 +403,7 @@
       "求值题"
     ],
     "预估难度": [],
-    "problem": "Definition: $n \\in \\mathbf{N}$ and $x \\in \\mathbf{R}^n$.\\\\ Definition: The scalar Huber function is $f_{\\mathrm{hub}} : \\mathbf{R} \\to \\mathbf{R}$, given by \\[ f_{\\mathrm{hub}}(t) = \\begin{cases} (1/2)t^2 & |t| \\leq 1 \\\\ |t| - 1/2 & |t| > 1. \\end{cases} \\]\\\\ Definition: The circularly symmetric Huber function is $f_{\\mathrm{cshub}} : \\mathbf{R}^n \\to \\mathbf{R}$, defined by $f_{\\mathrm{cshub}}(x) = f_{\\mathrm{hub}}(\\|x\\|_2)$. Equivalently, \\[ f_{\\mathrm{cshub}}(x) = \\begin{cases} (1/2)\\|x\\|_2^2 & \\|x\\|_2 \\leq 1 \\\\ \\|x\\|_2 - 1/2 & \\|x\\|_2 > 1. \\end{cases} \\]\\\\ Hypothesis: $\\|\\cdot\\|_2$ is the Euclidean norm.\\\\ Goal: prove that $f_{\\mathrm{cshub}}$ is convex.\\\\ Goal: determine the conjugate function $f_{\\mathrm{cshub}}^*$.",
+    "problem": "\\[\\text{Definition: } n \\in \\mathbf{N}.\\]\\n\\[\\text{Definition: } x \\in \\mathbf{R}^n.\\]\\n\\[\\text{Definition: The scalar Huber function } f_{\\mathrm{hub}} : \\mathbf{R} \\to \\mathbf{R} \\text{ is given by } f_{\\mathrm{hub}}(t)=\\begin{cases}(1/2)t^2 & |t| \\le 1\\\\ |t|-1/2 & |t|>1.\\end{cases}\\]\\n\\[\\text{Definition: The circularly symmetric Huber function } f_{\\mathrm{cshub}} : \\mathbf{R}^n \\to \\mathbf{R} \\text{ is given by } f_{\\mathrm{cshub}}(x)=f_{\\mathrm{hub}}(\\|x\\|_2)=\\begin{cases}(1/2)\\|x\\|_2^2 & \\|x\\|_2 \\le 1\\\\ \\|x\\|_2-1/2 & \\|x\\|_2>1.\\end{cases}\\]\\n\\[\\text{Definition: } \\|\\cdot\\|_2 \\text{ is the Euclidean norm.}\\]\\n\\[\\text{Goal: prove that } f_{\\mathrm{cshub}} \\text{ is convex.}\\]\\n\\[\\text{Goal: find the conjugate function } f_{\\mathrm{cshub}}^*.\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -415,7 +415,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } f : \\mathbf{R}^m \\to \\mathbf{R} \\cup \\{+\\infty\\}.\\]\n\\[\\text{Definition: } x_1, \\ldots, x_n \\in \\operatorname{dom} f.\\]\n\\[\\text{Definition: } \\lambda_1, \\ldots, \\lambda_n \\text{ are scalars}.\\]\n\\[\\text{Hypothesis: } f \\text{ is convex}.\\]\n\\[\\text{Hypothesis: } \\lambda_1 > 0.\\]\n\\[\\text{Hypothesis: } \\lambda_i \\leq 0 \\text{ for } i = 2, \\ldots, n.\\]\n\\[\\text{Hypothesis: } \\lambda_1 + \\cdots + \\lambda_n = 1.\\]\n\\[\\text{Goal: prove that } f(\\lambda_1 x_1 + \\cdots + \\lambda_n x_n) \\geq \\lambda_1 f(x_1) + \\cdots + \\lambda_n f(x_n).\\]",
+    "problem": "\\[\\text{Definition: } f : \\mathbf{R}^m \\to \\mathbf{R} \\cup \\{+\\infty\\}.\\]\n\\[\\text{Definition: } x_1, \\ldots, x_n \\in \\operatorname{dom} f.\\]\n\\[\\text{Hypothesis: } f \\text{ is convex}.\\]\n\\[\\text{Hypothesis: } \\lambda_1, \\ldots, \\lambda_n \\text{ are scalars}.\\]\n\\[\\text{Hypothesis: } \\lambda_1 > 0.\\]\n\\[\\text{Hypothesis: } \\lambda_i \\leq 0 \\text{ for } i = 2, \\ldots, n.\\]\n\\[\\text{Hypothesis: } \\lambda_1 + \\cdots + \\lambda_n = 1.\\]\n\\[\\text{Goal: prove that } f(\\lambda_1 x_1 + \\cdots + \\lambda_n x_n) \\geq \\lambda_1 f(x_1) + \\cdots + \\lambda_n f(x_n).\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -427,7 +427,7 @@
       "求值题"
     ],
     "预估难度": [],
-    "problem": "Definition: $f : \\mathbf{R}^n \\to \\mathbf{R}$.\\\\\nHypothesis: $f$ is convex.\\\\\nDefinition: A function $h : \\mathbf{R}^n \\to \\mathbf{R}$ is monotone nondecreasing if, for all $x,y \\in \\mathbf{R}^n$, $x \\ge y$ componentwise implies $h(x) \\ge h(y)$.\\\\\nDefinition: For $x \\in \\mathbf{R}^n$, define\n$$g(x) = \\inf_{z \\in \\mathbf{R}^n,\\ z \\ge 0} f(x+z),$$\nwhere $z \\ge 0$ is understood componentwise.\\\\\nHypothesis: For all $x \\in \\mathbf{R}^n$, $g(x) > -\\infty$.\\\\\nGoal: prove that $g$ is convex.\\\\\nGoal: prove that $g$ is monotone nondecreasing.\\\\\nGoal: prove that $g(x) \\le f(x)$ for all $x \\in \\mathbf{R}^n$.\\\\\nGoal: if $h : \\mathbf{R}^n \\to \\mathbf{R}$ is convex, monotone nondecreasing, and satisfies $h(x) \\le f(x)$ for all $x \\in \\mathbf{R}^n$, then prove that $h(x) \\le g(x)$ for all $x \\in \\mathbf{R}^n$.\\\\\nGoal: conclude that $g$ is the maximum convex monotone underestimator of $f$.",
+    "problem": "\\[\\text{Definition: } f : \\mathbf{R}^n \\to \\mathbf{R}.\\]\n\\[\\text{Hypothesis: } f \\text{ is convex on } \\mathbf{R}^n.\\]\n\\[\\text{Definition: A function } h : \\mathbf{R}^n \\to \\mathbf{R} \\text{ is monotone nondecreasing if } h(x) \\ge h(y) \\text{ whenever } x \\ge y, \\text{ with inequalities interpreted componentwise.}\\]\n\\[\\text{Definition: } g(x) = \\inf_{\\substack{z \\in \\mathbf{R}^n \\\\ z \\ge 0}} f(x+z), \\quad x \\in \\mathbf{R}^n, \\text{ where } z \\ge 0 \\text{ is componentwise.}\\]\n\\[\\text{Hypothesis: } g(x) > -\\infty \\text{ for all } x \\in \\mathbf{R}^n.\\]\n\\[\\text{Goal: prove that } g \\text{ is convex.}\\]\n\\[\\text{Goal: prove that } g \\text{ is monotone nondecreasing.}\\]\n\\[\\text{Goal: prove that } g(x) \\le f(x) \\text{ for all } x \\in \\mathbf{R}^n.\\]\n\\[\\text{Definition: } h : \\mathbf{R}^n \\to \\mathbf{R}.\\]\n\\[\\text{Hypothesis: } h \\text{ is convex.}\\]\n\\[\\text{Hypothesis: } h \\text{ is monotone nondecreasing.}\\]\n\\[\\text{Hypothesis: } h(x) \\le f(x) \\text{ for all } x \\in \\mathbf{R}^n.\\]\n\\[\\text{Goal: prove that } h(x) \\le g(x) \\text{ for all } x \\in \\mathbf{R}^n.\\]\n\\[\\text{Goal: conclude that } g \\text{ is the maximum convex monotone underestimator of } f.\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -439,7 +439,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } f : \\mathbf{R}^n \\to \\mathbf{R}.\\]\\[\\text{Hypothesis: } f \\text{ is convex.}\\]\\[\\text{Hypothesis: for every orthogonal matrix } Q \\in \\mathbf{R}^{n \\times n} \\text{ and every } x \\in \\mathbf{R}^n,\\ f(Qx) = f(x).\\]\\[\\text{Equivalent description: } f(x) \\text{ depends only on } \\|x\\|_2.\\]\\[\\text{Goal: prove that there exists } \\phi : \\mathbf{R} \\to \\mathbf{R} \\text{ such that } \\operatorname{dom} \\phi = \\mathbf{R},\\ \\phi \\text{ is convex, } \\phi \\text{ is nondecreasing, and } f(x) = \\phi(\\|x\\|_2) \\text{ for all } x \\in \\mathbf{R}^n.\\]",
+    "problem": "\\[\\text{Definition: } f : \\mathbf{R}^n \\to \\mathbf{R}.\\]\n\\[\\text{Hypothesis: } f \\text{ is convex on } \\mathbf{R}^n.\\]\n\\[\\text{Hypothesis: for every orthogonal matrix } Q \\in \\mathbf{R}^{n \\times n} \\text{ and every } x \\in \\mathbf{R}^n,\\ f(Qx) = f(x).\\]\n\\[\\text{Definition: this rotational symmetry is equivalent to saying that } f(x) \\text{ depends only on } \\|x\\|_2.\\]\n\\[\\text{Goal: prove that there exists } \\phi : \\mathbf{R} \\to \\mathbf{R} \\text{ such that } \\operatorname{dom} \\phi = \\mathbf{R},\\ \\phi \\text{ is convex, } \\phi \\text{ is nondecreasing, and } f(x) = \\phi(\\|x\\|_2) \\text{ for all } x \\in \\mathbf{R}^n.\\]\n\\[\\text{Goal: also prove the converse: every function of the form } f(x) = \\phi(\\|x\\|_2), \\text{ with } \\phi \\text{ convex and nondecreasing, is rotationally symmetric and convex.}\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -451,7 +451,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } f_1,\\ldots,f_m : \\mathbf{R}^n \\to \\mathbf{R} \\cup \\{+\\infty\\}.\\]\\[\\text{Hypothesis: each } f_i \\text{ is convex.}\\]\\[\\text{Definition: } g = f_1 \\diamond \\cdots \\diamond f_m.\\]\\[\\text{Definition: for } x \\in \\mathbf{R}^n,\\quad g(x)=\\inf\\{f_1(x_1)+\\cdots+f_m(x_m) \\mid x_1,\\ldots,x_m \\in \\mathbf{R}^n,\\ x_1+\\cdots+x_m=x\\}.\\]\\[\\text{Definition: } \\operatorname{dom} g = \\{x \\in \\mathbf{R}^n \\mid g(x) < +\\infty\\}.\\]\\[\\text{Goal: prove that } g \\text{ is convex.}\\]",
+    "problem": "\\[\\begin{aligned}&\\text{Definition: } f_1,\\ldots,f_m : \\mathbf{R}^n \\to \\mathbf{R} \\cup \\{+\\infty\\}.\\\\&\\text{Hypothesis: } f_1,\\ldots,f_m \\text{ are convex.}\\\\&\\text{Definition: } g = f_1 \\diamond \\cdots \\diamond f_m.\\\\&\\text{Definition: } g(x)=\\inf\\{f_1(x_1)+\\cdots+f_m(x_m) \\mid x_1,\\ldots,x_m \\in \\mathbf{R}^n,\\ x_1+\\cdots+x_m=x\\} \\text{ for } x \\in \\mathbf{R}^n.\\\\&\\text{Definition: } \\operatorname{dom} g = \\{x \\in \\mathbf{R}^n \\mid g(x)<+\\infty\\}.\\\\&\\text{Goal: prove that } g \\text{ is convex.}\\end{aligned}\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -463,7 +463,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "Definition: $f_1, \\ldots, f_m : \\mathbf{R}^n \\to \\mathbf{R} \\cup \\{\\infty\\}$.\\\\\nHypothesis: Each $f_i$ is convex.\\\\\nDefinition: $g = f_1 \\diamond \\cdots \\diamond f_m$.\\\\\nDefinition: For each $x \\in \\mathbf{R}^n$, $$g(x) = \\inf\\{f_1(x_1) + \\cdots + f_m(x_m) \\mid x_1, \\ldots, x_m \\in \\mathbf{R}^n,\\ x_1 + \\cdots + x_m = x\\}.$$\\\\\nDefinition: $\\operatorname{dom} g = \\{x \\in \\mathbf{R}^n \\mid g(x) < \\infty\\}$.\\\\\nDefinition: For each $i$, the convex conjugate of $f_i$ is $$f_i^*(y) = \\sup_{x \\in \\mathbf{R}^n} (y^T x - f_i(x)).$$\\\\\nDefinition: The convex conjugate of $g$ is $$g^*(y) = \\sup_{x \\in \\mathbf{R}^n} (y^T x - g(x)).$$\\\\\nGoal: prove that $$g^* = f_1^* + \\cdots + f_m^*.$$",
+    "problem": "Definition: $m \\in \\mathbf{N}$, and for each $i=1,\\ldots,m$, $f_i : \\mathbf{R}^n \\to \\mathbf{R} \\cup \\{\\infty\\}$.\\\\\nHypothesis: each $f_i$ is convex.\\\\\nDefinition: $g = f_1 \\diamond \\cdots \\diamond f_m$, where\n$$g(x) = \\inf\\{f_1(x_1)+\\cdots+f_m(x_m) \\mid x_1,\\ldots,x_m \\in \\mathbf{R}^n,\\ x_1+\\cdots+x_m=x\\}.$$\\\\\nDefinition: $\\operatorname{dom} g = \\{x \\in \\mathbf{R}^n \\mid g(x) < \\infty\\}$.\\\\\nDefinition: for each $i=1,\\ldots,m$, the convex conjugate of $f_i$ is\n$$f_i^*(y) = \\sup_{x \\in \\mathbf{R}^n} (y^T x - f_i(x)).$$\\\\\nDefinition: the convex conjugate of $g$ is\n$$g^*(y) = \\sup_{x \\in \\mathbf{R}^n} (y^T x - g(x)).$$\\\\\nGoal: prove that $g^* = f_1^* + \\cdots + f_m^*$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -475,7 +475,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } A \\in \\mathbf{R}^{m \\times n},\\ f : \\mathbf{R}^m \\to \\mathbf{R},\\ g : \\mathbf{R}^n \\to \\mathbf{R}.\\]\\[\\text{Hypothesis: } \\operatorname{rank} A = m.\\]\\[\\text{Hypothesis: } f \\text{ is convex}.\\]\\[\\text{Definition: } g(x) = f(Ax) \\text{ for all } x \\in \\mathbf{R}^n.\\]\\[\\text{Definition: } f^*(u) = \\sup_{z \\in \\mathbf{R}^m} \\bigl(u^T z - f(z)\\bigr) \\text{ for } u \\in \\mathbf{R}^m.\\]\\[\\text{Definition: } g^*(y) = \\sup_{x \\in \\mathbf{R}^n} \\bigl(y^T x - g(x)\\bigr) \\text{ for } y \\in \\mathbf{R}^n.\\]\\[\\text{Definition: } A^\\dagger = (A A^T)^{-1} A.\\]\\[\\text{Goal: for every } y \\in \\mathbf{R}^n,\\ g^*(y) = f^*\\bigl((A^\\dagger)^T y\\bigr).\\]\\[\\text{Goal: } \\operatorname{dom}(g^*) = A^T \\operatorname{dom}(f^*).\\]",
+    "problem": "Definition: $A \\in \\mathbf{R}^{m \\times n}$.\\\\ Definition: $f : \\mathbf{R}^m \\to \\mathbf{R}$ is a convex function.\\\\ Definition: $g : \\mathbf{R}^n \\to \\mathbf{R}$ is defined by $g(x) = f(Ax)$.\\\\ Definition: $f^*(u) = \\sup_{z \\in \\mathbf{R}^m} (u^T z - f(z))$.\\\\ Definition: $g^*(y) = \\sup_{x \\in \\mathbf{R}^n} (y^T x - g(x))$.\\\\ Definition: $A^\\dagger = (A A^T)^{-1} A$.\\\\ Hypothesis: $\\operatorname{rank} A = m$.\\\\ Goal: prove that for every $y \\in \\mathbf{R}^n$, $g^*(y) = f^*((A^\\dagger)^T y)$.\\\\ Goal: prove that $\\operatorname{dom}(g^*) = A^T \\operatorname{dom}(f^*)$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -487,7 +487,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "Definition: $n \\ge 1$.\\\\ Definition: $\\lambda_1, \\ldots, \\lambda_n$ are positive real numbers.\\\\ Definition: $f : \\mathbf{R}^n \\to \\mathbf{R}$ is defined by $f(x) = \\prod_{i=1}^n (1 - e^{-x_i})^{\\lambda_i}$.\\\\ Definition: $\\operatorname{dom} f = \\left\\{ x \\in \\mathbf{R}_{++}^n \\mid \\sum_{i=1}^n \\lambda_i e^{-x_i} \\le 1 \\right\\}$.\\\\ Goal: prove that $f$ is concave on $\\operatorname{dom} f$.",
+    "problem": "Definition: $n \\ge 1$.\\\\\nDefinition: $\\lambda_1, \\ldots, \\lambda_n$ are positive real numbers.\\\\\nDefinition: $f : \\mathbf{R}^n \\to \\mathbf{R}$ is defined by $f(x) = \\prod_{i=1}^n (1 - e^{-x_i})^{\\lambda_i}$.\\\\\nDefinition: $\\operatorname{dom} f = \\left\\{x \\in \\mathbf{R}_{++}^n \\mid \\sum_{i=1}^n \\lambda_i e^{-x_i} \\le 1\\right\\}$.\\\\\nDefinition: for $i = 1, \\ldots, n$, set $y_i = \\lambda_i e^{-x_i}/(1 - e^{-x_i})$ and $z_i = y_i/(1 - e^{-x_i})$.\\\\\nDefinition: the Hessian is $\\nabla^2 f(x) = f(x)(yy^T - \\operatorname{diag}(z))$.\\\\\nGoal: prove that $f$ is concave on $\\operatorname{dom} f$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -499,7 +499,7 @@
       "求值题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } a,b \\in \\mathbf{R}.\\]\n\\[\\text{Hypothesis: } a < b.\\]\n\\[\\text{Definition: } x=(x_1,\\dots,x_n) \\in \\mathbf{R}^n.\\]\n\\[\\text{Definition: } p_x(t)=x_1+x_2 t+x_3 t^2+\\cdots+x_n t^{n-1}, \\quad t \\in [a,b].\\]\n\\[\\text{Definition: } f : \\mathbf{R}^n \\to \\mathbf{R}, \\quad f(x)=\\sup_{t \\in [a,b]} p_x(t)-\\inf_{t \\in [a,b]} p_x(t).\\]\n\\[\\text{Goal: prove that } f \\text{ is convex on } \\mathbf{R}^n.\\]",
+    "problem": "Definition: $a,b \\in \\mathbf{R}$.\\\\\nHypothesis: $a < b$.\\\\\nDefinition: for each $x=(x_1,\\dots,x_n) \\in \\mathbf{R}^n$, define $p_x : [a,b] \\to \\mathbf{R}$ by $p_x(t)=x_1+x_2 t+x_3 t^2+\\cdots+x_n t^{n-1}$.\\\\\nDefinition: define $f : \\mathbf{R}^n \\to \\mathbf{R}$ by $f(x)=\\sup_{t\\in[a,b]} p_x(t)-\\inf_{t\\in[a,b]} p_x(t)$.\\\\\nGoal: prove that $f$ is convex on $\\mathbf{R}^n$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -511,7 +511,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "Definition: $m \\in \\mathbf{N}$, and for each $i = 1, \\ldots, m$, $f_i : \\mathbf{R}^n \\to \\mathbf{R}$.\\\\\nHypothesis: For each $i = 1, \\ldots, m$, the function $f_i$ is convex.\\\\\nDefinition: $\\operatorname{dom} f = \\{x \\in \\mathbf{R}^n \\mid f_i(x) < 0,\\ i = 1, \\ldots, m\\}$.\\\\\nDefinition: For $x \\in \\operatorname{dom} f$, $f(x) = \\sum_{i=1}^m e^{-1/f_i(x)}$.\\\\\nGoal: prove that $f$ is convex on $\\operatorname{dom} f$.",
+    "problem": "\\[\\text{Definition: } f_i : \\mathbf{R}^n \\to \\mathbf{R} \\text{ for } i=1,\\ldots,m.\\]\n\\[\\text{Hypothesis: each } f_i \\text{ is convex.}\\]\n\\[\\text{Definition: } \\operatorname{dom} f = \\{x \\in \\mathbf{R}^n \\mid f_i(x) < 0,\\ i=1,\\ldots,m\\}.\\]\n\\[\\text{Definition: } f(x) = \\sum_{i=1}^m e^{-1/f_i(x)} \\text{ for } x \\in \\operatorname{dom} f.\\]\n\\[\\text{Goal: prove that } f \\text{ is convex on } \\operatorname{dom} f.\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -523,7 +523,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } g : \\mathbf{R}^n \\to \\mathbf{R} \\cup \\{+\\infty\\}.\\]\n\\[\\text{Definition: } \\operatorname{dom} g := \\{ z \\in \\mathbf{R}^n \\mid g(z) < +\\infty \\}.\\]\n\\[\\text{Definition: } y \\in \\operatorname{dom} g.\\]\n\\[\\text{Hypothesis: } g \\text{ is convex.}\\]\n\\[\\text{Definition: } f(x) = \\inf_{\\alpha > 0} \\frac{g(y+\\alpha x)-g(y)}{\\alpha}, \\quad x \\in \\mathbf{R}^n.\\]\n\\[\\text{Hypothesis: the infimum is taken in the extended-real sense.}\\]\n\\[\\text{Goal: prove that } f \\text{ is convex.}\\]",
+    "problem": "\\[\\text{Definition: } g : \\mathbf{R}^n \\to \\mathbf{R} \\cup \\{+\\infty\\}.\\]\n\\[\\text{Definition: } \\operatorname{dom} g := \\{ z \\in \\mathbf{R}^n \\mid g(z) < +\\infty \\}.\\]\n\\[\\text{Definition: } y \\in \\mathbf{R}^n.\\]\n\\[\\text{Hypothesis: } g \\text{ is convex.}\\]\n\\[\\text{Hypothesis: } y \\in \\operatorname{dom} g.\\]\n\\[\\text{Definition: } f(x) = \\inf_{\\alpha > 0} \\frac{g(y + \\alpha x) - g(y)}{\\alpha}, \\quad x \\in \\mathbf{R}^n,\\]\n\\[\\text{Definition: the infimum is taken in the extended-real sense.}\\]\n\\[\\text{Goal: prove that } f \\text{ is convex.}\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -535,7 +535,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "Definition: $f : \\mathbf{R}^n \\to \\mathbf{R}$.\\\\\nHypothesis: $f$ is convex.\\\\\nHypothesis: $f$ is symmetric, i.e., $f(x) = f(Px)$ for every permutation matrix $P \\in \\mathbf{R}^{n \\times n}$.\\\\\nDefinition: $S \\in \\mathbf{R}^{n \\times n}$.\\\\\nHypothesis: $S$ is doubly stochastic, i.e., its entries are nonnegative and every row sum and every column sum are equal to $1$.\\\\\nDefinition: $x \\in \\mathbf{R}^n$.\\\\\nGoal: prove that $f(Sx) \\leq f(x)$.",
+    "problem": "Definition: $f : \\mathbf{R}^n \\to \\mathbf{R}$.\\\\\nDefinition: $S \\in \\mathbf{R}^{n \\times n}$ and $x \\in \\mathbf{R}^n$.\\\\\nDefinition: $f$ is symmetric, i.e., $f(x) = f(Px)$ for every permutation matrix $P \\in \\mathbf{R}^{n \\times n}$.\\\\\nDefinition: $S$ is doubly stochastic, i.e., all entries of $S$ are nonnegative, and every row sum and every column sum is equal to $1$.\\\\\nHypothesis: $f$ is convex.\\\\\nGoal: prove that $f(Sx) \\leq f(x)$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -547,7 +547,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "Definition: $Y \\in S^n$. \\\\ Definition: $Y = Q \\, \\operatorname{diag}(\\lambda) \\, Q^T$, where $Q \\in \\mathbf{R}^{n \\times n}$ is orthogonal and $\\lambda = (\\lambda_1, \\ldots, \\lambda_n) \\in \\mathbf{R}^n$ is the vector of eigenvalues of $Y$. \\\\ Definition: $S \\in \\mathbf{R}^{n \\times n}$ is defined by $S_{ij} = Q_{ij}^2$ for all $i,j$. \\\\ Goal: prove that $S$ is doubly stochastic. \\\\ Goal: prove that $\\operatorname{diag}(Y) = S\\lambda$.",
+    "problem": "Definition: $Y \\in S^n$.\\\\\nDefinition: $Y = Q \\, \\operatorname{diag}(\\lambda) \\, Q^T$, where $Q \\in \\mathbf{R}^{n \\times n}$ is orthogonal and $\\lambda = (\\lambda_1, \\ldots, \\lambda_n) \\in \\mathbf{R}^n$ is the vector of eigenvalues of $Y$.\\\\\nDefinition: $S \\in \\mathbf{R}^{n \\times n}$ is defined by $S_{ij} = Q_{ij}^2$ for all $i,j$.\\\\\nGoal: prove that $S$ is doubly stochastic.\\\\\nGoal: prove that $\\operatorname{diag}(Y) = S\\lambda$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -559,7 +559,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "Definition: $f : \\mathbf{R}^n \\to \\mathbf{R}$.\\\\\nHypothesis: $f$ is symmetric, i.e., $f(x) = f(Px)$ for every permutation matrix $P \\in \\mathbf{R}^{n \\times n}$.\\\\\nHypothesis: $f$ is convex.\\\\\nDefinition: $S^n$ is the space of $n \\times n$ real symmetric matrices.\\\\\nDefinition: for $X \\in S^n$, let $\\lambda(X) = (\\lambda_1(X), \\ldots, \\lambda_n(X)) \\in \\mathbf{R}^n$ be the eigenvalue vector of $X$.\\\\\nDefinition: for any square matrix $A$, let $\\operatorname{diag}(A) \\in \\mathbf{R}^n$ be the vector of diagonal entries of $A$.\\\\\nDefinition: $\\mathcal{V}$ is the set of $n \\times n$ real orthogonal matrices.\\\\\nDefinition: $X \\in S^n$.\\\\\nHypothesis: the results from parts (a) and (b) are available.\\\\\nGoal: prove that\n$$f(\\lambda(X)) = \\sup_{V \\in \\mathcal{V}} f(\\operatorname{diag}(V^T X V)).$$\\\\\nGoal: deduce that $f(\\lambda(X))$ is convex as a function of $X$.",
+    "problem": "Definition: $f : \\mathbf{R}^n \\to \\mathbf{R}$.\\\\\nHypothesis: $f$ is symmetric, i.e., $f(x) = f(Px)$ for every permutation matrix $P \\in \\mathbf{R}^{n \\times n}$.\\\\\nHypothesis: $f$ is convex.\\\\\nDefinition: $S^n$ is the space of $n \\times n$ real symmetric matrices.\\\\\nDefinition: For $X \\in S^n$, let $\\lambda(X) = (\\lambda_1(X), \\ldots, \\lambda_n(X)) \\in \\mathbf{R}^n$ be the vector of eigenvalues of $X$.\\\\\nDefinition: For any square matrix $A$, let $\\operatorname{diag}(A) \\in \\mathbf{R}^n$ be the vector of diagonal entries of $A$.\\\\\nDefinition: $\\mathcal{V}$ is the set of $n \\times n$ real orthogonal matrices.\\\\\nHypothesis: $X \\in S^n$.\\\\\nHypothesis: Use the results of parts (a) and (b).\\\\\nGoal: prove that $f(\\lambda(X)) = \\sup_{V \\in \\mathcal{V}} f(\\operatorname{diag}(V^T X V))$.\\\\\nGoal: deduce that $X \\mapsto f(\\lambda(X))$ is convex on $S^n$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -571,7 +571,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "Definition: $n \\ge 1$ is an integer.\\\\\nDefinition: $f : \\mathbf{R}^{n \\times n} \\times \\mathbf{R}^n \\to \\mathbf{R}$ is given by $f(X,y) = y^T X^{-1} y$.\\\\\nDefinition: $\\operatorname{dom} f = \\{(X,y) \\mid X + X^T \\succ 0\\}$, where $X \\in \\mathbf{R}^{n \\times n}$ and $y \\in \\mathbf{R}^n$.\\\\\nDefinition: $S^n$ is the set of real symmetric $n \\times n$ matrices.\\\\\nHypothesis: For $X \\in S^n$, the restricted function is known to be convex.\\\\\nGoal: determine whether $f$ is convex on $\\operatorname{dom} f$. If it is convex, prove it. If it is not convex, give a simple counterexample.",
+    "problem": "Definition: $n \\ge 1$ is an integer.\\\\\nDefinition: $f : \\mathbf{R}^{n \\times n} \\times \\mathbf{R}^n \\to \\mathbf{R}$ is given by $f(X,y) = y^T X^{-1} y$.\\\\\nDefinition: $\\operatorname{dom} f = \\{(X,y) \\mid X + X^T \\succ 0\\}$.\\\\\nDefinition: $X \\in \\mathbf{R}^{n \\times n}$ and $y \\in \\mathbf{R}^n$.\\\\\nDefinition: $S^n$ is the set of $n \\times n$ real symmetric matrices.\\\\\nHypothesis: when restricted to $X \\in S^n$, the function $f$ is convex.\\\\\nGoal: determine whether $f$ is convex on $\\operatorname{dom} f$. If it is convex, prove it. If it is not convex, give a simple counterexample.",
     "proof": "",
     "direct_answer": ""
   },
@@ -583,7 +583,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "Definition: $\\operatorname{dom} g \\subseteq \\mathbf{R}^n$ is a convex domain.\\\\\nDefinition: $g$ is twice differentiable on $\\operatorname{dom} g$.\\\\\nDefinition: $f(x) = -\\exp(-g(x))$ for $x \\in \\operatorname{dom} g$.\\\\\nHypothesis: for every $x \\in \\operatorname{dom} g$,\n$$\n\\begin{bmatrix}\n\\nabla^2 g(x) & \\nabla g(x) \\\\\n\\nabla g(x)^T & 1\n\\end{bmatrix} \\succeq 0.\n$$\\\\\nGoal: prove that $f$ is convex on $\\operatorname{dom} g$.",
+    "problem": "\\[\\text{Definition: } \\operatorname{dom} g \\subseteq \\mathbf{R}^n \\text{ is a convex domain.}\\]\n\\[\\text{Definition: } g \\text{ is twice differentiable on } \\operatorname{dom} g.\\]\n\\[\\text{Definition: } f(x) = -\\exp(-g(x)) \\text{ for } x \\in \\operatorname{dom} g.\\]\n\\[\\text{Hypothesis: For every } x \\in \\operatorname{dom} g,\\ \\begin{bmatrix} \\nabla^2 g(x) & \\nabla g(x) \\\\ \\nabla g(x)^T & 1 \\end{bmatrix} \\succeq 0.\\]\n\\[\\text{Goal: prove that } f \\text{ is convex on } \\operatorname{dom} g.\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -595,7 +595,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } A \\in \\mathbf{R}^{m \\times n}.\\]\\[\\text{Definition: } b \\in \\mathbf{R}^m.\\]\\[\\text{Definition: } \\|\\cdot\\| \\text{ is a norm on } \\mathbf{R}^m.\\]\\[\\text{Definition: } f : \\mathbf{R}^n \\to \\mathbf{R}, \\quad f(x) = \\max\\{\\|APx - b\\| \\mid P \\in \\mathbf{R}^{n \\times n} \\text{ is a permutation matrix}\\}.\\]\\[\\text{Goal: prove that } f \\text{ is convex.}\\]",
+    "problem": "\\[\\text{Definition: } A \\in \\mathbf{R}^{m\\times n}.\\]\n\\[\\text{Definition: } b \\in \\mathbf{R}^m.\\]\n\\[\\text{Definition: } \\|\\cdot\\| \\text{ is a norm on } \\mathbf{R}^m.\\]\n\\[\\text{Definition: } f : \\mathbf{R}^n \\to \\mathbf{R}, \\quad f(x) = \\max\\{\\|APx - b\\| \\mid P \\in \\mathbf{R}^{n\\times n} \\text{ is a permutation matrix}\\}.\\]\n\\[\\text{Definition: } x \\in \\mathbf{R}^n.\\]\n\\[\\text{Goal: prove that } f \\text{ is convex.}\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -607,7 +607,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } g,h : \\mathbf{R}^n \\to \\mathbf{R}.\\]\\[\\text{Hypothesis: } g \\text{ and } h \\text{ are convex.}\\]\\[\\text{Hypothesis: } g \\text{ and } h \\text{ are bounded below.}\\]\\[\\text{Hypothesis: } \\operatorname{dom} g = \\operatorname{dom} h = \\mathbf{R}^n.\\]\\[\\text{Definition: } f(x) = \\inf\\{\\theta g(y) + (1-\\theta) h(z) \\mid y,z \\in \\mathbf{R}^n,\\ \\theta y + (1-\\theta) z = x,\\ 0 \\leq \\theta \\leq 1\\}.\\]\\[\\text{Goal: prove that } f \\text{ is convex.}\\]\\[\\text{Goal: describe } \\operatorname{epi} f \\text{ in terms of } \\operatorname{epi} g \\text{ and } \\operatorname{epi} h.\\]",
+    "problem": "\\[\\text{Definition: } g,h : \\mathbf{R}^n \\to \\mathbf{R}.\\]\n\\[\\text{Hypothesis: } g \\text{ and } h \\text{ are convex.}\\]\n\\[\\text{Hypothesis: } g \\text{ and } h \\text{ are bounded below.}\\]\n\\[\\text{Hypothesis: } \\operatorname{dom} g = \\operatorname{dom} h = \\mathbf{R}^n.\\]\n\\[\\text{Definition: for } x \\in \\mathbf{R}^n,\\ f(x)=\\inf\\{\\theta g(y)+(1-\\theta)h(z) \\mid y,z \\in \\mathbf{R}^n,\\ \\theta y+(1-\\theta)z=x,\\ 0 \\le \\theta \\le 1\\}.\\]\n\\[\\text{Goal: prove that } f \\text{ is convex.}\\]\n\\[\\text{Goal: describe } \\operatorname{epi} f \\text{ in terms of } \\operatorname{epi} g \\text{ and } \\operatorname{epi} h.\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -619,7 +619,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } f : \\mathbf{R} \\to \\mathbf{R} \\cup \\{+\\infty\\}.\\]\n\\[\\text{Definition: } \\operatorname{dom} f = \\{x \\in \\mathbf{R} \\mid f(x) < +\\infty\\}.\\]\n\\[\\text{Goal: prove that } f \\text{ is convex if and only if } \\operatorname{dom} f \\text{ is convex and the following holds.}\\]\n\\[\\text{Hypothesis: for all } x,y,z \\in \\operatorname{dom} f \\text{ with } x<y<z,\\]\n\\[\\det\\begin{bmatrix}1 & 1 & 1 \\\\ x & y & z \\\\ f(x) & f(y) & f(z)\\end{bmatrix} \\geq 0.\\]",
+    "problem": "\\[\\text{Definition: } f : \\mathbf{R} \\to \\mathbf{R} \\cup \\{+\\infty\\}.\\]\n\\[\\text{Definition: } \\operatorname{dom} f = \\{x \\in \\mathbf{R} \\mid f(x) < +\\infty\\}.\\]\n\\[\\text{Goal: prove that } f \\text{ is convex if and only if both of the following hold.}\\]\n\\[\\text{Hypothesis: } \\operatorname{dom} f \\text{ is convex.}\\]\n\\[\\text{Hypothesis: for all } x,y,z \\in \\operatorname{dom} f \\text{ with } x<y<z,\\]\n\\[\n\\det\n\\begin{bmatrix}\n1 & 1 & 1 \\\\\nx & y & z \\\\\nf(x) & f(y) & f(z)\n\\end{bmatrix}\n\\geq 0.\n\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -631,7 +631,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } Y, Z \\in \\mathbf{S}^m.\\]\n\\[\\text{Hypothesis: } 0 \\prec Y \\preceq Z.\\]\n\\[\\text{Goal: prove that } \\det Y \\leq \\det Z.\\]",
+    "problem": "\\[\n\\begin{aligned}\n&\\text{Definition: } Y, Z \\in \\mathbf{S}^m.\\\\\n&\\text{Hypothesis: } 0 \\prec Y \\preceq Z.\\\\\n&\\text{Goal: prove that } \\det Y \\leq \\det Z.\n\\end{aligned}\n\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -643,7 +643,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "Definition: $X \\in \\mathbf{S}_{++}^n$.\\\\\nDefinition: Partition $X$ as\n\\[\nX=\n\\begin{bmatrix}\nX_{11} & X_{12} \\\\\nX_{12}^T & X_{22}\n\\end{bmatrix},\n\\]\nwith $X_{11} \\in \\mathbf{S}^m$, $X_{12} \\in \\mathbf{R}^{m\\times (n-m)}$, and $X_{22} \\in \\mathbf{S}^{n-m}$.\\\\\nDefinition: Consider the optimization problem with variable $Y \\in \\mathbf{S}^m$:\n\\[\n\\begin{aligned}\n\\text{minimize}\\quad & \\log\\det Y^{-1} \\\\\n\\text{subject to}\\quad & \\begin{bmatrix}\nY & 0 \\\\\n0 & 0\n\\end{bmatrix}\n\\preceq\n\\begin{bmatrix}\nX_{11} & X_{12} \\\\\nX_{12}^T & X_{22}\n\\end{bmatrix}.\n\\end{aligned}\n\\]\nHypothesis: The domain of $\\log\\det Y^{-1}$ is $\\mathbf{S}_{++}^m$.\\\\\nGoal: prove that the solution is\n\\[\nY = X_{11} - X_{12}X_{22}^{-1}X_{12}^T.\n\\]",
+    "problem": "\\[\\text{Definition: } X \\in \\mathbf{S}_{++}^n.\\]\\[\\text{Definition: } X = \\begin{bmatrix} X_{11} & X_{12} \\\\ X_{12}^T & X_{22} \\end{bmatrix}, \\text{ with } X_{11} \\in \\mathbf{S}^m,\\ X_{12} \\in \\mathbf{R}^{m \\times (n-m)},\\ X_{22} \\in \\mathbf{S}^{n-m}.\\]\\[\\text{Definition: } Y \\in \\mathbf{S}^m \\text{ is the optimization variable.}\\]\\[\\text{Definition: } \\log \\det Y^{-1} \\text{ has domain } \\mathbf{S}_{++}^m.\\]\\[\\text{Definition: consider the optimization problem } \\min \\ \\log \\det Y^{-1} \\text{ subject to } \\begin{bmatrix} Y & 0 \\\\ 0 & 0 \\end{bmatrix} \\preceq \\begin{bmatrix} X_{11} & X_{12} \\\\ X_{12}^T & X_{22} \\end{bmatrix}.\\]\\[\\text{Goal: prove that the solution is } Y = X_{11} - X_{12} X_{22}^{-1} X_{12}^T.\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -655,7 +655,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "Definition: $P = \\begin{bmatrix} I \\\\ 0 \\end{bmatrix} \\in \\mathbf{R}^{n \\times m}$, where $I$ is the $m \\times m$ identity matrix.\\\\\nDefinition: $X \\in \\mathbf{S}_{++}^n$ and $X$ is partitioned conformally with $P$ as $X = \\begin{bmatrix} X_{11} & X_{12} \\\\ X_{12}^T & X_{22} \\end{bmatrix}$.\\\\\nDefinition: $X_{11} \\in \\mathbf{S}^m$, $X_{22} \\in \\mathbf{S}^{n-m}$, and $X_{12} \\in \\mathbf{R}^{m \\times (n-m)}$.\\\\\nDefinition: $f : \\mathbf{S}^n \\to \\mathbf{R}$ is given by $f(X) = \\log \\det \\left( X_{11} - X_{12} X_{22}^{-1} X_{12}^T \\right)^{-1}$.\\\\\nHypothesis: $\\operatorname{dom} f = \\mathbf{S}_{++}^n$.\\\\\nHypothesis: use the result from part (b) and the minimization property on page 3-19 of the lecture notes.\\\\\nGoal: prove that $f$ is convex.",
+    "problem": "Definition: $P \\in \\mathbf{R}^{n \\times m}$ and $\\operatorname{rank}(P)=m$.\\\\\nDefinition: Assume $P = \\begin{bmatrix} I \\\\ 0 \\end{bmatrix}$, where $I$ is the $m \\times m$ identity matrix.\\\\\nDefinition: $X \\in \\mathbf{S}_{++}^n$.\\\\\nDefinition: Partition $X$ conformally with $P$ as $X = \\begin{bmatrix} X_{11} & X_{12} \\\\ X_{12}^T & X_{22} \\end{bmatrix}$, where $X_{11} \\in \\mathbf{S}^m$, $X_{22} \\in \\mathbf{S}^{n-m}$, and $X_{12} \\in \\mathbf{R}^{m \\times (n-m)}$.\\\\\nDefinition: $f : \\mathbf{S}^n \\to \\mathbf{R}$ is given by $f(X) = \\log \\det \\left( X_{11} - X_{12} X_{22}^{-1} X_{12}^T \\right)^{-1}$.\\\\\nDefinition: $\\operatorname{dom} f = \\mathbf{S}_{++}^n$.\\\\\nHypothesis: Use the result of part (b) and the minimization property from page 3-19 of the lecture notes.\\\\\nGoal: prove that $f$ is convex.",
     "proof": "",
     "direct_answer": ""
   },
@@ -667,7 +667,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } P \\in \\mathbf{R}^{n \\times m},\\ \\operatorname{rank}(P)=m,\\ \\text{and } P = \\begin{bmatrix} I \\\\ 0 \\end{bmatrix},\\ \\text{where } I \\text{ is the } m \\times m \\text{ identity matrix}.\\]\n\\[\\text{Definition: } f : \\mathbf{S}^n \\to \\mathbf{R},\\ \\operatorname{dom} f = \\mathbf{S}_{++}^n,\\ \\text{and } f(X) = \\log \\det(P^T X^{-1} P).\\]\n\\[\\text{Definition: } X \\in \\mathbf{S}_{++}^n \\text{ is partitioned conformably with } P \\text{ as } X = \\begin{bmatrix} X_{11} & X_{12} \\\\ X_{12}^T & X_{22} \\end{bmatrix}.\\]\n\\[\\text{Definition: } X_{11} \\in \\mathbf{S}^m,\\ X_{22} \\in \\mathbf{S}^{n-m},\\ X_{12} \\in \\mathbf{R}^{m \\times (n-m)}.\\]\n\\[\\text{Goal: prove that } (X_{11} - X_{12} X_{22}^{-1} X_{12}^T)^{-1} = P^T X^{-1} P.\\]\n\\[\\text{Goal: conclude that } (X_{11} - X_{12} X_{22}^{-1} X_{12}^T)^{-1} \\text{ is the leading } m \\times m \\text{ principal submatrix of } X^{-1}.\\]\n\\[\\text{Goal: conclude that } f(X) = \\log \\det(P^T X^{-1} P).\\]\n\\[\\text{Hypothesis: you may use } \\begin{bmatrix} A & B \\\\ B^T & C \\end{bmatrix}^{-1} = \\begin{bmatrix} 0 & 0 \\\\ 0 & C^{-1} \\end{bmatrix} + \\begin{bmatrix} -I \\\\ C^{-1} B^T \\end{bmatrix} (A - B C^{-1} B^T)^{-1} \\begin{bmatrix} -I \\\\ C^{-1} B^T \\end{bmatrix}^T,\\ \\text{if } C \\text{ and } A - B C^{-1} B^T \\text{ are invertible}.\\]",
+    "problem": "\\[\\text{Definition: } P = \\begin{bmatrix} I \\\\ 0 \\end{bmatrix} \\in \\mathbf{R}^{n \\times m}, \\text{ where } I \\text{ is the } m \\times m \\text{ identity matrix}.\\]\n\\[\\text{Definition: } X \\in \\mathbf{S}_{++}^n.\\]\n\\[\\text{Definition: } X = \\begin{bmatrix} X_{11} & X_{12} \\\\ X_{12}^T & X_{22} \\end{bmatrix}.\\]\n\\[\\text{Definition: } X_{11} \\in \\mathbf{S}^m,\\; X_{22} \\in \\mathbf{S}^{n-m},\\; X_{12} \\in \\mathbf{R}^{m \\times (n-m)}.\\]\n\\[\\text{Goal: prove that } \\left( X_{11} - X_{12} X_{22}^{-1} X_{12}^T \\right)^{-1} = P^T X^{-1} P.\\]\n\\[\\text{Goal: conclude that the function } f \\text{ from part (c) can be written as } f(X) = \\log \\det \\left( P^T X^{-1} P \\right).\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -679,7 +679,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } X \\text{ is a random variable on } \\mathbf{R}^n \\text{ with density } p \\text{ with respect to Lebesgue measure.}\\]\n\\[\\text{Hypothesis: } p \\text{ is log-concave on } \\mathbf{R}^n.\\]\n\\[\\text{Definition: } g : \\mathbf{R}^n \\to \\mathbf{R}.\\]\n\\[\\text{Definition: } Y = g(X).\\]\n\\[\\text{Hypothesis: } g \\text{ is affine and not constant.}\\]\n\\[\\text{Goal: determine whether } Y \\text{ has a log-concave density with respect to Lebesgue measure on } \\mathbf{R}.\\]\n\\[\\text{If true, prove it; if false, give a counterexample.}\\]",
+    "problem": "Definition: $X$ is a random variable on $\\mathbf{R}^n$.\\\\\nDefinition: $p$ is the density of $X$ with respect to Lebesgue measure on $\\mathbf{R}^n$.\\\\\nHypothesis: $p$ is log-concave.\\\\\nDefinition: $g : \\mathbf{R}^n \\to \\mathbf{R}$.\\\\\nDefinition: $Y = g(X)$.\\\\\nHypothesis: $g$ is affine.\\\\\nHypothesis: $g$ is not constant.\\\\\nGoal: either give a counterexample to the statement that $Y$ has a log-concave density with respect to Lebesgue measure on $\\mathbf{R}$, or prove that this statement is true.",
     "proof": "",
     "direct_answer": ""
   },
@@ -691,7 +691,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } X \\text{ is an } \\mathbf{R}^n\\text{-valued random variable with density } p : \\mathbf{R}^n \\to \\mathbf{R}_+.\\]\\[\\text{Hypothesis: } p \\text{ is log-concave on } \\mathbf{R}^n.\\]\\[\\text{Definition: } g : \\mathbf{R}^n \\to \\mathbf{R}.\\]\\[\\text{Definition: } Y = g(X).\\]\\[\\text{Hypothesis: } g \\text{ is convex.}\\]\\[\\text{Definition: } F(a) = \\mathbf{prob}(Y \\le a) \\text{ for } a \\in \\mathbf{R}.\\]\\[\\text{Goal: determine whether } F \\text{ is log-concave in } a \\in \\mathbf{R}; \\text{ either prove it or give a counterexample.}\\]",
+    "problem": "Definition: $X$ is an $\\mathbf{R}^n$-valued random variable with density $p : \\mathbf{R}^n \\to \\mathbf{R}_+$ with respect to Lebesgue measure.\\\\\nHypothesis: $p$ is log-concave on $\\mathbf{R}^n$.\\\\\nDefinition: $g : \\mathbf{R}^n \\to \\mathbf{R}$.\\\\\nDefinition: $Y = g(X)$.\\\\\nHypothesis: $g$ is convex.\\\\\nGoal: determine whether the function $a \\mapsto \\mathbf{prob}(Y \\leq a)$ is log-concave for $a \\in \\mathbf{R}$. If true, prove it; if false, give a counterexample.",
     "proof": "",
     "direct_answer": ""
   },
@@ -703,7 +703,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } X \\text{ is a random variable on } \\mathbf{R}^n \\text{ with a log-concave probability density with respect to Lebesgue measure.}\\]\n\\[\\text{Definition: } g : \\mathbf{R}^n \\to \\mathbf{R} \\text{ is measurable, and } Y = g(X).\\]\n\\[\\text{Definition: } (s)_+ = \\max\\{s,0\\}.\\]\n\\[\\text{Definition: for } a \\in \\mathbf{R},\\ T(a) = \\mathbf{E}\\big((Y-a)_+\\big).\\]\n\\[\\text{Hypothesis: } g \\text{ is concave.}\\]\n\\[\\text{Hypothesis: the expectation } \\mathbf{E}\\big((Y-a)_+\\big) \\text{ exists for all relevant } a.\\]\n\\[\\text{Goal: determine whether } T(a) \\text{ is a convex function of } a \\in \\mathbf{R} \\text{ and whether it is log-concave in } a \\in \\mathbf{R}; \\text{ prove the true statements or give a counterexample to any false statement.}\\]",
+    "problem": "\\[\\text{Definition: } X \\text{ is a random variable on } \\mathbf{R}^n \\text{ with a log-concave probability density with respect to Lebesgue measure.}\\]\n\\[\\text{Definition: } g : \\mathbf{R}^n \\to \\mathbf{R} \\text{ is measurable, and } Y = g(X).\\]\n\\[\\text{Hypothesis: } g \\text{ is concave.}\\]\n\\[\\text{Definition: for } s \\in \\mathbf{R},\\ (s)_+ = \\max\\{s,0\\}.\\]\n\\[\\text{Definition: for } a \\in \\mathbf{R},\\ F(a) = \\mathbf{E}\\big((Y-a)_+\\big).\\]\n\\[\\text{Hypothesis: } \\mathbf{E}\\big((Y-a)_+\\big) \\text{ exists for all relevant } a.\\]\n\\[\\text{Goal: determine whether } F(a) \\text{ is convex in } a \\in \\mathbf{R}, \\text{ and whether } F(a) \\text{ is log-concave in } a \\in \\mathbf{R}.\\]\n\\[\\text{Goal: either prove the statement or give a counterexample.}\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -715,7 +715,7 @@
       "求值题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } a \\in \\mathbb{R}^n.\\]\n\\[\\text{Definition: } C = \\{(a_{\\pi_1}, a_{\\pi_2}, \\ldots, a_{\\pi_n}) \\mid (\\pi_1, \\pi_2, \\ldots, \\pi_n) \\text{ is a permutation of } (1,2,\\ldots,n)\\} \\subseteq \\mathbb{R}^n.\\]\n\\[\\text{Definition: For } y \\in \\mathbb{R}^n,\\ S_C(y) = \\max_{x \\in C} y^T x.\\]\n\\[\\text{Definition: For any } u \\in \\mathbb{R}^n,\\ u_{[1]}, u_{[2]}, \\ldots, u_{[n]} \\text{ are the components of } u \\text{ arranged in nonincreasing order.}\\]\n\\[\\text{Goal: For every } y \\in \\mathbb{R}^n,\\ prove that } S_C(y) = a_{[1]}y_{[1]} + a_{[2]}y_{[2]} + \\cdots + a_{[n]}y_{[n]}.\\]",
+    "problem": "\\[\n\\begin{array}{l}\n\\text{Definition: } a \\in \\mathbf{R}^n.\\\\\n\\text{Definition: } C = \\{(a_{\\pi_1}, a_{\\pi_2}, \\ldots, a_{\\pi_n}) \\mid (\\pi_1, \\pi_2, \\ldots, \\pi_n) \\text{ is a permutation of } (1, 2, \\ldots, n)\\} \\subseteq \\mathbf{R}^n.\\\\\n\\text{Definition: } y \\in \\mathbf{R}^n.\\\\\n\\text{Definition: } S_C(y) = \\max_{x \\in C} y^T x.\\\\\n\\text{Definition: For any vector } u \\in \\mathbf{R}^n,\\ u_{[1]}, u_{[2]}, \\ldots, u_{[n]} \\text{ are the components of } u \\text{ arranged in nonincreasing order.}\\\\\n\\text{Goal: prove that } S_C(y) = a_{[1]}y_{[1]} + a_{[2]}y_{[2]} + \\cdots + a_{[n]}y_{[n]}.\n\\end{array}\n\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -727,7 +727,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "Definition: $a \\in \\mathbb{R}^n$.\\\\\nDefinition: $C \\subset \\mathbb{R}^n$ is the set of all permutations of $a$, i.e.,\n$$\nC = \\{(a_{\\pi_1}, a_{\\pi_2}, \\ldots, a_{\\pi_n}) \\mid (\\pi_1, \\pi_2, \\ldots, \\pi_n) \\text{ is a permutation of } (1,2,\\ldots,n)\\}.\n$$\\\\\nDefinition: For $y \\in \\mathbb{R}^n$, define the support function\n$$\nS_C(y) = \\sup\\{y^T z \\mid z \\in C\\}.\n$$\\\\\nDefinition: For $u \\in \\mathbb{R}^n$, let $u_{[1]} \\ge u_{[2]} \\ge \\cdots \\ge u_{[n]}$ be the components of $u$ sorted in nonincreasing order.\\\\\nDefinition: For $k=1,\\ldots,n$, define\n$$\ns_k(u) = u_{[1]} + u_{[2]} + \\cdots + u_{[k]}.\n$$\\\\\nDefinition: $x \\in \\mathbb{R}^n$.\\\\\nGoal: prove that\n$$\nx^T y \\le S_C(y) \\quad \\text{for all } y \\in \\mathbb{R}^n\n$$\nholds if and only if\n$$\ns_k(x) \\le s_k(a), \\quad k = 1,\\ldots,n-1, \\qquad s_n(x) = s_n(a).\n$$",
+    "problem": "Definition: $a \\in \\mathbf{R}^n$.\\\\\nDefinition: $C \\subset \\mathbf{R}^n$ is the set of all permutations of $a$, i.e. $C = \\{(a_{\\pi_1}, a_{\\pi_2}, \\ldots, a_{\\pi_n}) \\mid (\\pi_1, \\pi_2, \\ldots, \\pi_n)$ is a permutation of $(1,2,\\ldots,n)\\}$.\\\\\nDefinition: $S_C(y) = \\sup\\{y^T z \\mid z \\in C\\}$ for $y \\in \\mathbf{R}^n$.\\\\\nDefinition: For $u \\in \\mathbf{R}^n$, let $u_{[1]} \\ge u_{[2]} \\ge \\cdots \\ge u_{[n]}$ be the components of $u$ sorted in nonincreasing order.\\\\\nDefinition: For $k = 1, \\ldots, n$, define $s_k(u) = u_{[1]} + u_{[2]} + \\cdots + u_{[k]}$.\\\\\nDefinition: $x \\in \\mathbf{R}^n$.\\\\\nGoal: prove that the condition $x^T y \\le S_C(y)$ for all $y \\in \\mathbf{R}^n$ holds if and only if $s_k(x) \\le s_k(a)$ for $k = 1, \\ldots, n-1$, and $s_n(x) = s_n(a)$.\\\\\nDefinition: When these inequalities hold, $a$ majorizes $x$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -739,7 +739,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } a \\in \\mathbb{R}^n.\\]\n\\[\\text{Definition: } C \\subset \\mathbb{R}^n \\text{ is the set of all permutations of } a, \\text{ i.e., } C = \\{(a_{\\pi_1}, a_{\\pi_2}, \\ldots, a_{\\pi_n}) \\mid (\\pi_1, \\pi_2, \\ldots, \\pi_n) \\text{ is a permutation of } (1,2,\\ldots,n)\\}.\\]\n\\[\\text{Definition: } S_C(y) = \\sup_{z \\in C} y^T z.\\]\n\\[\\text{Definition: } S_C^*(x) = \\sup_{y \\in \\mathbb{R}^n} (x^T y - S_C(y)).\\]\n\\[\\text{Definition: } x \\in \\mathbb{R}^n \\text{ is majorized by } a \\text{ if, after rearranging both vectors in nonincreasing order, } \\sum_{i=1}^k x_{[i]} \\le \\sum_{i=1}^k a_{[i]} \\text{ for } k=1,\\ldots,n-1, \\text{ and } \\sum_{i=1}^n x_i = \\sum_{i=1}^n a_i.\\]\n\\[\\text{Goal: prove that } S_C^*(x) = \\begin{cases} 0 & \\text{if } x \\text{ is majorized by } a,\\\\ +\\infty & \\text{otherwise.} \\end{cases}\\]\n\\[\\text{Goal: deduce that } x \\text{ is a convex combination of the permutations of } a \\text{ if and only if } a \\text{ majorizes } x.\\]",
+    "problem": "Definition: $a \\in \\mathbf{R}^n$.\\\\\nDefinition: $C = \\{(a_{\\pi_1}, a_{\\pi_2}, \\ldots, a_{\\pi_n}) \\mid (\\pi_1, \\pi_2, \\ldots, \\pi_n) \\text{ is a permutation of } (1, 2, \\ldots, n)\\} \\subset \\mathbf{R}^n$.\\\\\nDefinition: The support function of $C$ is $S_C(y) = \\sup_{z \\in C} y^T z$.\\\\\nDefinition: The convex conjugate of $S_C$ is $S_C^*(x) = \\sup_{y \\in \\mathbf{R}^n} (x^T y - S_C(y))$.\\\\\nDefinition: For $x \\in \\mathbf{R}^n$, say that $x$ is majorized by $a$ if, after rearranging the components of $x$ and $a$ in nonincreasing order, one has $\\sum_{i=1}^k x_{[i]} \\le \\sum_{i=1}^k a_{[i]}$ for $k = 1, \\ldots, n-1$, and $\\sum_{i=1}^n x_i = \\sum_{i=1}^n a_i$.\\\\\nGoal: prove that\n$$\nS_C^*(x) =\n\\begin{cases}\n0 & \\text{if } x \\text{ is majorized by } a,\\\\\n+\\infty & \\text{otherwise.}\n\\end{cases}\n$$\n\\\\\nGoal: conclude that $x$ is a convex combination of the permutations of $a$ if and only if $a$ majorizes $x$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -751,7 +751,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "Definition: $f : \\mathbf{R}_{++}^2 \\to \\mathbf{R}$ is given by $f(x)=x_1^{\\theta_1}x_2^{\\theta_2}$.\\\\\nDefinition: $x \\in \\mathbf{R}_{++}^2$.\\\\\nDefinition: $\\theta \\in \\mathbf{R}^2$.\\\\\nHypothesis: $\\theta \\succeq 0$, i.e., $\\theta_1 \\ge 0$ and $\\theta_2 \\ge 0$.\\\\\nHypothesis: $1^T\\theta = 1$.\\\\\nGoal: prove that $f$ is concave on $\\mathbf{R}_{++}^2$.",
+    "problem": "\\[\\begin{array}{l}\\text{Definition: } n=2.\\\\\\text{Definition: } \\theta \\in \\mathbf{R}^2.\\\\\\text{Definition: } f : \\mathbf{R}_{++}^2 \\to \\mathbf{R},\\quad f(x)=x_1^{\\theta_1}x_2^{\\theta_2}.\\\\\\text{Definition: } x \\in \\mathbf{R}_{++}^2.\\\\\\text{Hypothesis: } \\theta \\succeq 0.\\\\\\text{Hypothesis: } 1^T\\theta = 1.\\\\\\text{Goal: prove that } f \\text{ is concave on } \\mathbf{R}_{++}^2.\\end{array}\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -763,7 +763,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } f : \\mathbf{R}_{++}^n \\to \\mathbf{R}, \\quad f(x) = x_1^{\\theta_1} \\cdots x_n^{\\theta_n}.\\]\n\\[\\text{Definition: } x = (x_1, \\dots, x_n) \\in \\mathbf{R}_{++}^n, \\quad \\theta = (\\theta_1, \\dots, \\theta_n) \\in \\mathbf{R}^n.\\]\n\\[\\text{Hypothesis: } \\theta \\succeq 0, \\text{ i.e. } \\theta_i \\ge 0 \\text{ for all } i = 1, \\dots, n.\\]\n\\[\\text{Hypothesis: } 1^T \\theta = 1.\\]\n\\[\\text{Goal: prove that } f \\text{ is concave on } \\mathbf{R}_{++}^n.\\]",
+    "problem": "Definition: $f : \\mathbf{R}_{++}^n \\to \\mathbf{R}$.\\\\\nDefinition: for $x = (x_1, \\dots, x_n) \\in \\mathbf{R}_{++}^n$ and $\\theta = (\\theta_1, \\dots, \\theta_n) \\in \\mathbf{R}^n$, $f(x) = x_1^{\\theta_1} \\cdots x_n^{\\theta_n}$.\\\\\nHypothesis: $\\theta \\succeq 0$.\\\\\nDefinition: $\\theta \\succeq 0$ means $\\theta_i \\ge 0$ for all $i = 1, \\dots, n$.\\\\\nHypothesis: $1^T \\theta = 1$.\\\\\nGoal: prove that $f$ is concave on $\\mathbf{R}_{++}^n$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -775,7 +775,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } n \\ge 1,\\ \\theta = (\\theta_1,\\ldots,\\theta_n) \\in \\mathbf{R}^n.\\]\\[\\text{Definition: } \\mathbf{R}_{++}^n = \\{x \\in \\mathbf{R}^n \\mid x_i > 0,\\ i=1,\\ldots,n\\}.\\]\\[\\text{Definition: } f : \\mathbf{R}_{++}^n \\to \\mathbf{R},\\quad f(x) = x_1^{\\theta_1} \\cdots x_n^{\\theta_n}.\\]\\[\\text{Definition: } 1 \\in \\mathbf{R}^n \\text{ is the all-ones vector.}\\]\\[\\text{Hypothesis: } \\theta \\succeq 0,\\ \\text{i.e. } \\theta_i \\ge 0 \\text{ for all } i.\\]\\[\\text{Hypothesis: } 1^T \\theta \\le 1.\\]\\[\\text{Goal: prove that } f \\text{ is concave on } \\mathbf{R}_{++}^n.\\]",
+    "problem": "Definition: $n \\geq 1$.\\\\\nDefinition: $\\theta = (\\theta_1,\\ldots,\\theta_n) \\in \\mathbf{R}^n$.\\\\\nDefinition: $\\mathbf{R}_{++}^n = \\{x \\in \\mathbf{R}^n \\mid x_i > 0,\\ i=1,\\ldots,n\\}$.\\\\\nDefinition: $f : \\mathbf{R}_{++}^n \\to \\mathbf{R}$ is defined by $f(x) = x_1^{\\theta_1} \\cdots x_n^{\\theta_n}$.\\\\\nDefinition: $1 \\in \\mathbf{R}^n$ is the all-ones vector.\\\\\nHypothesis: $\\theta \\succeq 0$, i.e. $\\theta_i \\geq 0$ for all $i$.\\\\\nHypothesis: $1^T \\theta \\leq 1$.\\\\\nGoal: prove that $f$ is concave on $\\mathbf{R}_{++}^n$.",
     "proof": "",
     "direct_answer": ""
   },
@@ -787,7 +787,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } n \\in \\mathbf{N}.\\]\n\\[\\text{Definition: } \\theta = (\\theta_1,\\dots,\\theta_n) \\in \\mathbf{R}^n.\\]\n\\[\\text{Definition: } \\mathbf{R}_{++}^n = \\{x \\in \\mathbf{R}^n \\mid x_i > 0,\\ i=1,\\dots,n\\}.\\]\n\\[\\text{Definition: } f : \\mathbf{R}_{++}^n \\to \\mathbf{R}, \\quad f(x) = x_1^{\\theta_1} \\cdots x_n^{\\theta_n}.\\]\n\\[\\text{Hypothesis: } \\theta \\preceq 0, \\text{ i.e. } \\theta_i \\le 0 \\text{ for all } i=1,\\dots,n.\\]\n\\[\\text{Goal: prove that } f \\text{ is convex on } \\mathbf{R}_{++}^n.\\]",
+    "problem": "\\[\\text{Definition: } n \\in \\mathbf{N}.\\]\n\\[\\text{Definition: } \\theta = (\\theta_1,\\dots,\\theta_n) \\in \\mathbf{R}^n.\\]\n\\[\\text{Definition: } \\mathbf{R}_{++}^n = \\{x \\in \\mathbf{R}^n \\mid x_i > 0,\\ i = 1,\\dots,n\\}.\\]\n\\[\\text{Definition: } f : \\mathbf{R}_{++}^n \\to \\mathbf{R}, \\quad f(x) = x_1^{\\theta_1} \\cdots x_n^{\\theta_n}.\\]\n\\[\\text{Hypothesis: } \\theta \\preceq 0.\\]\n\\[\\text{Definition: } \\theta \\preceq 0 \\text{ means } \\theta_i \\le 0 \\text{ for all } i = 1,\\dots,n.\\]\n\\[\\text{Goal: prove that } f \\text{ is convex on } \\mathbf{R}_{++}^n.\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -799,7 +799,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\begin{aligned}\n&\\text{Definition: } n \\ge 1.\\\\\n&\\text{Definition: } \\theta=(\\theta_1,\\ldots,\\theta_n) \\in \\mathbf{R}^n.\\\\\n&\\text{Definition: } \\mathbf{R}_{++}^n = \\{x \\in \\mathbf{R}^n \\mid x_i > 0 \\text{ for all } i\\}.\\\\\n&\\text{Definition: } f: \\mathbf{R}_{++}^n \\to \\mathbf{R}, \\quad f(x)=x_1^{\\theta_1}\\cdots x_n^{\\theta_n}.\\\\\n&\\text{Hypothesis: } 1^T\\theta = 1.\\\\\n&\\text{Hypothesis: exactly one component of } \\theta \\text{ is positive.}\\\\\n&\\text{Hypothesis: equivalently, one component of } \\theta \\text{ is } >0 \\text{ and all other components are } \\le 0.\\\\\n&\\text{Goal: prove that } f \\text{ is convex on } \\mathbf{R}_{++}^n.\n\\end{aligned}\\]",
+    "problem": "\\[\\begin{array}{l}\n\\text{Definition: } n \\geq 1. \\\\\n\\text{Definition: } \\theta = (\\theta_1, \\ldots, \\theta_n) \\in \\mathbf{R}^n. \\\\\n\\text{Definition: } f : \\mathbf{R}_{++}^n \\to \\mathbf{R}, \\quad f(x) = x_1^{\\theta_1} \\cdots x_n^{\\theta_n}. \\\\\n\\text{Definition: } \\mathbf{R}_{++}^n = \\{x \\in \\mathbf{R}^n \\mid x_i > 0 \\text{ for } i = 1, \\ldots, n\\}. \\\\\n\\text{Hypothesis: } 1^T \\theta = 1. \\\\\n\\text{Hypothesis: Exactly one component of } \\theta \\text{ is positive.} \\\\\n\\text{Hypothesis: Equivalently, there exists exactly one index } i \\text{ such that } \\theta_i > 0, \\text{ and } \\theta_j \\leq 0 \\text{ for all } j \\neq i. \\\\\n\\text{Goal: Prove that } f \\text{ is convex on } \\mathbf{R}_{++}^n.\n\\end{array}\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -811,7 +811,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "Definition: $n \\in \\mathbf{N}$.\\\\\nDefinition: $\\theta = (\\theta_1,\\dots,\\theta_n) \\in \\mathbf{R}^n$.\\\\\nDefinition: $\\mathbf{R}_{++}^n = \\{x \\in \\mathbf{R}^n \\mid x_i > 0,\\ i=1,\\dots,n\\}$.\\\\\nDefinition: $f : \\mathbf{R}_{++}^n \\to \\mathbf{R}$ is given by $f(x) = x_1^{\\theta_1} \\cdots x_n^{\\theta_n}$.\\\\\nHypothesis: $1^T \\theta \\ge 1$.\\\\\nHypothesis: exactly one component of $\\theta$ is positive; that is, there exists a unique index $i$ such that $\\theta_i > 0$, and $\\theta_j \\le 0$ for all $j \\ne i$.\\\\\nGoal: prove that $f$ is convex on $\\mathbf{R}_{++}^n$.",
+    "problem": "\\[\\text{Definition: } n \\in \\mathbf{N}.\\]\n\\[\\text{Definition: } \\theta = (\\theta_1,\\dots,\\theta_n) \\in \\mathbf{R}^n.\\]\n\\[\\text{Definition: } \\mathbf{R}_{++}^n = \\{x \\in \\mathbf{R}^n \\mid x_i > 0,\\ i = 1,\\dots,n\\}.\\]\n\\[\\text{Definition: } f : \\mathbf{R}_{++}^n \\to \\mathbf{R}, \\quad f(x) = x_1^{\\theta_1} \\cdots x_n^{\\theta_n}.\\]\n\\[\\text{Hypothesis: } 1^T \\theta \\ge 1.\\]\n\\[\\text{Hypothesis: There exists a unique index } i \\text{ such that } \\theta_i > 0.\\]\n\\[\\text{Hypothesis: For all } j \\ne i,\\ \\theta_j \\le 0.\\]\n\\[\\text{Goal: prove that } f \\text{ is convex on } \\mathbf{R}_{++}^n.\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -823,7 +823,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } f,g : \\mathbf{R}^n \\to \\mathbf{R},\\quad f(x)=\\|x\\|_1,\\quad g(x)=\\frac{1}{2}\\|x\\|_2^2.\\]\\[\\text{Definition: } h : \\mathbf{R}^n \\to \\mathbf{R},\\quad h(x)=\\inf_{y\\in\\mathbf{R}^n} \\bigl(f(y)+g(x-y)\\bigr)=\\inf_{y\\in\\mathbf{R}^n} \\left(\\|y\\|_1+\\frac{1}{2}\\|x-y\\|_2^2\\right).\\]\\[\\text{Definition: For } u\\in\\mathbf{R},\\ \\phi(u)=\\begin{cases} u^2/2, & |u|\\le 1,\\\\ |u|-1/2, & |u|>1. \\end{cases}\\]\\[\\text{Definition: } x=(x_1,\\dots,x_n)\\in\\mathbf{R}^n.\\]\\[\\text{Goal: Prove that } h(x)=\\sum_{i=1}^n \\phi(x_i) \\text{ for all } x\\in\\mathbf{R}^n.\\]",
+    "problem": "\\[\n\\text{Definition: } f,g : \\mathbf{R}^n \\to \\mathbf{R}.\n\\]\n\\[\n\\text{Definition: } f(x) = \\|x\\|_1, \\quad g(x) = \\frac{1}{2}\\|x\\|_2^2.\n\\]\n\\[\n\\text{Definition: } h : \\mathbf{R}^n \\to \\mathbf{R} \\text{ is the infimal convolution of } f \\text{ and } g, \\text{ given by } h(x) = \\inf_{y \\in \\mathbf{R}^n} \\left(f(y) + g(x-y)\\right).\n\\]\n\\[\n\\text{Definition: } h(x) = \\inf_{y \\in \\mathbf{R}^n} \\left(\\|y\\|_1 + \\frac{1}{2}\\|x-y\\|_2^2\\right).\n\\]\n\\[\n\\text{Definition: } \\phi : \\mathbf{R} \\to \\mathbf{R}, \\quad \\phi(u) = \\begin{cases} u^2/2, & |u| \\leq 1,\\\\ |u|-1/2, & |u| > 1. \\end{cases}\n\\]\n\\[\n\\text{Definition: } x = (x_1, \\dots, x_n) \\in \\mathbf{R}^n.\n\\]\n\\[\n\\text{Goal: prove that for all } x \\in \\mathbf{R}^n, \\quad h(x) = \\sum_{i=1}^n \\phi(x_i).\n\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -835,7 +835,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } n \\geq 1.\\]\\n\\[\\text{Definition: } h : \\mathbf{R} \\to \\mathbf{R}.\\]\\n\\[\\text{Hypothesis: } h \\text{ is convex on } \\mathbf{R}.\\]\\n\\[\\text{Hypothesis: } h \\text{ is nondecreasing on } \\mathbf{R}.\\]\\n\\[\\text{Hypothesis: } \\operatorname{dom} h = \\mathbf{R}.\\]\\n\\[\\text{Hypothesis: } h(t) = h(0) \\text{ for all } t \\leq 0.\\]\\n\\[\\text{Definition: } f : \\mathbf{R}^n \\to \\mathbf{R}, \\quad f(x) = h(\\|x\\|_2).\\]\\n\\[\\text{Goal: prove that } f \\text{ is convex on } \\mathbf{R}^n.\\]",
+    "problem": "\\[\\text{Definition: } n \\ge 1.\\]\n\\[\\text{Definition: } h : \\mathbf{R} \\to \\mathbf{R}.\\]\n\\[\\text{Definition: } \\operatorname{dom} h = \\mathbf{R}.\\]\n\\[\\text{Hypothesis: } h \\text{ is convex.}\\]\n\\[\\text{Hypothesis: } h \\text{ is nondecreasing.}\\]\n\\[\\text{Hypothesis: } h(t) = h(0) \\text{ for all } t \\le 0.\\]\n\\[\\text{Definition: } f : \\mathbf{R}^n \\to \\mathbf{R}, \\quad f(x) = h(\\|x\\|_2).\\]\n\\[\\text{Goal: prove that } f \\text{ is convex on } \\mathbf{R}^n.\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -847,7 +847,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "Definition: $h : \\mathbf{R} \\to \\mathbf{R}$.\\\\\nHypothesis: $h$ is convex.\\\\\nHypothesis: $h$ is nondecreasing.\\\\\nHypothesis: $\\operatorname{dom} h = \\mathbf{R}$.\\\\\nHypothesis: for all $t \\le 0$, $h(t) = h(0)$.\\\\\nDefinition: $f : \\mathbf{R}^n \\to \\mathbf{R}$ is defined by $f(x) = h(\\|x\\|_2)$.\\\\\nDefinition: $y \\in \\mathbf{R}^n$.\\\\\nGoal: prove that $f^*(y) = h^*(\\|y\\|_2)$.",
+    "problem": "\\[\\text{Definition: } h : \\mathbf{R} \\to \\mathbf{R}.\\]\\[\\text{Hypothesis: } h \\text{ is convex.}\\]\\[\\text{Hypothesis: } h \\text{ is nondecreasing.}\\]\\[\\text{Hypothesis: } \\operatorname{dom} h = \\mathbf{R}.\\]\\[\\text{Hypothesis: } h(t) = h(0) \\text{ for all } t \\le 0.\\]\\[\\text{Definition: } f : \\mathbf{R}^n \\to \\mathbf{R} \\text{ is defined by } f(x) = h(\\|x\\|_2).\\]\\[\\text{Definition: } y \\in \\mathbf{R}^n.\\]\\[\\text{Goal: prove that } f^*(y) = h^*(\\|y\\|_2).\\]",
     "proof": "",
     "direct_answer": ""
   },
@@ -859,7 +859,7 @@
       "证明题"
     ],
     "预估难度": [],
-    "problem": "\\[\\text{Definition: } p > 1,\\ x \\in \\mathbf{R}^n,\\ \\text{and } f(x) = \\frac{1}{p}\\|x\\|_2^p.\\]\n\\[\\text{Definition: } h : \\mathbf{R} \\to \\mathbf{R},\\quad h(t) = \\frac{1}{p}\\max\\{0,t\\}^p = \\begin{cases} \\frac{1}{p} t^p & t \\ge 0,\\\\ 0 & t < 0. \\end{cases}\\]\n\\[\\text{Hypothesis: If } g : \\mathbf{R}^n \\to \\mathbf{R} \\text{ is defined by } g(x) = h(\\|x\\|_2),\\ \\text{then } g^*(y) = h^*(\\|y\\|_2) \\text{ for all } y \\in \\mathbf{R}^n.\\]\n\\[\\text{Goal: use this result to derive the convex conjugate of } f.\\]",
+    "problem": "Definition: $p > 1$.\\\\\nDefinition: $x \\in \\mathbf{R}^n$.\\\\\nDefinition: $f : \\mathbf{R}^n \\to \\mathbf{R}$ is given by $f(x) = (1/p)\\|x\\|_2^p$.\\\\\nDefinition: $h : \\mathbf{R} \\to \\mathbf{R}$ is given by $h(t) = \\frac{1}{p}\\max\\{0,t\\}^p = \\begin{cases} \\frac{1}{p} t^p & t \\ge 0,\\\\ 0 & t < 0. \\end{cases}$\\\\\nDefinition: for part (b), if $g : \\mathbf{R}^n \\to \\mathbf{R}$ is defined by $g(x) = h(\\|x\\|_2)$, then $g^*(y) = h^*(\\|y\\|_2)$ for all $y \\in \\mathbf{R}^n$.\\\\\nGoal: derive the convex conjugate $f^*$ by applying the result of part (b) to the above function $h$.",
     "proof": "",
     "direct_answer": ""
   }
