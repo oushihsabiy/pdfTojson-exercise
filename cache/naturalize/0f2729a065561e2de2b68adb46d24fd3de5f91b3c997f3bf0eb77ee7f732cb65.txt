@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the feasible set \\(\\Omega \\subset \\mathbf{R}^2\\) defined by \\(x_2 \\ge 0\\) and \\(x_2 \\le x_1^2\\). If the objective function is \\(f(x) = -x_2\\), verify that the KKT conditions \\((12.34)\\) are satisfied at \\(x^*\\)."}

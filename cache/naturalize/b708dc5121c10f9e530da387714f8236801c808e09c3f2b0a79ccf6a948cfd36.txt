@@ -1,0 +1,1 @@
+{"problem_standardized_math":"For \(z \in \mathbf{R}\), show that the function \(\min(0,z)^2\) has a discontinuous second derivative at \(z=0\). Consequently, the quadratic penalty function (17.7) need not have continuous second derivatives even when \(f\) and \(c_i\), \(i \in \mathcal{E} \cup \mathcal{I}\), in (17.6) are all twice continuously differentiable."}

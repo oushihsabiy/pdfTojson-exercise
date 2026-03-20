@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let $J$ be an $m \\times n$ matrix with $m \\geq n$. Show that $J$ has full column rank if and only if $J^T J$ is positive definite."}

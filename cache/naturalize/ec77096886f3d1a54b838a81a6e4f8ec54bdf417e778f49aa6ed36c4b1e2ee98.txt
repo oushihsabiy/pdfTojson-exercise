@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that, in Example 15.2, if \(x\) is eliminated in terms of \(y\), then the correct solution of the problem is obtained by carrying out an unconstrained minimization."}

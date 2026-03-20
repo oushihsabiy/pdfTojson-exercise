@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the matrix equation \\(\\begin{bmatrix} \\, & 1 \\\\ 1 & 1 \\end{bmatrix}\\begin{bmatrix} x_1 \\\\ x_2 \\end{bmatrix}=\\begin{bmatrix}\\,\\end{bmatrix}\\)."}

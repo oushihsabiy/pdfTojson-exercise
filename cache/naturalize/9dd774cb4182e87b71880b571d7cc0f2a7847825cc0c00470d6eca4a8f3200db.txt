@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Use Theorem 12.6 to show that, if the conditions of Lemma 16.1 hold, then the vector pair $(x^*, \\lambda^*)$ satisfying (16.4) satisfies the second-order sufficient conditions for (16.3)."}

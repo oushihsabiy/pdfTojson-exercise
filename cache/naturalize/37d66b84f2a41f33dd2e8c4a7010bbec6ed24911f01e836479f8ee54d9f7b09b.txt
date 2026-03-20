@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Analyze the eigenvalue distribution of the (2,2)-block under the change of variables \\(\\tilde{p}_s = \\Sigma^{1/2} p_s\\) or \\(\\tilde{p}_s = \\sqrt{\\mu}\\, S^{-1} p_s\\)."}

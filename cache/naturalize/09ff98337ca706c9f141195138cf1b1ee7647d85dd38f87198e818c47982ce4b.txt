@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Use Theorem 12.1 to verify that the first-order necessary conditions for problem (16.3) are given by (16.4)."}

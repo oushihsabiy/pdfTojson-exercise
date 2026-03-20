@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Write a program that computes the one-dimensional minimizer of a strictly convex quadratic function $f$ along a direction $p$ using quadratic interpolation. Describe the formulas used in the program."}

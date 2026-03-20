@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let the partially separable quasi-Newton approximation be defined by\n\\[\ns_{[i]}=x_{[i]}^{+}-x_{[i]}, \\qquad y_{[i]}=\\nabla \\phi_i(x_{[i]}^{+})-\\nabla \\phi_i(x_{[i]}),\n\\]\nand\n\\[\nB=\\sum_{i=1}^{n_e} U_i^{T} B_{[i]} U_i.\n\\]\nDoes the approximation \\(B\\) obtained in this way satisfy the secant equation \\(Bs=y\\)?}

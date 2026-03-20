@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that, in the quadratic program (18.7), the linear term \\(\\nabla f_k^{T} p\\) may be replaced by \\(\\nabla_x \\mathcal{L}(x_k, \\lambda_k)^{T} p\\) without changing the solution."}

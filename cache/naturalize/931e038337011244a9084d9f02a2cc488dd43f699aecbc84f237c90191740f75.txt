@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let\n\\[\nK=\\begin{bmatrix}\nG & A^T\\\\\nA & 0\n\\end{bmatrix}.\n\\]\nProve that if the KKT matrix \(K\) is nonsingular, then \(A\) must have full rank."}

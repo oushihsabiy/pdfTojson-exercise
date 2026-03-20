@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Exercise 16.23(b): Verify (16.65)."}

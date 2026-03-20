@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Use a similar technique to prove that\n\\[\n\\det(I + xy^T + uv^T) = (1 + y^T x)(1 + v^T u) - (x^T v)(y^T u).\n\\]"}

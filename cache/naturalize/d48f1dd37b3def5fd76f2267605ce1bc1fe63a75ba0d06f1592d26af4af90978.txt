@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that, if $f$ is a convex function, then the shrinkage step in the Nelder--Mead simplex method does not increase the average function value over the simplex vertices,\n\\[\n\\frac{1}{n+1}\\sum_{i=1}^{n+1} f(x_i).\n\\]\nShow further that, unless $f(x_1)=f(x_2)=\\cdots=f(x_{n+1})$, this average value in fact decreases."}

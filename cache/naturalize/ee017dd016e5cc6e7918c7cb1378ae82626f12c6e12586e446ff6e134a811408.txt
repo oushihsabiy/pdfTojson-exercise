@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that the damped BFGS update satisfies\n\\[\ns_k^T r_k = 0.2\, s_k^T B_k s_k > 0.\n\\]"}

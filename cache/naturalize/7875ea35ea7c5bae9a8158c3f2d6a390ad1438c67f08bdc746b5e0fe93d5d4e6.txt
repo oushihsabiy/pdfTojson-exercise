@@ -1,0 +1,1 @@
+{"problem_standardized_math":"For the SR1 inverse Hessian update\n\\[\nH_{k+1}=H_k+\\frac{(s_k-H_ky_k)(s_k-H_ky_k)^T}{(s_k-H_ky_k)^Ty_k},\n\\tag{6.25}\n\\]\nprove statements (ii) and (iii) in the paragraph immediately following equation (6.25)."}

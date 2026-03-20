@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Give a simple linear program for which both the primal problem and its dual are infeasible."}

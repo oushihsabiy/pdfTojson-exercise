@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that the preconditioned residual \(g^+\) in (16.28d), given by \(g^+ = P_{\perp} r^+\), can be computed using either of the equivalent representations\n\[\nP_{\perp} = Z(Z^T Z)^{-1} Z^T\n\]\nor\n\[\nP_{\perp} = I - A^T(AA^T)^{-1}A.\n\]"}

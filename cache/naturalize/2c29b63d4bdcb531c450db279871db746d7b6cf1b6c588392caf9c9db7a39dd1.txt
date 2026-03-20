@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Determine the value of $\\delta$ for which the coordinate generating set\n\\[\n\\mathcal{D}_k=\\{e_1,e_2,\\ldots,e_n,-e_1,-e_2,\\ldots,-e_n\\}\n\\]\nsatisfies\n\\[\n\\kappa(\\mathcal{D}_k)\\stackrel{\\mathrm{def}}{=}\\min_{v\\in\\mathbf{R}^n}\\max_{p\\in\\mathcal{D}_k}\\frac{v^T p}{\\|v\\|\\,\\|p\\|}\\geq \\delta.\n\\]"}

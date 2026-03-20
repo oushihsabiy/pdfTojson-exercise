@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let\n\\[\nf(x)=x_1\\sum_{i=1}^n i^2 x_i^2.\n\\]\nDraw the adjacency graph of the function \\(f\\). Show that the coloring in which node \\(1\\) has one color and nodes \\(2,3,\\ldots,n\\) have another color is valid. Then draw the intersection graph for \\(\\nabla f\\)."}

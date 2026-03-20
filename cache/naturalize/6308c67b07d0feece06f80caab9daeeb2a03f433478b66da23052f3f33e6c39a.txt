@@ -1,0 +1,1 @@
+{"problem_standardized_math":"If the objective function is redefined as \(q(x)=-f(x)\), determine whether the optimization problem has a finite minimum and whether it has any local minimizers."}

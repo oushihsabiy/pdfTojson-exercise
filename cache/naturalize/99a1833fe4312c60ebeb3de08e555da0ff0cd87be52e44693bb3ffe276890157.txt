@@ -1,0 +1,1 @@
+{"problem_standardized_math":"For the optimization problem in Example 15.3, eliminate the variables \(x_2\) and \(x_5\) by simple elimination to obtain an unconstrained problem in the remaining variables \(x_1, x_3, x_4,\) and \(x_6\). As in (15.12), express the eliminated variables explicitly in terms of the retained variables."}

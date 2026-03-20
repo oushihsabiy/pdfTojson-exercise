@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Verify that, for the constraint set defined in (12.32), neither the Linear Independence Constraint Qualification (LICQ) nor the Mangasarian-Fromovitz Constraint Qualification (MFCQ) holds at \(x^* = (0,0)^T\)."}

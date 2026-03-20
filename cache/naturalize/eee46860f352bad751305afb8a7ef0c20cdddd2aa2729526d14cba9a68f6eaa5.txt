@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Verify formula (8.21) for approximating an element of the Hessian using only function values:\n\\[\n\\frac{\\partial^2 f}{\\partial x_i \\partial x_j}(x)\n=\n\\frac{f(x+\\epsilon e_i+\\epsilon e_j)-f(x+\\epsilon e_i)-f(x+\\epsilon e_j)+f(x)}{\\epsilon^2}\n+O(\\epsilon).\n\\tag{8.21}\n\\]"}

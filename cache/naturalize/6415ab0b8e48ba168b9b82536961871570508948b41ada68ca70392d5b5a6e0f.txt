@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that the function \\(f(x)=8x_1+12x_2+x_1^2-2x_2^2\\) has exactly one stationary point, and that this point is neither a maximum nor a minimum, but a saddle point. Sketch the contour lines of \\(f\\)."}

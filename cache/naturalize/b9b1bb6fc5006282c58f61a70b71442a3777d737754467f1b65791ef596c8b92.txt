@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the optimization problem\n\\[\n\\min_{x\\in\\Omega} f(x). \\tag{12.3}\n\\]\nAssume that \(f\) is convex and that the feasible region \(\Omega\) is convex. Show that every local solution of (12.3) is also a global solution. Also show that the set of global solutions is convex. (Hint: See Theorem 2.5.)"}

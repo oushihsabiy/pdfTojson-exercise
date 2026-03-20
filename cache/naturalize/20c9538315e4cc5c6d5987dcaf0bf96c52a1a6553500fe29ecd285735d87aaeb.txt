@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that the solution \(w\) of the problem derived in part (b) is orthogonal to the normal step \(v\); that is, show that \(w^T v = 0\)."}

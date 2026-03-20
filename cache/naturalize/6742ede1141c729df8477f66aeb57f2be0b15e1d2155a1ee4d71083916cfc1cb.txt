@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Prove that, if the KKT conditions (12.34) and the LICQ hold at a point $x^*$, then the Lagrange multiplier $\\lambda^*$ appearing in (12.34) is unique."}

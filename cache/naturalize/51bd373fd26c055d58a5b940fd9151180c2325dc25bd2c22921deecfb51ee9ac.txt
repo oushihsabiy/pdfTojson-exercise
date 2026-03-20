@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Assuming that the line searches are exact, derive formula (7.23):\n\\[\np_{k+1}=-H_{k+1}\\nabla f_{k+1}=-\\nabla f_{k+1}+\\frac{\\nabla f_{k+1}^T y_k}{y_k^T p_k}\\,p_k.\n\\]"}

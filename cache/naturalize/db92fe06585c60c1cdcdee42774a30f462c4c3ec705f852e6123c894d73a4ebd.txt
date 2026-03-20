@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that the dual of the linear program\n\\[\n\\min c^T x \\quad \\text{subject to } Ax \\ge b,\\; x \\ge 0,\n\\]\nis\n\\[\n\\max b^T \\lambda \\quad \\text{subject to } A^T \\lambda \\le c,\\; \\lambda \\ge 0.\n\\]"}

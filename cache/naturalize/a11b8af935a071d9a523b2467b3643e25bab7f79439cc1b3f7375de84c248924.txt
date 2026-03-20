@@ -1,0 +1,1 @@
+{"problem_standardized_math":"For problem (17.5), draw the contour lines of the quadratic penalty function \(Q\) corresponding to \(\mu = 1\), and find the stationary points of \(Q\)."}

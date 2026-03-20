@@ -1,0 +1,1 @@
+{"problem_standardized_math":"For each of the alternative choices of the initial working set \\(\\mathcal{W}_0\\) in Example (16.49), namely \\(\\mathcal{W}_0=\\{3\\}\\), \\(\\mathcal{W}_0=\\{5\\}\\), and \\(\\mathcal{W}_0=\\emptyset\\), work through the first two iterations of Algorithm 16.3."}

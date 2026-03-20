@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let $a \\in \\mathbb{R}^n$ be fixed, and define\n\\[\nf(x)=\\frac{1}{2}\\bigl(x^T x+(a^T x)^2\\bigr).\n\\]\nDetermine the number of operations required to evaluate $f$, $\\nabla f$, $\\nabla^2 f$, and the Hessian-vector product $\\nabla^2 f(x)p$ for an arbitrary vector $p$."}

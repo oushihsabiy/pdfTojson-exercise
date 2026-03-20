@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let \\(s_{[i]} = x_{[i]}^+ - x_{[i]}\\) and \\(y_{[i]} = \\nabla \\phi_i(x_{[i]}^+) - \\nabla \\phi_i(x_{[i]})\\), and let \\(B = \\sum_{i=1}^{n_e} U_i^T B_{[i]} U_i\\). Does the approximation \\(B\\) obtained by the partially separable quasi-Newton updating (7.38), (7.41) satisfy the secant equation \\(Bs = y\\)?"}

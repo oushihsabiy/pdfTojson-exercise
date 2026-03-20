@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Exercise 19.2(c). In Algorithm 19.1, suppose that the new iterate \\((x_{k+1}, s_{k+1}, y_{k+1}, z_{k+1})\\) is obtained by arbitrary means. What conditions must this iterate satisfy in order for Theorem 19.1 to remain valid?"}

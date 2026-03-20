@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Prove that the sets\n\\[\n\\mathcal{N}_{-\\infty}(1)=\\{(x,\\lambda,s)\\in \\mathcal{F}^\\circ \\mid x_i s_i \\ge \\mu \\text{ for all } i=1,2,\\ldots,n\\}\n\\]\nand\n\\[\n\\mathcal{N}_2(0)=\\{(x,\\lambda,s)\\in \\mathcal{F}^\\circ \\mid \\|XSe-\\mu e\\|_2=0\\}\n\\]\ncoincide with the central path \\(\\mathcal{C}\\)."}

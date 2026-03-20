@@ -56,7 +56,7 @@ def run_cmd(cmd: list[str]) -> None:
         raise SystemExit(proc.returncode)
 
 
-def ensure_scripts_exist(script_dir: Path, mode: str, rawjson_src_dir: Optional[Path] = None) -> tuple[Path, Path, Path, Path, Path]:
+def ensure_scripts_exist(script_dir: Path, mode: str, rawjson_src_dir: Optional[Path] = None) -> tuple[Path, Path, Path, Optional[Path], Path, Path, Path]:
     if mode not in {"book", "exercise", "paper"}:
         raise SystemExit(
             f"Unsupported mode: {mode!r} (expected 'book', 'exercise', or 'paper')")
@@ -66,17 +66,21 @@ def ensure_scripts_exist(script_dir: Path, mode: str, rawjson_src_dir: Optional[
     pdf_to_md = src_dir_rawjson / "pdfTomd.py"
     md_to_tex = src_dir_rawjson / "mdTotex.py"
     tex_to_json = src_dir_rawjson / "texTojson.py"
+    json_naturalize = src_dir_rawjson / "jsonNaturalize.py"
+    if not json_naturalize.exists():
+        json_naturalize = None
 
     src_dir_stdjson = script_dir / "src" / "stdjson"
     raw_to_complete = src_dir_stdjson / "raw_to_complete.py"
-    complete_to_lean = src_dir_stdjson / "complete_to_lean.py"
+    complete_to_concise = src_dir_stdjson / "complete_to_concise.py"
+    concise_to_lean = src_dir_stdjson / "concise_to_lean.py"
 
     missing = [p for p in [pdf_to_md, md_to_tex, tex_to_json,
-                           raw_to_complete, complete_to_lean] if not p.exists()]
+                           raw_to_complete, complete_to_concise, concise_to_lean] if not p.exists()]
     if missing:
         raise SystemExit("Missing scripts:\n" + "\n".join(str(p)
                          for p in missing))
-    return pdf_to_md, md_to_tex, tex_to_json, raw_to_complete, complete_to_lean
+    return pdf_to_md, md_to_tex, tex_to_json, json_naturalize, raw_to_complete, complete_to_concise, concise_to_lean
 
 
 def _tmp_path(final_path: Path) -> Path:
@@ -353,25 +357,50 @@ def process_one(
 def process_json(
     json_path: Path,
     raw_to_complete: Path,
-    complete_to_lean: Path,
+    complete_to_concise: Path,
+    concise_to_lean: Path,
     *,
     mode: str,
     input_json_dir: Path,
     output_json_dir: Path,
     work_dir: Path,
 ) -> Path:
-    """Run stdjson stages: raw_to_complete -> complete_to_lean.
+    """Run stdjson stages: raw_to_complete -> complete_to_concise -> concise_to_lean.
 
     Uses atomic stage runner when configured. Returns final lean JSON path.
     """
-    rel = json_path.relative_to(input_json_dir)
+    try:
+        rel = json_path.relative_to(input_json_dir)
+    except ValueError:
+        # Allow book-mode naturalized inputs from work_dir, e.g.
+        # work/book/foo/foo.naturalized.json -> rel book/foo.json
+        try:
+            rel_work = json_path.relative_to(work_dir)
+        except ValueError as err:
+            raise ValueError(
+                f"{json_path!s} is not under either {input_json_dir!s} or {work_dir!s}"
+            ) from err
+
+        stem = json_path.stem
+        if stem.endswith(".naturalized"):
+            stem = stem[:-len(".naturalized")]
+
+        # If the file lives in work/<mode>/<stem>/<stem>.naturalized.json,
+        # collapse it back to <mode>/<stem>.json.
+        parent = rel_work.parent
+        if parent.name == stem:
+            rel = parent.parent / (stem + ".json")
+        else:
+            rel = rel_work.with_name(stem + ".json")
+
     rel_no_suffix = rel.with_suffix("")
+    base_stem = rel_no_suffix.name
 
     job_dir = work_dir / rel_no_suffix
     job_dir.mkdir(parents=True, exist_ok=True)
 
-    stem = json_path.stem
-    complete_json = job_dir / f"{stem}.complete.json"
+    complete_json = job_dir / f"{base_stem}.complete.json"
+    concise_json = job_dir / f"{base_stem}.concise.json"
     lean_json = (output_json_dir / rel).with_suffix(".lean.json")
     lean_json.parent.mkdir(parents=True, exist_ok=True)
 
@@ -386,7 +415,7 @@ def process_json(
                                   validate_out=json_complete)
             if not ok:
                 print(
-                    f"[warn] RAW->COMPLETE stage failed for {json_path}; skipping COMPLETE->LEAN", file=sys.stderr)
+                    f"[warn] RAW->COMPLETE stage failed for {json_path}; skipping remaining stdjson stages", file=sys.stderr)
                 return lean_json
         else:
             run_cmd(cmd1)
@@ -394,26 +423,85 @@ def process_json(
                 raise SystemExit(
                     f"RAW->COMPLETE output incomplete: {complete_json}")
 
-    # Stage 2: complete -> lean
+    # Stage 2: complete -> concise
+    if json_complete(concise_json) and not OVERWRITE_JSON:
+        print(f"[skip] COMPLETE->CONCISE (complete): {concise_json}")
+    else:
+        cmd2 = [sys.executable, str(complete_to_concise), str(
+            complete_json), str(concise_json)]
+        if ATOMIC_OUTPUTS:
+            ok = run_stage_atomic(cmd=cmd2, out_path=concise_json,
+                                  validate_out=json_complete)
+            if not ok:
+                print(
+                    f"[warn] COMPLETE->CONCISE stage failed for {complete_json}; skipping CONCISE->LEAN", file=sys.stderr)
+                return lean_json
+        else:
+            run_cmd(cmd2)
+            if not json_complete(concise_json):
+                raise SystemExit(
+                    f"COMPLETE->CONCISE output incomplete: {concise_json}")
+
+    # Stage 3: concise -> lean
     if json_complete(lean_json) and not OVERWRITE_JSON:
-        print(f"[skip] COMPLETE->LEAN (complete): {lean_json}")
+        print(f"[skip] CONCISE->LEAN (complete): {lean_json}")
         return lean_json
 
-    cmd2 = [sys.executable, str(complete_to_lean), str(
-        complete_json), str(lean_json)]
+    cmd3 = [sys.executable, str(concise_to_lean), str(
+        concise_json), str(lean_json)]
     if ATOMIC_OUTPUTS:
-        ok = run_stage_atomic(cmd=cmd2, out_path=lean_json,
+        ok = run_stage_atomic(cmd=cmd3, out_path=lean_json,
                               validate_out=json_complete)
         if not ok:
             print(
-                f"[warn] COMPLETE->LEAN stage failed for {complete_json}; skipping", file=sys.stderr)
+                f"[warn] CONCISE->LEAN stage failed for {concise_json}; skipping", file=sys.stderr)
             return lean_json
     else:
-        run_cmd(cmd2)
+        run_cmd(cmd3)
         if not json_complete(lean_json):
-            raise SystemExit(f"COMPLETE->LEAN output incomplete: {lean_json}")
+            raise SystemExit(f"CONCISE->LEAN output incomplete: {lean_json}")
 
     return lean_json
+
+
+def process_book_naturalize(
+    json_path: Path,
+    json_naturalize: Path,
+    *,
+    input_json_dir: Path,
+    work_dir: Path,
+) -> Path:
+    """Run optional book rawjson naturalize stage after texTojson."""
+    rel = json_path.relative_to(input_json_dir)
+    rel_no_suffix = rel.with_suffix("")
+
+    job_dir = work_dir / rel_no_suffix
+    job_dir.mkdir(parents=True, exist_ok=True)
+
+    stem = json_path.stem
+    naturalized_json = job_dir / f"{stem}.naturalized.json"
+
+    if json_complete(naturalized_json) and not OVERWRITE_JSON:
+        print(f"[skip] JSON->NATURALIZED (complete): {naturalized_json}")
+        return naturalized_json
+
+    cmd = [sys.executable, str(json_naturalize), str(
+        json_path), str(naturalized_json)]
+    if ATOMIC_OUTPUTS:
+        ok = run_stage_atomic(cmd=cmd, out_path=naturalized_json,
+                              validate_out=json_complete)
+        if not ok:
+            print(
+                f"[warn] JSON->NATURALIZED stage failed for {json_path}; fallback to raw JSON", file=sys.stderr)
+            return json_path
+    else:
+        run_cmd(cmd)
+        if not json_complete(naturalized_json):
+            print(
+                f"[warn] JSON->NATURALIZED output incomplete: {naturalized_json}; fallback to raw JSON", file=sys.stderr)
+            return json_path
+
+    return naturalized_json
 
 
 def parse_args() -> argparse.Namespace:
@@ -444,9 +532,6 @@ def main() -> None:
     OCR_MAX_TOKENS = get_setting(settings, "OCR_MAX_TOKENS", None)
     ONLY_THESE_STEMS = set(get_setting(settings, "ONLY_THESE_STEMS", []))
     OVERWRITE_JSON = bool(get_setting(settings, "OVERWRITE_JSON", False))
-    _rawjson_str = get_setting(settings, "RAWJSON_SRC_DIR", None)
-    RAWJSON_SRC_DIR = (PROJECT_ROOT / str(_rawjson_str)
-                       ) if _rawjson_str else None
     OCR_WORKERS = get_setting(settings, "OCR_WORKERS", 4)
     THINK_WORKERS = get_setting(settings, "THINK_WORKERS", 4)
     STRICT_RESUME = bool(get_setting(settings, "STRICT_RESUME", True))
@@ -456,11 +541,14 @@ def main() -> None:
     args = parse_args()
     mode = args.mode
 
+    # Always use mode-specific rawjson scripts so `--mode book` runs `src/book/rawjson/*`.
+    RAWJSON_SRC_DIR = PROJECT_ROOT / "src" / mode / "rawjson"
+
     INPUT_PDF_DIR.mkdir(parents=True, exist_ok=True)
     OUTPUT_JSON_DIR.mkdir(parents=True, exist_ok=True)
     WORK_DIR.mkdir(parents=True, exist_ok=True)
 
-    pdf_to_md, md_to_tex, tex_to_json, raw_to_complete, complete_to_lean = ensure_scripts_exist(
+    pdf_to_md, md_to_tex, tex_to_json, json_naturalize, raw_to_complete, complete_to_concise, concise_to_lean = ensure_scripts_exist(
         PROJECT_ROOT, mode, rawjson_src_dir=RAWJSON_SRC_DIR)
     mode_input_dir = INPUT_PDF_DIR / mode
     mode_input_dir.mkdir(parents=True, exist_ok=True)
@@ -529,12 +617,32 @@ def main() -> None:
         )
         print(f"[ok] JSON -> {out_json}")
 
-        # Run stdjson processing (raw_to_complete, complete_to_lean)
+        stdjson_input = out_json
+
+        # Optional book-only naturalize stage in src/book/rawjson/jsonNaturalize.py
+        if mode == "book" and json_naturalize is not None:
+            try:
+                stdjson_input = process_book_naturalize(
+                    out_json,
+                    json_naturalize,
+                    input_json_dir=OUTPUT_JSON_DIR,
+                    work_dir=WORK_DIR,
+                )
+                print(f"[ok] NATURALIZED JSON -> {stdjson_input}")
+            except Exception as e:
+                print(
+                    f"[warn] jsonNaturalize failed for {out_json}; fallback to raw JSON. reason={e}",
+                    file=sys.stderr,
+                )
+                stdjson_input = out_json
+
+        # Run stdjson processing (raw_to_complete, complete_to_concise, concise_to_lean)
         try:
             lean = process_json(
-                out_json,
+                stdjson_input,
                 raw_to_complete,
-                complete_to_lean,
+                complete_to_concise,
+                concise_to_lean,
                 mode=mode,
                 input_json_dir=OUTPUT_JSON_DIR,
                 output_json_dir=OUTPUT_JSON_DIR,

@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Prove that the coefficient matrix in (14.16),\n\\[\n\\begin{bmatrix}\n0 & A^T & I\\\\\nA & 0 & 0\\\\\nS & 0 & X\n\\end{bmatrix},\n\\]\nis nonsingular if and only if \\(A\\) has full row rank."}

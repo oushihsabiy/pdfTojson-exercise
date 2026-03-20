@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the optimization problem\n\\[\n\\min_{x} \\; \\left(x_1-\\frac{3}{2}\\right)^2+(x_2-t)^4\n\\quad \\text{subject to} \\quad\n\\begin{bmatrix}\n1-x_1-x_2\\\\\n1-x_1+x_2\\\\\n1+x_1-x_2\\\\\n1+x_1+x_2\n\\end{bmatrix}\n\\ge 0.\n\\]\nShow that when \\(t=1\\), only the first constraint is active at the solution."}

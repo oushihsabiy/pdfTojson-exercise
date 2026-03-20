@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Derive a central-difference analogue of the Hessian-vector approximation formula\n\\[\n\\nabla^2 f(x)p \\approx \\frac{\\nabla f(x+\\epsilon p)-\\nabla f(x)}{\\epsilon}.\n\\tag{8.20}\n\\]"}

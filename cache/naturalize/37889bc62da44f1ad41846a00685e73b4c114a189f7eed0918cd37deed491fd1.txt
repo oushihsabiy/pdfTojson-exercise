@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Use the Sherman-Morrison formula (A.27) to show that the SR1 update\n\\[\nB_{k+1}=B_k+\\frac{(y_k-B_ks_k)(y_k-B_ks_k)^T}{(y_k-B_ks_k)^Ts_k}\n\\]\nis the inverse of\n\\[\nH_{k+1}=H_k+\\frac{(s_k-H_ky_k)(s_k-H_ky_k)^T}{(s_k-H_ky_k)^Ty_k}.\n\\]"}

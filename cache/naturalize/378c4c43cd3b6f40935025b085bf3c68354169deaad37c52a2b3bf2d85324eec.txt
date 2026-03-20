@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Implement the BFGS algorithm using the line search procedure described in this chapter that satisfies the strong Wolfe conditions. Have the program verify that \\(y_k^T s_k\\) is always positive. Use the implementation to minimize the Rosenbrock function from the starting points given in Exercise 3.1."}

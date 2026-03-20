@@ -42,4 +42,26 @@
 - 修改: 把`stdjson`提到上一级目录，因为无论是`paper`,`book`还是`exercise`,
 		只要得到了rawjson，剩下的步骤是一样的
 
+### 2026-03-19 — 更新: stdjson 分阶段调整（助理修改）
+
+- 添加: `src/stdjson/complete_to_concise.py`
+	- 功能: 使用提示词 `src/prompt/complete_to_concise.md` 将每个练习对象的 `problem` 字段改写为更清晰、简练、便于形式化的表述；严格保留除 `problem` 外的所有字段不变。
+- 添加: `src/stdjson/concise_to_lean.py`
+	- 功能: 使用提示词 `src/prompt/concise_to_lean.md` 将 `problem` 字段重写为 `Definition/Hypothesis/Goal` 的 Lean 友好结构；严格保留其他字段不变。
+- 删除: `src/stdjson/complete_to_lean.py`
+	- 说明: 原有的单步 `complete_to_lean` 被拆分为两步（complete->concise、concise->lean），因此该文件已移除。
+- 修改: `main.py`
+	- 功能: `ensure_scripts_exist` 与 `process_json` 已更新以支持三阶段 stdjson 流程：
+	  `raw -> complete -> concise -> lean`。
+	- 细节: `ensure_scripts_exist` 现在查找并返回 `complete_to_concise` 与 `concise_to_lean` 两个脚本路径；
+	  `process_json` 会在 `work/` 下生成中间文件 `{stem}.complete.json` 与 `{stem}.concise.json`，最终产出 `{stem}.lean.json`。
+- 其它: 清理了 `src/stdjson/__pycache__`，并对新增脚本做了语法检查（`python -m py_compile`）。
+- 验证: 在当前开发环境执行过一次端到端试跑：
+
+```
+python main.py --mode exercise
+```
+
+  测试运行成功启动 stdjson 阶段（已开始处理 `exercise` 模式下的练习项）。
+
  

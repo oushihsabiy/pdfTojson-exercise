@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let \\(\\Omega \\subset \\mathbf{R}^2\\) be the feasible set defined by \\(x_2 \\ge 0\\) and \\(x_2 \\le x_1^2\\). For \\(x^*=(0,0)^T\\), write down \\(T_\\Omega(x^*)\\) and \\(\\mathcal{F}(x^*)\\)."}

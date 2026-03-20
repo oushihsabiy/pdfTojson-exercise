@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the determination of a quadratic function in two variables. Show that six points lying on a circle in the plane do not uniquely determine the quadratic."}

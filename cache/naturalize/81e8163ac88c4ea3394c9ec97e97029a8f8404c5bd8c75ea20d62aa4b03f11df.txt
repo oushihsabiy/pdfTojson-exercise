@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Verify that, in the iteration \(x_{k+1}=x_k+\alpha_k p_k\), where \(\alpha_k\) is the one-dimensional minimizer of the quadratic function \(\phi(\cdot)\) along \(x_k+\alpha p_k\), the formula\n\[\n\alpha_k=-\frac{r_k^T p_k}{p_k^T A p_k}\n\tag{5.7}\n\]\nholds."}

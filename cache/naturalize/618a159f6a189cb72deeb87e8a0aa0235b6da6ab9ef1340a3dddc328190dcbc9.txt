@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Use the Cauchy--Schwarz inequality (A.5) to verify that\n\\[\n\\mu_k=\\frac{(y_k^T B_k^{-1} y_k)(s_k^T B_k s_k)}{(y_k^T s_k)^2}\n\\]\nsatisfies \\(\\mu_k \\ge 1\\)."}

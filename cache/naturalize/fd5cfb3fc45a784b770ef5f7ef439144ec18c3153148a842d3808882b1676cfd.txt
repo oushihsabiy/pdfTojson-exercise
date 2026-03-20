@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that for any symmetric matrix $B$, there exists a scalar $\\lambda \\geq 0$ such that $B + \\lambda I$ is positive definite."}

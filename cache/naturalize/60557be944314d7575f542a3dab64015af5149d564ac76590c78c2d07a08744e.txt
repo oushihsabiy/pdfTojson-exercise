@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Suppose that a function \(f\) of two variables is poorly scaled at the solution \(x^*\). Write the Taylor expansion of \(f\) about \(x^*\) along each of the two coordinate directions, and use these expansions to show that the Hessian \(\nabla^2 f(x^*)\) is ill-conditioned."}

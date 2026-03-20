@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let $J \\in \\mathbf{R}^{n \\times m}$ and $r \\in \\mathbf{R}^n$. Suppose that $J J^T r = 0$. Show that $J^T r = 0$."}

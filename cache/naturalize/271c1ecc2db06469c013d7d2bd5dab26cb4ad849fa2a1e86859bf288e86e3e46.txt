@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Suppose a nonlinear program has a minimizer $x^*$ with Lagrange multiplier vector $\\lambda^*$. It can be shown that the function $\\phi_1(x;\\mu)$ does not have a local minimizer at $x^*$ unless $\\mu > \\|\\lambda^*\\|_\\infty$. Verify that this observation holds for Example 17.1."}

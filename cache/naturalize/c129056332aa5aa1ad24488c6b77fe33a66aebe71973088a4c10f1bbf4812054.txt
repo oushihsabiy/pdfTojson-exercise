@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let\n\\[\n\\kappa(\\mathcal{D}_k) \\stackrel{\\mathrm{def}}{=} \\min_{v\\in\\mathbf{R}^n}\\max_{p\\in\\mathcal{D}_k} \\frac{v^T p}{\\|v\\|\\,\\|p\\|}.\n\\]\nShow that \\(\\kappa(D_k)=0\\) when \\(D_k=\\{e_i,-e_i\\}\\) for any \\(i=1,2,\\ldots,n\\)."}

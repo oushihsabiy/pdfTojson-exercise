@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let $r(x)=\\sin(5x)-x$ be a scalar function. Show that the sum-of-squares merit function has infinitely many local minima, and determine a general formula for these points."}

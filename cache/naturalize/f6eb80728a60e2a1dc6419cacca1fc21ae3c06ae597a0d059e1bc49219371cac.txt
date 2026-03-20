@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider limited-memory SR1 updating based on\n\\[\nB_k = B_0 + (Y_k - B_0 S_k)(D_k + L_k + L_k^T - S_k^T B_0 S_k)^{-1}(Y_k - B_0 S_k)^T.\n\\tag{7.30}\n\\]\nExplain how the storage requirement can be reduced by one-half if the basic matrix $B_0^k$ is kept fixed for all $k$. (Hint: Consider the matrix $Q_k=[q_0,\\ldots,q_{k-1}]=Y_k-B_0S_k$.)"}

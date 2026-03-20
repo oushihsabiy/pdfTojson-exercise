@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Is an isolated local solution necessarily a strict local solution? Explain."}

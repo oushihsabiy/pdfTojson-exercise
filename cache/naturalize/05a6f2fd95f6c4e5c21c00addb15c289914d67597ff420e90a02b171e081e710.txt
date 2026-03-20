@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the linear program in standard form\n\\[\\min c^T x \\quad \\text{subject to } Ax=b,\\; x\\ge 0,\\]\nand let\n\\[B=[A_i]_{i\\in\\mathcal{B}}.\\]\nShow that if \\(m\\le n\\) and the rows of \\(A\\) are linearly dependent, then the matrix \\(B\\) is singular, and therefore there are no basic feasible points."}

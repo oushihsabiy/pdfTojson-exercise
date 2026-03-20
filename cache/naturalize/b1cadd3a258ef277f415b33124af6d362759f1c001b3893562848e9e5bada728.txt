@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Derive the solution of the two-dimensional subspace minimization problem in the case where \(B\) is positive definite."}

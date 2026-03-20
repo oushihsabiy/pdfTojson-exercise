@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the nonlinear program\n\\[\n\\min f(x) \\quad \\text{subject to} \\quad c_e(x)=0,\\quad c_i(x)\\ge 0.\n\\tag{19.59}\n\\]\nRepeat part (c) for this problem, but assume that the MFCQ condition (see Definition 12.6) holds instead of LICQ."}

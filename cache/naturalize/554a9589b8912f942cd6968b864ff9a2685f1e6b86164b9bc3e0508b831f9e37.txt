@@ -1,0 +1,1 @@
+{"problem_standardized_math":"In Exercise 19.8(c), the dogleg step is defined as a combination of the Newton step and the Cauchy step from parts (a) and (b). Show that the dogleg step lies in the range space of $\\hat A^T$."}

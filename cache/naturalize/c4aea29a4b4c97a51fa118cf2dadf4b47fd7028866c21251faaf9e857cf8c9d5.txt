@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the constraint \(x_1^2 + x_2^2 = 1\). Write the linearized constraint at each of the following points: \((0,0)^T\), \((0,1)^T\), \((0.1,0.02)^T\), and \(-(0.1,0.02)^T\)."}

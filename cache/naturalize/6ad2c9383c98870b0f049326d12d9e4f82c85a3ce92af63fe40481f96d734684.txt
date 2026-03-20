@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Convert the linear program\n\\[\n\\begin{aligned}\n\\min\\;& -5x_1-x_2\\\\\n\\text{subject to }& x_1+x_2\\le 5,\\\\\n& 2x_1+\\tfrac{1}{2}x_2\\le 8,\\\\\n& x\\ge 0\n\\end{aligned}\n\\]\nto standard form by introducing slack variables \\(x_3\\) and \\(x_4\\)."}

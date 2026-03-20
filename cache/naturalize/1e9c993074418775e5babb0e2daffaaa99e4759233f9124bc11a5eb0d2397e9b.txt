@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that the constraints (18.50b)(i)–(18.50e) are always consistent."}

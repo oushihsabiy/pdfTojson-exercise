@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Verify that, for (19.33a)–(19.33c), the least-squares multiplier formula corresponding to (18.21),\n\\[\n\\hat{\\lambda}_{k+1}=(A_kA_k^T)^{-1}A_k\\nabla f_k,\n\\]\nis given by\n\\[\n\\begin{bmatrix}\ny \\\\\nz\n\\end{bmatrix}\n=\n(\\hat A \\hat A^T)^{-1}\\hat A\n\\begin{bmatrix}\n\\nabla f(x) \\\\\n-\\mu e\n\\end{bmatrix}.\n\\]"}

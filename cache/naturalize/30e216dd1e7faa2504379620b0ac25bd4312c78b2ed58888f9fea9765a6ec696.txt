@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Verify that the number of interpolation conditions required to uniquely determine the coefficients in the quadratic model\n\\[\nm_k(x_k+p)=c+g^T p+\\frac{1}{2}p^T Gp\n\\]\nis\n\\[\nq=\\frac{1}{2}(n+1)(n+2).\n\\]"}

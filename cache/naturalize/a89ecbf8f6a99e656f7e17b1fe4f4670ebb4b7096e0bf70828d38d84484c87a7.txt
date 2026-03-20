@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the single-variable optimization problem\n\\[\n\\begin{aligned}\n&\\min x \\\\\n\\text{subject to}\\quad & x\\ge 0,\\quad 1-x\\ge 0.\n\\end{aligned}\n\\]\nCharacterize the minimizers of the barrier function as a function of \\(\\mu\\), and determine the limit of these minimizers as \\(\\mu\\to 0\\)."}

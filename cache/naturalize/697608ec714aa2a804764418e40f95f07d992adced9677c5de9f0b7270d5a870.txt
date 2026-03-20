@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Find the maximum value of $f(x)=x_1x_2$ over the unit disk $\{(x_1,x_2): 1-x_1^2-x_2^2\\ge 0\}$."}

@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Theorem 4.5 shows that the sequence \\(\\{\\|g(x_k)\\|\\}\\) has an accumulation point at \\(0\\). Show that, if the iterates \\(\\{x_k\\}\\) remain in a bounded set \\(\\mathcal{B}\\), then the sequence \\(\\{x_k\\}\\) has a limit point \\(x_\\infty\\) such that \\(g(x_\\infty)=0\\)."}

@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Justify that, in one step of the Nelder–Mead method, the average function value at the simplex points decreases if any of the points $\\bar{x}(-1)$, $\\bar{x}(-2)$, $\\bar{x}\\left(-\\frac{1}{2}\\right)$, or $\\bar{x}\\left(\\frac{1}{2}\\right)$ is chosen to replace $x_{n+1}$."}

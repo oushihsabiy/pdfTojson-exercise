@@ -1,0 +1,1 @@
+{"problem_standardized_math":"This exercise concerns Algorithm 19.1. In part (a), extend the proof of Theorem 19.1 to the general nonlinear program (19.1)."}

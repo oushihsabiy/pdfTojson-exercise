@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that the matrices \\(\\tilde{R}\\) in \\((10.15)\\) and \\(R\\) in \\((10.17)\\) are identical when \\(\\Pi = I\\), provided that \\(J\\) has full column rank \\(n\\)."}

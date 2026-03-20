@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Using the modified Cholesky factorization\n\\[\nPAP^T+E=LDL^T=MM^T,\n\\tag{3.50}\n\\]\ndescribe the effect of this factorization on the Hessian\n\\[\n\\nabla^2 f(x_k)=\\operatorname{diag}(-2,12,4).\n\\]"}

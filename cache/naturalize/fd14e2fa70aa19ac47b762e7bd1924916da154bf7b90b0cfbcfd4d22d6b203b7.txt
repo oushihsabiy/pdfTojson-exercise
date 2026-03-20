@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Express the function\n\\[\nf(x)=x_2x_3e^{x_1+x_3-x_4}+(x_2x_3)^2+(x_3-x_4)\n\\]\nin the form\n\\[\nf(x)=\\sum_{i=1}^{n_e}\\phi_i(U_i x).\n\\]\nIn particular, specify each of the compactifying transformations \\(U_i\\)."}

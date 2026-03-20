@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the function $r:\\mathbb{R}\\to\\mathbb{R}$ defined by $r(x)=x^q$, where $q$ is an integer greater than $2$. Note that $x^*=0$ is the unique root of $r$ and that this root is degenerate. Show that Newton's method converges Q-linearly, and determine the value of the convergence ratio $r$ in (A.34)."}

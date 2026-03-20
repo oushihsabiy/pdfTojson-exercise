@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the optimization problem\n\\[\n\\min\\; x_1+x_2\n\\qquad\\text{s.t.}\\qquad\nx_1^2+x_2^2-2=0.\n\\tag{12.9}\n\\]\nSpecify two feasible sequences that approach the maximizing point \\((1,1)^T\\), and show that neither sequence is a decreasing sequence for \\(f\\)."}

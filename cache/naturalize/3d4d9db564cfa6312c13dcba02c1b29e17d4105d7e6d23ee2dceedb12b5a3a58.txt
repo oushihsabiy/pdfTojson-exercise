@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let\n\\[\nr(x)=\\begin{bmatrix}\nx_1x_3+0.173x_1x_5\\\\\n-0.716x_1x_2-1.578x_1x_4+1.132x_4x_2\\\\\n-x_1x_5\\\\\nx_1x_4\n\\end{bmatrix}.\n\\]\nUsing the definition\n\\[\nJ(x)=\\left[\\frac{\\partial r_j}{\\partial x_i}\\right],\n\\]\nfind the Jacobian matrix \(J(x)\) of \(r(x)\)."}

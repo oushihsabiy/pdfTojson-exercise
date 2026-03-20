@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that the function \\(\\Phi_\\rho\\) defined by equation \\((14.46)\\) satisfies property \\((14.45a)\\)."}

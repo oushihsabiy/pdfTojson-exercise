@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that the basis matrices \(Y\) and \(Z\) defined by\n\\[\nY=\n\\begin{bmatrix}\nB^{-1} \\\\\n0\n\\end{bmatrix},\n\\qquad\nZ=\n\\begin{bmatrix}\n-B^{-1}N \\\\\nI\n\\end{bmatrix}\n\\tag{15.15}\n\\]\nare linearly independent."}

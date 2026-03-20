@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let\n\\[\np_{k+1}=-\\nabla f_{k+1}+\\frac{\\nabla f_{k+1}^T y_k}{y_k^T p_k}\\,p_k\n= -\\left(I-\\frac{s_k y_k^T}{y_k^T s_k}\\right)\\nabla f_{k+1}\n\\equiv -\\hat H_{k+1}\\nabla f_{k+1}.\n\\]\nShow that the matrix \\(\\hat H_{k+1}\\) is singular."}

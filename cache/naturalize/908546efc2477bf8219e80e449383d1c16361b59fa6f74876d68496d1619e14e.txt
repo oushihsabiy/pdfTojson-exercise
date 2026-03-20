@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let B be a block-diagonal matrix whose diagonal blocks are 1×1 and 2×2 matrices. Show that the eigenvalues and eigenvectors of B are obtained by computing the spectral decomposition of each diagonal block separately."}

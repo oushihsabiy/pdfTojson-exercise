@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Using (16.39) and (16.41), briefly explain why the gradient of any blocking constraint cannot be expressed as a linear combination of the gradients of the constraints in the current working set $W_k$."}

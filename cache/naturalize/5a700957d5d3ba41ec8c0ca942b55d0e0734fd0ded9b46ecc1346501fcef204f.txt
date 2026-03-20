@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Find the minima of the function $f(x)=x_1x_2$ subject to the constraint $x_1^2+x_2^2=1$. Illustrate this problem geometrically."}

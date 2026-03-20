@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let \\(\\{(\\lambda_i, v_i)\\}_{i=1}^n\\) be the eigenpairs of the symmetric matrix \\(A\\). Show that the matrix \\([I + P_k(A)A]^T A [I + P_k(A)A]\\) has eigenvalues \\(\\lambda_i[1 + \\lambda_i P_k(\\lambda_i)]^2\\) and corresponding eigenvectors \\(v_i\\), for \\(i=1,2,\\ldots,n\\)."}

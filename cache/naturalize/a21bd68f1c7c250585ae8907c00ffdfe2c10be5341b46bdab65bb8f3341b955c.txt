@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Complete the proof of Theorem 13.1 by showing that if the dual problem\n\\[\\max\\ b^T\\lambda \\quad \\text{subject to } A^T\\lambda \\preceq c \\tag{13.7}\\]\nis unbounded above, then the primal problem\n\\[\\min\\ c^T x \\quad \\text{subject to } Ax=b,\\; x\\ge 0 \\tag{13.1}\\]\nmust be infeasible."}

@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Write a quadratic programming subproblem analogous to (17.31) for the penalty function\n\\[\n\\phi(x;\\mu)=f(x)+\\mu\\|c_{\\mathcal E}(x)\\|+\\mu\\|[c_{\\mathcal I}(x)]^{-}\\|,\n\\]\nwhen the norm \\(\\|\\cdot\\|\\) in this expression is the infinity norm."}

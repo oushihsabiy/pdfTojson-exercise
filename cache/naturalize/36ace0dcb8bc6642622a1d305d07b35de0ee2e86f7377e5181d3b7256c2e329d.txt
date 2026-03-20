@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that, if \(0<c_2<c_1<1\), there may exist no step lengths that satisfy the Wolfe conditions."}

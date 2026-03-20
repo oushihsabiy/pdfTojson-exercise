@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let \\(\\gamma>0\\) be the smallest eigenvalue of \\(\\nabla_{xx}^2 \\mathcal{L}_C\\). Describe a change of variables such that all eigenvalues of the \\((2,2)\\) block converge to \\(\\gamma\\) as \\(\\mu \\to 0\\)."}

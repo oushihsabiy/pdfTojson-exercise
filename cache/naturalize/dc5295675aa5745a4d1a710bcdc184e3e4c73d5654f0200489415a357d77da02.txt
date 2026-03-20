@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Convert the following linear program to standard form:\n\\[\n\\max_{x,y} \\; c^T x + d^T y\n\\quad \\text{subject to} \\quad A_1x = b_1,\\; A_2x + B_2y \\le b_2,\\; l \\le y \\le u,\n\\]\nwhere there are no explicit bounds on \\(x\\)."}

@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that if $f(x)$ is a strictly convex quadratic function, then the function\n\\[\nh(\\sigma) \\stackrel{\\mathrm{def}}{=} f\\bigl(x_0 + \\sigma_0 p_0 + \\cdots + \\sigma_{k-1} p_{k-1}\\bigr)\n\\]\nis also a strictly convex quadratic function of the variable\n\\[\n\\sigma = (\\sigma_0, \\sigma_1, \\ldots, \\sigma_{k-1})^T.\n\\]"}

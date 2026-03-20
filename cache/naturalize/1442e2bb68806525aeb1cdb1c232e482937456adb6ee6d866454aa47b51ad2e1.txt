@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that if \(f\) is strongly convex, then the curvature condition\n\[\ns_k^T y_k>0\n\]\nholds for any vectors \(x_k\) and \(x_{k+1}\)."}

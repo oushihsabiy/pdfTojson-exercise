@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Give an example of a feasible set and a feasible point $x^*$ such that the active constraints at $x^*$ are linear, but the LICQ is not satisfied."}

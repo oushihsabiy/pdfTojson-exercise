@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that if Q is an orthogonal matrix, then \\|Qx\\| = \\|x\\| for any vector x."}

@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let \\(\\Omega \\subset \\mathbb{R}^2\\) be the feasible set defined by\n\\[\n x_2 \\ge 0, \\qquad x_2 \\le x_1^2.\n\\]\nFind a feasible sequence \\(\\{z_k\\} \\subset \\Omega\\) such that \\(z_k \\to x^*\\) and \\(f(z_k) < f(x^*)\\) for all \\(k\\)."}

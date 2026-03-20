@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Using the definitions\n\\[\nD_p x_i \\stackrel{\\mathrm{def}}{=} (\\nabla x_i)^T p = \\sum_{j=1}^3 \\frac{\\partial x_i}{\\partial x_j} \\, p_j, \\qquad i=1,2,\\ldots,9,\n\\]\nand\n\\[\nD_{pq} x_i = p^T (\\nabla^2 x_i) q,\n\\]\nverify the differentiation formulae (8.38) for the unitary operation \\(x_i = L(x_j)\\)."}

@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Using the formulas in (5.14), verify that for \(k=1\),\n\\[\n\\operatorname{span}\\{r_0,r_1\\}=\\operatorname{span}\\{r_0,Ar_0\\}\n\\]\nand\n\\[\n\\operatorname{span}\\{p_0,p_1\\}=\\operatorname{span}\\{r_0,Ar_0\\}.\n\\]"}

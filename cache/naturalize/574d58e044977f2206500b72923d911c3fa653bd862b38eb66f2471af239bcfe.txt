@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the sequence \\(\\{x_k\\}\\) defined by\n\\[\nx_k=\n\\begin{cases}\n\\left(\\frac14\\right)^{2^k}, & \\text{if } k \\text{ is even},\\\\[4pt]\n\\dfrac{x_{k-1}}{k}, & \\text{if } k \\text{ is odd}.\n\\end{cases}\n\\]\nDetermine whether this sequence is Q-superlinearly convergent, Q-quadratically convergent, and R-quadratically convergent."}

@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Verify that, for a nondegenerate simplex in $\\mathbb{R}^n$, the total number of its vertices and the midpoints of its edges is\n\\[\nq=\\frac{1}{2}(n+1)(n+2),\n\\]\nand hence that these points can be used as the initial interpolation set in a DFO algorithm."}

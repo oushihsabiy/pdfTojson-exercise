@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that the minimizer in one dimension of a strongly convex quadratic function is given by formula (3.55)."}

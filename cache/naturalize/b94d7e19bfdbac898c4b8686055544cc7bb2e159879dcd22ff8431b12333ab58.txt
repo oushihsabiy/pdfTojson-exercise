@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that Newton's method, applied to the function \(r(x)=-x^5+x^3+4x\) with initial value \(x_0=1\), produces the cyclic behavior described in the text. Find the roots of \(r\), and verify that they are nondegenerate."}

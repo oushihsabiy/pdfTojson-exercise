@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Prove that, for any nonsingular matrix $B$, \n\\[\n\\|Bx\\| \\ge \\frac{\\|x\\|}{\\|B^{-1}\\|}.\n\\]\nThen, assuming there is a constant $M$ such that\n\\[\n\\|B_k\\|\\,\\|B_k^{-1}\\| \\le M \\qquad \\text{for all } k,\n\\]\nuse this result to establish\n\\[\n\\cos \\theta_k \\ge \\frac{1}{M}.\n\\tag{3.19}\n\\]"}

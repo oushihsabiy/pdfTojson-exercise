@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that, if $f$ satisfies Assumption 6.1 and the sequence of gradients satisfies $\\liminf \\|\\nabla f_k\\| = 0$, then the entire sequence of iterates $x$ converges to the solution $x^*$."}

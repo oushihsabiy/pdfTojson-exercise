@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider problem (16.3). Assume that \(A\) has full row rank and that \(Z\) is a basis for the null space of \(A\). Prove that there are no finite solutions if \(Z^{T} G Z\) has negative eigenvalues."}

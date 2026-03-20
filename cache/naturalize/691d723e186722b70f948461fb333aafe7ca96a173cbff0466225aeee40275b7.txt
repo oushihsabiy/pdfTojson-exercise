@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Construct an equality-constrained optimization problem that has a local solution and whose quadratic penalty function Q is unbounded for every value of the penalty parameter."}

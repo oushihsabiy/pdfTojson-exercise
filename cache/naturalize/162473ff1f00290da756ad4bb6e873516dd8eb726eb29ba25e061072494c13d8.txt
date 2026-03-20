@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that, in Example (19.53), if the starting point lies in the region\n\\[\n\\{(x,s_1,s_2): x^2-s_1-1 \\ge 0,\\ s_1 \\ge 0\\},\n\\tag{19.54}\n\\]\nthen the interior-point step leads to a point on the tangent line to the parabola, as illustrated in Figure 19.2. More specifically, show that the tangent line never lies to the left of the parabola."}

@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that the vector\n\\[\nx^* = \\sum_{\\sigma_i \\ne 0} \\frac{u_i^T y}{\\sigma_i} \\, v_i + \\sum_{\\sigma_i = 0} \\tau_i \\, v_i\n\\]\ndefined in \\((10.22)\\) is a minimizer of \\((10.13)\\), where\n\\[\n\\epsilon_j = \\phi(x; t_j) - y_j.\n\\]"}

@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Verify that\n\\[\nD(\\phi_1(\\hat{x};\\mu);p)=\\nabla f(\\hat{x})^T p+\\mu \\sum_{i\\in\\mathcal{E}} |\\nabla c_i(\\hat{x})^T p|+\n\\mu \\sum_{i\\in\\mathcal{I}\\cap\\mathcal{A}(\\hat{x})} [\\nabla c_i(\\hat{x})^T p]^{-}.\n\\tag{17.28}\n\\]"}

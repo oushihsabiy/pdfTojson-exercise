@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Solve the optimization problem\n\\[\n\\min_x \\; x_1+x_2 \\quad \\text{subject to} \\quad x_1^2+x_2^2=1\n\\]\nby eliminating the variable \\(x_2\\). Show that the choice of sign in the square-root step of the elimination process is critical, and that choosing the wrong sign leads to an incorrect answer."}

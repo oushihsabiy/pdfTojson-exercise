@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that, if \(Z^T r = r_z \neq 0\) and \(Z^T H Z\) is positive definite, then the denominator in equation \((16.28e)\) is nonzero."}

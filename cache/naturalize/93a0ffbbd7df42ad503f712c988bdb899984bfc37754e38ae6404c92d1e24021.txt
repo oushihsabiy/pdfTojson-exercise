@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the system\n\\[\nx_1+x_2-2=0,\n\\]\n\\[\nx_1x_2-2x_2^2+1=0.\n\\]\nFind all solutions of this system. Show that, if the first equation is replaced by its product with \\(x_2\\), then the set of solutions is unchanged, but the Newton step starting from \\((1,-1)\\) is different from the Newton step for the original system."}

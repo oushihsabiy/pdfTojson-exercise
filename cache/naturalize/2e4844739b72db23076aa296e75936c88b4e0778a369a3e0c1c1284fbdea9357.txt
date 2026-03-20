@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let\n\\[\nH=\\{x\\in\\mathbf{R}^n\\mid a^T x+\\alpha\\ge 0\\},\n\\]\nwhere \\(a\\in\\mathbf{R}^n\\) and \\(\\alpha\\in\\mathbf{R}\\) are given. Formulate the optimization problem for finding the point \\(x\\in H\\) with the smallest Euclidean norm, and solve it."}

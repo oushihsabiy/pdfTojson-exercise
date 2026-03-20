@@ -1,0 +1,1 @@
+{"problem_standardized_math":"For the quadratic model\n\\[\nm_k(x_k+p)=f(x_k)+g^T p+\\sum_{i<j} G_{ij}p_i p_j+\\frac{1}{2}\\sum_i G_{ii}p_i^2,\n\\tag{9.14}\n\\]\ndescribe conditions on the vectors \\(s^l\\) that guarantee that the model \\((9.14)\\) is uniquely determined."}

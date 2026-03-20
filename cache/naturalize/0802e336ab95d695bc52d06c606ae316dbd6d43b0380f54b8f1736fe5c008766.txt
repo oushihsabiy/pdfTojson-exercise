@@ -1,0 +1,1 @@
+{"problem_standardized_math":"For each of the LCL objective functions\n\\[\nF_k(x)=f(x)-\\sum_{i=1}^m \\lambda_i^k\\,\\bar{c}_i^k(x)\n\\]\nand\n\\[\nF_k(x)=f(x)-\\sum_{i=1}^m \\lambda_i^k\\,\\bar{c}_i^k(x)+\\frac{\\mu}{2}\\sum_{i=1}^m [\\bar{c}_i^k(x)]^2,\n\\]\ncalculate the gradient and the Hessian of \\(F_k(x)\\), and evaluate these quantities at \\(x=x_k\\)."}

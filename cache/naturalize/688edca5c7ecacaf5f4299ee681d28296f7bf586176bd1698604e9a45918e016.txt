@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Prove part (iii) of Theorem 11.3."}

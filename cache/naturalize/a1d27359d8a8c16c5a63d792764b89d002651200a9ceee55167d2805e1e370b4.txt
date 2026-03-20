@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let \(r:\mathbf{R}^n \to \mathbf{R}^n\). Show that the function\n\[\n\phi(\lambda)=\left\|(J^T J+\lambda I)^{-1}J^T r\right\|\n\]\nis monotonically decreasing in \(\lambda\), unless \(J^T r = 0\). (Hint: Use the singular-value decomposition of \(J\).)"}

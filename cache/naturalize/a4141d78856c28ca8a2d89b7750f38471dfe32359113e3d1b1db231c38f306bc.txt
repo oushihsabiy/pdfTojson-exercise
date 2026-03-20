@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider Algorithm 19.1. Show that the theorem remains valid if the condition\n\\[\nE(x_k,s_k,y_k,z_k)\\leq \\mu_k\n\\]\nis replaced by\n\\[\nE(x_k,s_k,y_k,z_k)\\leq \\epsilon_{\\mu_k},\n\\]\nfor any sequence \\(\\epsilon_{\\mu_k}\\) such that \\(\\epsilon_{\\mu_k}\\to 0\\) as \\(\\mu_k\\to 0\\)."}

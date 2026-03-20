@@ -1,0 +1,1 @@
+{"problem_standardized_math":"By appropriately extending the two-step solution procedure\n\\[\nL\\bar d = A_q, \\qquad Ud = \\bar d,\n\\tag{13.27}\n\\]\nand using the factorization\n\\[\nB^+ = L^+U^+, \\,\\qquad \\text{where} \\qquad L^+ = LP_1^TL_1, \\quad U^+ = U_1P_1,\n\\tag{13.31}\n\\]\nshow how linear systems with coefficient matrix $B^+$ can be solved efficiently."}

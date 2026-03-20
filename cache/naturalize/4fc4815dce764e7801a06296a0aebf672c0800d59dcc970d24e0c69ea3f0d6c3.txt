@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that the second strong Wolfe condition (3.7b) implies the curvature condition\n\\[\ns_k^T y_k > 0.\n\\tag{6.7}\n\\]"}

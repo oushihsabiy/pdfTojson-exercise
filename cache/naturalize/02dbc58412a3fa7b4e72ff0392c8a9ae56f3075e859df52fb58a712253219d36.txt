@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Give an example of a function \(g\) of one variable such that \(g(0)=-1\) and \(g(1)=-\frac{1}{4}\), and show that the curvature condition \((6.7)\), \(s_k^T y_k>0\), does not hold in this case."}

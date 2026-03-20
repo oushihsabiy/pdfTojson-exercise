@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Solve the quadratic programming problem and illustrate the solution geometrically:\n\\[\n\\begin{array}{ll}\n\\text{minimize} & f(x)=2x_1+3x_2+4x_1^2+2x_1x_2+x_2^2,\\\\\n\\text{subject to} & x_1-x_2\\ge 0,\\quad x_1+x_2\\le 4,\\quad x_1\\le 3.\n\\end{array}\n\\]"}

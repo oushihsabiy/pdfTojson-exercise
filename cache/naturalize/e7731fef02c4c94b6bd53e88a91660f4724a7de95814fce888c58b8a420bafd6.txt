@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Compute the gradient \\(\\nabla f(x)\\) and the Hessian \\(\\nabla^2 f(x)\\) of the Rosenbrock function\n\\[\nf(x)=100(x_2-x_1^2)^2+(1-x_1)^2.\n\\]\nShow that \\(x^*=(1,1)^T\\) is the unique local minimizer of this function, and that the Hessian matrix at \\(x^*\\) is positive definite."}

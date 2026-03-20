@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Find a null-space basis matrix \(Z\) for the equality-constrained problem defined by (16.74a) and (16.74b)."}

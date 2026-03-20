@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the search for the one-dimensional minimizer of the function \(q(x(t))\) defined in (16.73). There are 9 possible cases, according to whether \(f\), \(f'\), and \(f''\) are positive, negative, or zero. For each case, determine the location of the minimizer, and verify that the rules described in Section 16.7 hold."}

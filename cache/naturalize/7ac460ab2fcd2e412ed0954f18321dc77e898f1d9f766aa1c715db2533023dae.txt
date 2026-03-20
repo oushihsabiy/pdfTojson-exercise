@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the feasible set \\(\\Omega \\subset \\mathbf{R}^2\\) defined by \\(x_2 \\ge 0\\) and \\(x_2 \\le x_1^2\\). Determine whether LICQ is satisfied at \\(x^*\\), and whether MFCQ is satisfied at \\(x^*\\)."}

@@ -1,0 +1,1 @@
+{"problem_standardized_math":"In the long-step path-following method (Algorithm 14.2), give a procedure for computing the maximum value of \\(\\alpha \\in [0,1]\\) such that\n\\[\n(x^k(\\alpha),\\, \\lambda^k(\\alpha),\\, s^k(\\alpha)) \\in \\mathcal{N}_{-\\infty}(\\gamma).\n\\tag{14.20}\n\\]"}

@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the quadratic model\n\\[\nm_k(x_k+p)=c+g^T p+\\frac{1}{2}p^T Gp. \\tag{9.6}\n\\]\nHow many interpolation conditions are required to determine the coefficients in (9.6) if the matrix \\(G\\) is identically zero? How many are required if \\(G\\) is diagonal? How many if \\(G\\) is tridiagonal?"}

@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the scalar optimization problem\n\\[\n\\min_{x} \\frac{1}{1+x^2} \\quad \\text{subject to } x \\ge 1.\n\\]\nWrite down \\(P(x;\\mu)\\) for this problem, and show that \\(P(x;\\mu)\\) is unbounded below for every positive value of \\(\\mu\\)."}

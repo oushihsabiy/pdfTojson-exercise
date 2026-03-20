@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that the operator\n\\[\nP = Z(Z^T HZ)^{-1}Z^T\n\\]\ndefined in (16.27) is independent of the choice of null-space basis \\(Z\\). (Hint: First show that any null-space basis \\(Z\\) can be written in the form \\(Z = QB\\), where \\(Q\\) is an orthogonal basis and \\(B\\) is a nonsingular matrix.)"}

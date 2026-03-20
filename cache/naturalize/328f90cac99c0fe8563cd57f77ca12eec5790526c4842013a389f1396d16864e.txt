@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that, for a strongly convex quadratic function, the one-dimensional minimizer satisfies the Goldstein conditions\n\\[\nf(x_k) + (1-c)\\alpha_k \\nabla f_k^T p_k \\leq f(x_k + \\alpha_k p_k) \\leq f(x_k) + c\\alpha_k \\nabla f_k^T p_k,\n\\]\nwhere \\(0<c<\\tfrac12\\)."}

@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that if the nonzero vectors $p_0, p_1, \\ldots, p_l$ satisfy\n\\[\np_i^T A p_j = 0, \\qquad \\text{for all } i \\ne j,\n\\]\nwhere $A$ is symmetric and positive definite, then the vectors $p_0, p_1, \\ldots, p_l$ are linearly independent. (This result implies that $A$ has at most $n$ conjugate directions.)"}

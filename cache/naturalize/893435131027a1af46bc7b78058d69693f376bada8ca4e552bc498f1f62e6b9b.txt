@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that this computation can also be carried out by solving the augmented system\n\\[\n\\begin{bmatrix}\nI & A^T \\\\\nA & 0\n\\end{bmatrix}\n\\begin{bmatrix}\ng^+ \\\\\nv^+\n\\end{bmatrix}\n=\n\\begin{bmatrix}\nr^+ \\\\\n0\n\\end{bmatrix}.\n\\tag{16.32}\n\\]"}

@@ -1,0 +1,1 @@
+{"problem_standardized_math":"For \(n=2\), find a point \((x,s)>0\) such that the condition\n\[\n\|XSe-\mu e\|_2 \le \theta \mu\n\]\nis not satisfied for any \(\theta \in [0,1)\)."}

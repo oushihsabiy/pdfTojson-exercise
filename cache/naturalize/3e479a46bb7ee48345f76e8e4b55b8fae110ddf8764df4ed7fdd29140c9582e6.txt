@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let $(x,s,y,z)$ be a primal-dual solution satisfying the LICQ and strict complementarity conditions. Argue that the matrix in $(19.6)$ is not ill-conditioned under these assumptions."}

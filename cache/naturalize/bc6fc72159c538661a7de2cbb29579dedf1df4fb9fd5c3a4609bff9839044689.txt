@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let \(a\) be a given vector in \(\mathbb{R}^n\), and let \(A\) be a given symmetric \(n \times n\) matrix. Compute the gradient and the Hessian of the functions \(f_1(x)=a^T x\) and \(f_2(x)=x^T A x\)."}

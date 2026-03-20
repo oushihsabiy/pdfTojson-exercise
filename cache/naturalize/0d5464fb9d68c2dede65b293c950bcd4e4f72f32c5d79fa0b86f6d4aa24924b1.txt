@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Prove that every isolated local minimizer is a strict local minimizer. Hint: Let x^* be an isolated local minimizer and let \\mathcal{N} be a neighborhood of x^*. Show that for any x \\in \\mathcal{N} with x \\neq x^*, we must have f(x) > f(x^*)."}

@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Can you obtain a smooth reformulation, analogous to that in the previous question, when\n\\[\nf(x)=\\min_{i=1,2,\\ldots,m} f_i(x)?\n\\]\n(Note: this is \\(\"min\"\\), not \\(\"max\"\\).) Why or why not?"}

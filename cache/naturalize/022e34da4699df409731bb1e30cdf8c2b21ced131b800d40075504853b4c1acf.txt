@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Verify the modified conjugacy condition\n\\[\nr_i^T M^{-1} r_j = 0 \\qquad \\text{for all } i \\neq j.\n\\tag{5.40}\n\\]"}

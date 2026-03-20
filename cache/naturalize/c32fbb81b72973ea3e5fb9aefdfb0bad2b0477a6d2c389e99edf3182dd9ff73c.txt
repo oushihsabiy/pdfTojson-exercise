@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that for the feasible region defined by\n\\[\n(x_1-1)^2+(x_2-1)^2\\le 2,\n\\]\n\\[\n(x_1-1)^2+(x_2+1)^2\\le 2,\n\\]\nand\n\\[\nx_1\\ge 0,\n\\]\nthe Mangasarian-Fromovitz constraint qualification (MFCQ) is satisfied at \\(x^*=(0,0)^T\\), whereas the linear independence constraint qualification (LICQ) is not satisfied there."}

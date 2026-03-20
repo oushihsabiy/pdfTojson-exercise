@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Derive Algorithm 5.3 by applying the standard conjugate gradient (CG) method to the variables \\(\\hat{x}\\) and then transforming back to the original variables."}

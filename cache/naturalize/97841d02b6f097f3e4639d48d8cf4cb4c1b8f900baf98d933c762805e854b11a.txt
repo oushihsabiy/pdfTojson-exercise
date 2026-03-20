@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Find \\(\\|x^*\\|\\) and conclude that this norm is minimized when \\(\\tau_i = 0\\) for all \\(i\\) such that \\(\\sigma_i = 0\\)."}

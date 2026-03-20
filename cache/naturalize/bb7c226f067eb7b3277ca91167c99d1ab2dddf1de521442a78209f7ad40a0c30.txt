@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that equation (5.24d) is equivalent to equation (5.14d)."}

@@ -1,0 +1,1 @@
+{"problem_standardized_math":"For the quadratic objective\n\\[\n\\phi(v)=\\|A_e(x)v_x+c_e(x)\\|_2^2+\\|A_I(x)v_x-Sv_s+(c_I(x)-s)\\|_2^2,\n\\]\ncompute the unconstrained minimizer of \\(\\phi(v)\\) along the steepest descent direction, starting from \\(v=0\\). (This minimizer defines the Cauchy component in the dogleg method used to find an approximate solution to (19.34).)"}

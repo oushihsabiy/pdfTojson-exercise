@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Implement Algorithm 16.4 and use it to solve problem (16.76). Take all initial variables to be the vector $e=(1,1,\\ldots,1)^T$."}

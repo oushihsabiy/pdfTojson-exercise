@@ -1,0 +1,1 @@
+{"problem_standardized_math":"For the function\n\\[\nf(x)=\\frac{x_1x_2\\sin x_3+e^{x_1x_2}}{x_3},\n\\]\ntrace the computations performed in the forward mode. Express the intermediate derivatives \\(\\nabla x_i\\), for \\(i=4,5,\\ldots,9\\), first in terms of the quantities available at their parent nodes and then in terms of the independent variables \\(x_1,x_2,x_3\\)."}

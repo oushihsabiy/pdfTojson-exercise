@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the nonlinear program\n\\[\n\\min f(x) \\quad \\text{subject to} \\quad c_e(x)=0,\\; c_i(x)\\ge 0.\n\\tag{19.59}\n\\]\n(a) Write down the KKT conditions for problems (19.1) and (19.59), and establish a one-to-one correspondence between the KKT points of these two problems, despite the different numbers of variables and multipliers."}

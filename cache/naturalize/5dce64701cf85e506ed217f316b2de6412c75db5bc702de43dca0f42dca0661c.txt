@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let the discrepancies between the model and the observations be defined by\n\\[\n\\epsilon_j=\\phi(x;t_j)-y_j.\n\\]\nShow that the least-squares objective function \(f(x)\) corresponding to (10.13) is convex."}

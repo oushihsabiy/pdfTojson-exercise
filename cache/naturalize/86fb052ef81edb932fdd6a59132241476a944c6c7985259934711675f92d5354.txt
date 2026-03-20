@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Suppose that \(f\) is a convex function. Show that the set of global minimizers of \(f\) is convex."}

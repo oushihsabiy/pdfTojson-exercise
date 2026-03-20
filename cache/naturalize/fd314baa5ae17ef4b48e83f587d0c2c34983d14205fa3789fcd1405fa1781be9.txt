@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Using the properties of the trace for symmetric matrices and the BFGS update formula\n\\[\nB_{k+1}=B_k-\\frac{B_k s_k s_k^T B_k}{s_k^T B_k s_k}+\\frac{y_k y_k^T}{y_k^T s_k},\n\\]\nprove equation (6.44)."}

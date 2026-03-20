@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Given an arbitrary point $(x,\\lambda,s)\\in\\mathcal{F}^o$, determine the range of values of $\\gamma$ for which $(x,\\lambda,s)\\in\\mathcal{N}_{-\\infty}(\\gamma)$. (This range depends on $x$ and $s$.)"}

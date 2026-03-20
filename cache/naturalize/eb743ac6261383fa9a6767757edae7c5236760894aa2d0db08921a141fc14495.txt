@@ -1,0 +1,1 @@
+{"problem_standardized_math":"A square root of a matrix $A$ is a matrix $A^{1/2}$ satisfying $A^{1/2}A^{1/2}=A$. Show that every symmetric positive definite matrix $A$ has a square root, and that this square root is itself symmetric and positive definite. (Hint: Use the factorization $A=UDU^T$, where $U$ is orthogonal and $D$ is diagonal with positive diagonal entries.)"}

@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the nonlinear system of equations\n\\[\nr(x)=0.\n\\]\nShow that Newton's method,\n\\[\nJ(x_k)p_k=-r(x_k),\n\\]\nis invariant under scaling of the equations. More precisely, show that the Newton step \(p_k\) does not change if each component of \(r\) is multiplied by a nonzero constant."}

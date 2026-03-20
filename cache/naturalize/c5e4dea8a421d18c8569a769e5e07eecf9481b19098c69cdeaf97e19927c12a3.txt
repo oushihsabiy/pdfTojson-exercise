@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the determination of a quadratic function of two variables. Show that six points lying on a single line do not determine the quadratic function uniquely."}

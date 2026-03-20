@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let $A$ be a full-rank $m \\times n$ matrix with $m<n$. Using the QR factorization and a permutation matrix, show that there exist an orthogonal matrix $Q$ and an $m\\times m$ upper triangular matrix $\\hat U$ such that\n\\[\nAQ=\\begin{bmatrix}0&\\hat U\\end{bmatrix}.\n\\]\nHint: Begin by applying the standard QR factorization to $A^T$."}

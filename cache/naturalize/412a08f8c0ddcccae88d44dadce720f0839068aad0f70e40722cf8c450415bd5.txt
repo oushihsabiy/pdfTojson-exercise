@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the optimization problem\n\\[\n\\min\\ (x_2+100)^2+0.01x_1^2\n\\quad\\text{subject to}\\quad x_2-\\cos x_1\\ge 0.\n\\]\nDoes problem \\((12.4)\\) have a finite or an infinite number of local solutions? Use the first-order optimality conditions \\((12.34)\\) to justify your answer."}

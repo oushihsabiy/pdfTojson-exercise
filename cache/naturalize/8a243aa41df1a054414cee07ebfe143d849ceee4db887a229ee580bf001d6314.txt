@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Construct matrices with various eigenvalue distributions, both clustered and non-clustered, and apply the CG method to them. Comment on whether the observed behavior can be explained by Theorem 5.5."}

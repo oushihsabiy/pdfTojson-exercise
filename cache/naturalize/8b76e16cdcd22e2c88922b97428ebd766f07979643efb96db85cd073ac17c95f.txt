@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Verify that the dual of the linear program\n\\[\n\\max b^T\\lambda \\quad \\text{subject to } A^T\\lambda + s = c, \\quad s \\succeq 0,\n\\tag{13.8}\n\\]\nis the original primal problem\n\\[\n\\min c^T x \\quad \\text{subject to } Ax=b, \\quad x\\geq 0.\n\\tag{13.1}\n\\]"}

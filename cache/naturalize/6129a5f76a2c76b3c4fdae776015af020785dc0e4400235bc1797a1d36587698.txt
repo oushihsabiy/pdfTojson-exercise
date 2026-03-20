@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Write a program that implements the dogleg method, taking \\(B_k\\) to be the exact Hessian. Apply it to solve Rosenbrock's function\n\\[\nf(x)=100(x_2-x_1^2)^2+(1-x_1)^2.\n\\]\nExperiment with the trust-region update rule by changing the constants in Algorithm 4.1, or by designing your own rules."}

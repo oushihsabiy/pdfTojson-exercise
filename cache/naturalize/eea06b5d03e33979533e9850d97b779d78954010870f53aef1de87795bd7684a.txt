@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the function \(f(x_1,x_2)=(x_1+x_2^2)^2\). At the point \(x^T=(1,0)\), consider the search direction \(p^T=(-1,1)\). Show that \(p\) is a descent direction at \(x\), and find all minimizers \(\alpha>0\) of the one-dimensional problem\n\[\n\min_{\alpha>0} f(x+\alpha p).\n\]"}

@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that the solutions of the problems in (14.39) are given explicitly by the formulas in (14.40)."}

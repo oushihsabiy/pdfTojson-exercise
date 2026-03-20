@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Show that, if $Z^T G Z$ is positive definite, then the denominator in equation (16.28a) is nonzero."}

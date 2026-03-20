@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Verify that, if the Hessian of a function $f$ has nonzero diagonal elements, then its adjacency graph is a subgraph of the intersection graph of $\\nabla f$; that is, show that every arc in the adjacency graph also belongs to the intersection graph."}

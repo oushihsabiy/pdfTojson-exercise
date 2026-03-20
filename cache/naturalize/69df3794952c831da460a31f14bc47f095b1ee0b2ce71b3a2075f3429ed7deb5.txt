@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Determine whether the sequence \\(x_k = 1/k!\\) converges Q-superlinearly and whether it converges Q-quadratically."}

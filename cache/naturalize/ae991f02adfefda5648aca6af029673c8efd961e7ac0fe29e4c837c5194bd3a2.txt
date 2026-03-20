@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let $(\\Delta x,\\Delta \\lambda,\\Delta s)$ satisfy equation \\((14.10)\\). Prove that\n\\[\n\\Delta x^{T}\\Delta s=0.\n\\tag{14.23}\n\\]"}

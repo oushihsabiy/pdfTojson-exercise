@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Let \(W\) be an \(n \times n\) symmetric matrix, and let \(Z\) be an \(n \times t\) matrix. Assume that \(Z^{T}WZ\) is positive definite, and let \(\bar Z\) be the matrix obtained by removing one column from \(Z\). Show that \(\bar Z^{T}W\bar Z\) is positive definite."}

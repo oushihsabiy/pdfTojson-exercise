@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Consider the quadratic program\n\\[\n\\begin{array}{ll}\n\\max & 6x_1 + 4x_2 - 13 - x_1^2 - x_2^2, \\\\\n\\text{subject to} & x_1 + x_2 \\le 3,\\qquad x_1 \\ge 0,\\qquad x_2 \\ge 0.\n\\end{array}\n\\]\nFirst solve this problem graphically, and then solve it using your program that implements the active-set method given in Algorithm 16.3."}

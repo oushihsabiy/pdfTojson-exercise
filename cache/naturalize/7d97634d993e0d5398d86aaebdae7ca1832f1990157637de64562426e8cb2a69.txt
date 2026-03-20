@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Exercise 6.10(c). The object of this exercise is to prove equation (6.45). Use this relation to establish (6.45)."}

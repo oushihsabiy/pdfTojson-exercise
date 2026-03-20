@@ -1,0 +1,1 @@
+{"problem_standardized_math":"Prove Theorem 18.2 for the case in which the merit function is\n\\[\\phi(x;\\mu)=f(x)+\\mu\\|c(x)\\|_q,\\]\nwhere \\(q>0\\). Using this lemma, show that the condition ensuring descent is\n\\[\\mu>\\|\\lambda_{k+1}\\|_r,\\]\nwhere \\(r>0\\) satisfies\n\\[r^{-1}+q^{-1}=1.\\]"}
